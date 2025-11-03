@@ -1,29 +1,71 @@
 {
-	"highlight": true,
-	"title": {
-		"en": "GPIO is !{{high|low}}",
-		"nl": "GPIO is !{{hoog|laag}}",
-		"pl": "GPIO jest !{{wysokie|niskie}}"
-	},
-	"titleFormatted": {
-		"en": "GPIO[[io]] is !{{high|low}}",
-		"nl": "GPIO[[io]] is !{{hoog|laag}}",
-		"pl": "GPIO[[io]] jest !{{wysokie|niskie}}"
-	},
-	"hint": { "en": "GPIO 0-53" },
-	"args": [
-		{
-		  "type": "device",
-		  "name": "device",
-		  "filter": "driver_id=rpi"
-		},
-		{
-			"type": "number",
-			"name": "io",
-			"title": { "en": "GPIO" },
-			"value": 0,
-			"min": 0,
-			"max": 53
-		}
-	]
+  "highlight": true,
+  "title": {
+    "en": "GPIO is !{{high|low}}",
+    "nl": "GPIO is !{{hoog|laag}}",
+    "pl": "GPIO jest !{{wysokie|niskie}}",
+    "da": "GPIO er !{{høj|lav}}",
+    "de": "GPIO ist !{{hoch|niedrig}}",
+    "es": "GPIO es !{{alto|bajo}}",
+    "fr": "GPIO est !{{haut|bas}}",
+    "it": "GPIO è !{{alto|basso}}",
+    "no": "GPIO er !{{høy|lav}}",
+    "sv": "GPIO är !{{hög|låg}}",
+    "ru": "GPIO это !{{высокий|низкий}}",
+    "ko": "GPIO는 !{{높음|낮음}}"
+  },
+  "titleFormatted": {
+    "en": "GPIO[[io]] is !{{high|low}}",
+    "nl": "GPIO[[io]] is !{{hoog|laag}}",
+    "pl": "GPIO[[io]] jest !{{wysokie|niskie}}",
+    "da": "GPIO[[io]] er !{{høj|lav}}",
+    "de": "GPIO[[io]] ist !{{hoch|niedrig}}",
+    "es": "GPIO[[io]] es !{{alto|bajo}}",
+    "fr": "GPIO[[io]] est !{{haut|bas}}",
+    "it": "GPIO[[io]] è !{{alto|basso}}",
+    "no": "GPIO[[io]] er !{{høy|lav}}",
+    "sv": "GPIO[[io]] är !{{hög|låg}}",
+    "ru": "GPIO[[io]] это !{{высокий|низкий}}",
+    "ko": "GPIO[[io]]는 !{{높음|낮음}}"
+  },
+  "hint": {
+    "en": "GPIO 0-53",
+    "da": "GPIO 0-53",
+    "de": "GPIO 0-53",
+    "es": "GPIO 0-53",
+    "fr": "GPIO 0-53",
+    "it": "GPIO 0-53",
+    "no": "GPIO 0-53",
+    "sv": "GPIO 0-53",
+    "pl": "GPIO 0-53",
+    "ru": "GPIO 0-53",
+    "ko": "GPIO 0-53"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=rpi"
+    },
+    {
+      "type": "number",
+      "name": "io",
+      "title": {
+        "en": "GPIO",
+        "da": "GPIO",
+        "de": "GPIO",
+        "es": "GPIO",
+        "fr": "GPIO",
+        "it": "GPIO",
+        "no": "GPIO",
+        "sv": "GPIO",
+        "pl": "GPIO",
+        "ru": "GPIO",
+        "ko": "GPIO"
+      },
+      "value": 0,
+      "min": 0,
+      "max": 53
+    }
+  ]
 }

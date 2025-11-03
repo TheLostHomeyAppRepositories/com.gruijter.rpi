@@ -1,0 +1,15 @@
+{
+  "pair": {
+    "title": "Koble til en Raspberry Pi",
+    "text": "Denne appen er laget for å brukes med RPi-er på Raspberry OS. Annet maskinvare eller Linux-distribusjoner kan fungere delvis også. SSH må være aktivert, og du må bruke legitimasjon med tilstrekkelige rettigheter.",
+    "host": "IP-adresse eller URL",
+    "port": "SSH-port",
+    "username": "Brukernavn",
+    "password": "Passord",
+    "incomplete": "IP eller URL, brukernavn og passord må fylles ut!",
+    "continue": "FREMSKRIDT"
+  },
+  "device": {
+    "connectionError": "Tilkoblingsfeil, starter på nytt nå"
+  }
+}

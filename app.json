@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "com.gruijter.rpi",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "compatibility": ">=10.0.0",
   "sdk": 3,
   "brandColor": "#c7053d",
@@ -9,11 +9,32 @@
     "local"
   ],
   "name": {
-    "en": "Raspberry Pi"
+    "en": "Raspberry Pi",
+    "nl": "Raspberry Pi",
+    "da": "Raspberry Pi",
+    "de": "Raspberry Pi",
+    "es": "Raspberry Pi",
+    "fr": "Raspberry Pi",
+    "it": "Raspberry Pi",
+    "no": "Raspberry Pi",
+    "sv": "Raspberry Pi",
+    "pl": "Raspberry Pi",
+    "ru": "Raspberry Pi",
+    "ko": "라즈베리 파이"
   },
   "description": {
     "en": "Monitor and control your RPi",
-    "pl": "Monitoruj i kontroluj swoje RPi"
+    "pl": "Monitoruj i kontroluj swoje RPi",
+    "nl": "Monitor en bestuur je RPi",
+    "da": "Overvåg og kontrolér din RPi",
+    "de": "Überwachen und steuern Sie Ihr RPi",
+    "es": "Monitorea y controla tu RPi",
+    "fr": "Surveillez et contrôlez votre RPi",
+    "it": "Monitora e controlla il tuo RPi",
+    "no": "Overvåk og kontroller RPi-en din",
+    "sv": "Övervaka och kontrollera din RPi",
+    "ru": "Мониторинг и управление вашим RPi",
+    "ko": "RPi를 모니터링하고 제어하세요"
   },
   "tags": {
     "en": [
@@ -21,6 +42,83 @@
       "raspberry",
       "linux",
       "debian",
+      "ssh"
+    ],
+    "nl": [
+      "rpi",
+      "framboos",
+      "linux",
+      "debian",
+      "ssh"
+    ],
+    "da": [
+      "rpi",
+      "hindbær",
+      "linux",
+      "debian",
+      "ssh"
+    ],
+    "de": [
+      "rpi",
+      "himbeere",
+      "linux",
+      "debian",
+      "ssh"
+    ],
+    "es": [
+      "rpi",
+      "frambuesa",
+      "linux",
+      "debian",
+      "ssh"
+    ],
+    "fr": [
+      "rpi",
+      "framboise",
+      "linux",
+      "debian",
+      "ssh"
+    ],
+    "it": [
+      "rpi",
+      "lampone",
+      "linux",
+      "debian",
+      "ssh"
+    ],
+    "no": [
+      "rpi",
+      "bringebær",
+      "linux",
+      "debian",
+      "ssh"
+    ],
+    "sv": [
+      "rpi",
+      "hallon",
+      "linux",
+      "debian",
+      "ssh"
+    ],
+    "pl": [
+      "rpi",
+      "malina",
+      "linux",
+      "debian",
+      "ssh"
+    ],
+    "ru": [
+      "rpi",
+      "малина",
+      "линукс",
+      "дебиан",
+      "ssh"
+    ],
+    "ko": [
+      "rpi",
+      "라즈베리",
+      "리눅스",
+      "데비안",
       "ssh"
     ]
   },
@@ -70,12 +168,30 @@
         "title": {
           "en": "GPIO turned high",
           "nl": "GPIO werd hoog",
-          "pl": "GPIO zmieniło się na wysokie"
+          "pl": "GPIO zmieniło się na wysokie",
+          "da": "GPIO blev høj",
+          "de": "GPIO wurde hoch",
+          "es": "GPIO se activó",
+          "fr": "GPIO devenu haut",
+          "it": "GPIO attivato",
+          "no": "GPIO ble høy",
+          "sv": "GPIO blev hög",
+          "ru": "GPIO включен",
+          "ko": "GPIO가 높게 설정됨"
         },
         "titleFormatted": {
           "en": "GPIO[[io]] turned high",
           "nl": "GPIO[[io]] werd hoog",
-          "pl": "GPIO[[io]] zmieniło się na wysokie"
+          "pl": "GPIO[[io]] zmieniło się na wysokie",
+          "da": "GPIO[[io]] blev høj",
+          "de": "GPIO[[io]] wurde hoch",
+          "es": "GPIO[[io]] se activó",
+          "fr": "GPIO[[io]] devenu haut",
+          "it": "GPIO[[io]] attivato",
+          "no": "GPIO[[io]] ble høy",
+          "sv": "GPIO[[io]] blev hög",
+          "ru": "GPIO[[io]] включен",
+          "ko": "GPIO[[io]]가 높게 설정됨"
         },
         "hint": {
           "en": "GPIO 0-53"
@@ -90,7 +206,17 @@
             "type": "number",
             "name": "io",
             "title": {
-              "en": "GPIO"
+              "en": "GPIO",
+              "da": "GPIO",
+              "de": "GPIO",
+              "es": "GPIO",
+              "fr": "GPIO",
+              "it": "GPIO",
+              "no": "GPIO",
+              "sv": "GPIO",
+              "pl": "GPIO",
+              "ru": "GPIO",
+              "ko": "GPIO"
             },
             "value": 0,
             "min": 0,
@@ -104,12 +230,30 @@
         "title": {
           "en": "GPIO turned low",
           "nl": "GPIO werd laag",
-          "pl": "GPIO zmieniło się na niskie"
+          "pl": "GPIO zmieniło się na niskie",
+          "da": "GPIO blev lavt",
+          "de": "GPIO wurde niedrig",
+          "es": "GPIO se volvió bajo",
+          "fr": "GPIO est devenu bas",
+          "it": "GPIO è diventato basso",
+          "no": "GPIO ble lav",
+          "sv": "GPIO blev lågt",
+          "ru": "GPIO стал низким",
+          "ko": "GPIO가 낮아졌습니다"
         },
         "titleFormatted": {
           "en": "GPIO[[io]] turned low",
           "nl": "GPIO[[io]] werd laag",
-          "pl": "GPIO[[io]] zmieniło się na niskie"
+          "pl": "GPIO[[io]] zmieniło się na niskie",
+          "da": "GPIO[[io]] blev lavt",
+          "de": "GPIO[[io]] wurde niedrig",
+          "es": "GPIO[[io]] se volvió bajo",
+          "fr": "GPIO[[io]] est devenu bas",
+          "it": "GPIO[[io]] è diventato basso",
+          "no": "GPIO[[io]] ble lav",
+          "sv": "GPIO[[io]] blev lågt",
+          "ru": "GPIO[[io]] стал низким",
+          "ko": "GPIO[[io]]가 낮아졌습니다"
         },
         "hint": {
           "en": "GPIO 0-53"
@@ -124,7 +268,17 @@
             "type": "number",
             "name": "io",
             "title": {
-              "en": "GPIO"
+              "en": "GPIO",
+              "da": "GPIO",
+              "de": "GPIO",
+              "es": "GPIO",
+              "fr": "GPIO",
+              "it": "GPIO",
+              "no": "GPIO",
+              "sv": "GPIO",
+              "pl": "GPIO",
+              "ru": "GPIO",
+              "ko": "GPIO"
             },
             "value": 0,
             "min": 0,
@@ -137,7 +291,16 @@
         "title": {
           "en": "The CPU temperature changed",
           "nl": "De CPU temperatuur is veranderd",
-          "pl": "Temperatura CPU uległa zmianie"
+          "pl": "Temperatura CPU uległa zmianie",
+          "da": "CPU-temperaturen ændrede sig",
+          "de": "Die CPU-Temperatur hat sich geändert",
+          "es": "La temperatura de la CPU cambió",
+          "fr": "La température du CPU a changé",
+          "it": "La temperatura della CPU è cambiata",
+          "no": "CPU-temperaturen endret seg",
+          "sv": "CPU-temperaturen ändrades",
+          "ru": "Температура ЦП изменилась",
+          "ko": "CPU 온도가 변경되었습니다"
         },
         "highlight": true,
         "args": [
@@ -154,7 +317,16 @@
             "title": {
               "en": "CPU temperature",
               "nl": "CPU temperatuur",
-              "pl": "Temperatura CPU"
+              "pl": "Temperatura CPU",
+              "da": "CPU temperatur",
+              "de": "CPU-Temperatur",
+              "es": "Temperatura de la CPU",
+              "fr": "Température du CPU",
+              "it": "Temperatura della CPU",
+              "no": "CPU-temperatur",
+              "sv": "CPU-temperatur",
+              "ru": "Температура ЦП",
+              "ko": "CPU 온도"
             },
             "example": 50
           }
@@ -165,7 +337,16 @@
         "title": {
           "en": "The GPU temperature changed",
           "nl": "De GPU temperatuur is veranderd",
-          "pl": "Temperatura GPU uległa zmianie"
+          "pl": "Temperatura GPU uległa zmianie",
+          "da": "GPU-temperaturen ændrede sig",
+          "de": "Die GPU-Temperatur hat sich geändert",
+          "es": "La temperatura de la GPU cambió",
+          "fr": "La température du GPU a changé",
+          "it": "La temperatura della GPU è cambiata",
+          "no": "GPU-temperaturen endret seg",
+          "sv": "GPU-temperaturen ändrades",
+          "ru": "Температура GPU изменилась",
+          "ko": "GPU 온도가 변경되었습니다"
         },
         "highlight": true,
         "args": [
@@ -182,7 +363,16 @@
             "title": {
               "en": "GPU temperature",
               "nl": "GPU temperatuur",
-              "pl": "Temperatura GPU"
+              "pl": "Temperatura GPU",
+              "da": "GPU-temperatur",
+              "de": "GPU-Temperatur",
+              "es": "Temperatura de la GPU",
+              "fr": "Température du GPU",
+              "it": "Temperatura della GPU",
+              "no": "GPU-temperatur",
+              "sv": "GPU-temperatur",
+              "ru": "Температура GPU",
+              "ko": "GPU 온도"
             },
             "example": 50
           }
@@ -193,7 +383,16 @@
         "title": {
           "en": "The CPU scaling (%) changed",
           "nl": "De CPU schaling (%) is veranderd",
-          "pl": "Skalowanie procesora (%) uległo zmianie"
+          "pl": "Skalowanie procesora (%) uległo zmianie",
+          "da": "CPU-skaleringen (%) er ændret",
+          "de": "Die CPU-Skalierung (%) hat sich geändert",
+          "es": "La escala de la CPU (%) ha cambiado",
+          "fr": "L'échelle du CPU (%) a changé",
+          "it": "La scalabilità della CPU (%) è cambiata",
+          "no": "CPU-skaleringen (%) har endret seg",
+          "sv": "CPU-skalan (%) har ändrats",
+          "ru": "Масштабирование процессора (%) изменилось",
+          "ko": "CPU 스케일링 (%)이 변경되었습니다"
         },
         "highlight": true,
         "args": [
@@ -210,7 +409,16 @@
             "title": {
               "en": "CPU scaling (%)",
               "nl": "CPU schaling (%)",
-              "pl": "Skalowanie CPU (%)"
+              "pl": "Skalowanie CPU (%)",
+              "da": "CPU-skalering (%)",
+              "de": "CPU-Skalierung (%)",
+              "es": "Escala de CPU (%)",
+              "fr": "Échelle de CPU (%)",
+              "it": "Scalabilità della CPU (%)",
+              "no": "CPU-skala (%)",
+              "sv": "CPU-skala (%)",
+              "ru": "Масштабирование CPU (%)",
+              "ko": "CPU 스케일링 (%)"
             },
             "example": 60
           }
@@ -221,7 +429,16 @@
         "title": {
           "en": "The CPU usage (%) changed",
           "nl": "Het CPU gebruik (%) is veranderd",
-          "pl": "Zużycie CPU (%) uległo zmianie"
+          "pl": "Zużycie CPU (%) uległo zmianie",
+          "da": "CPU-brug (%) er ændret",
+          "de": "Die CPU-Auslastung (%) hat sich geändert",
+          "es": "El uso de CPU (%) ha cambiado",
+          "fr": "L'utilisation du CPU (%) a changé",
+          "it": "L'uso della CPU (%) è cambiato",
+          "no": "CPU-bruken (%) har endret seg",
+          "sv": "CPU-användningen (%) har ändrats",
+          "ru": "Использование ЦП (%) изменилось",
+          "ko": "CPU 사용량 (%)이 변경되었습니다"
         },
         "highlight": true,
         "args": [
@@ -238,7 +455,16 @@
             "title": {
               "en": "CPU used (%)",
               "nl": "CPU gebruikt (%)",
-              "pl": "Zużycie CPU (%)"
+              "pl": "Zużycie CPU (%)",
+              "da": "CPU brugt (%)",
+              "de": "CPU verwendet (%)",
+              "es": "CPU usado (%)",
+              "fr": "CPU utilisé (%)",
+              "it": "CPU utilizzato (%)",
+              "no": "CPU brukt (%)",
+              "sv": "CPU använd (%)",
+              "ru": "Использование ЦП (%)",
+              "ko": "CPU 사용 (%)"
             },
             "example": 50
           }
@@ -249,7 +475,16 @@
         "title": {
           "en": "The memory usage (%) changed",
           "nl": "Het geheugen gebruik (%) is veranderd",
-          "pl": "Zużycie pamięci (%) uległo zmianie"
+          "pl": "Zużycie pamięci (%) uległo zmianie",
+          "da": "Brugen af hukommelsen (%) er ændret",
+          "de": "Die Speichernutzung (%) hat sich geändert",
+          "es": "El uso de memoria (%) ha cambiado",
+          "fr": "L'utilisation de la mémoire (%) a changé",
+          "it": "L'uso della memoria (%) è cambiato",
+          "no": "Minnebruket (%) har endret seg",
+          "sv": "Minness användning (%) har ändrats",
+          "ru": "Использование памяти (%) изменилось",
+          "ko": "메모리 사용량 (%)이 변경되었습니다"
         },
         "highlight": true,
         "args": [
@@ -266,7 +501,16 @@
             "title": {
               "en": "Memory used (%)",
               "nl": "Geheugen gebruikt (%)",
-              "pl": "Zużycie pamięci (%)"
+              "pl": "Zużycie pamięci (%)",
+              "da": "Hukommelse brugt (%)",
+              "de": "Verwendeter Speicher (%)",
+              "es": "Memoria utilizada (%)",
+              "fr": "Mémoire utilisée (%)",
+              "it": "Memoria utilizzata (%)",
+              "no": "Minne brukt (%)",
+              "sv": "Använt minne (%)",
+              "ru": "Используемая память (%)",
+              "ko": "사용된 메모리 (%)"
             },
             "example": 50
           }
@@ -277,7 +521,16 @@
         "title": {
           "en": "Active processes changed",
           "nl": "Actieve processen is veranderd",
-          "pl": "Aktywne procesy uległy zmianie"
+          "pl": "Aktywne procesy uległy zmianie",
+          "da": "Aktive processer ændret",
+          "de": "Aktive Prozesse geändert",
+          "es": "Procesos activos cambiados",
+          "fr": "Processus actifs modifiés",
+          "it": "Processi attivi modificati",
+          "no": "Aktive prosesser endret",
+          "sv": "Aktiva processer ändrade",
+          "ru": "Активные процессы изменились",
+          "ko": "활성 프로세스 변경됨"
         },
         "highlight": true,
         "args": [
@@ -294,7 +547,16 @@
             "title": {
               "en": "Number of processes",
               "nl": "Aantal processen",
-              "pl": "Liczba procesów"
+              "pl": "Liczba procesów",
+              "da": "Antal processer",
+              "de": "Anzahl der Prozesse",
+              "es": "Número de procesos",
+              "fr": "Nombre de processus",
+              "it": "Numero di processi",
+              "no": "Antall prosesser",
+              "sv": "Antal processer",
+              "ru": "Количество процессов",
+              "ko": "프로세스 수"
             },
             "example": 3
           }
@@ -305,7 +567,16 @@
         "title": {
           "en": "Running processes changed",
           "nl": "Lopende processen is veranderd",
-          "pl": "Działające procesy uległy zmianie"
+          "pl": "Działające procesy uległy zmianie",
+          "da": "Kørende processer ændret",
+          "de": "Laufende Prozesse geändert",
+          "es": "Procesos en ejecución cambiados",
+          "fr": "Processus en cours modifiés",
+          "it": "Processi in esecuzione modificati",
+          "no": "Kjørende prosesser endret",
+          "sv": "Körande processer ändrade",
+          "ru": "Измененные запущенные процессы",
+          "ko": "실행 중인 프로세스가 변경됨"
         },
         "highlight": true,
         "args": [
@@ -322,7 +593,16 @@
             "title": {
               "en": "Number of processes",
               "nl": "Aantal processen",
-              "pl": "Liczba procesów"
+              "pl": "Liczba procesów",
+              "da": "Antal processer",
+              "de": "Anzahl der Prozesse",
+              "es": "Número de procesos",
+              "fr": "Nombre de processus",
+              "it": "Numero di processi",
+              "no": "Antall prosesser",
+              "sv": "Antal processer",
+              "ru": "Количество процессов",
+              "ko": "프로세스 수"
             },
             "example": 3
           }
@@ -333,7 +613,16 @@
         "title": {
           "en": "The storage usage (%) changed",
           "nl": "Het opslag gebruik (%) is veranderd",
-          "pl": "Wykorzystanie miejsca do przechowywania (%) uległo zmianie"
+          "pl": "Wykorzystanie miejsca do przechowywania (%) uległo zmianie",
+          "da": "Lagerforbruget (%) er ændret",
+          "de": "Die Speichernutzung (%) hat sich geändert",
+          "es": "El uso de almacenamiento (%) ha cambiado",
+          "fr": "L'utilisation de stockage (%) a changé",
+          "it": "L'uso di spazio di archiviazione (%) è cambiato",
+          "no": "Lagerbruket (%) har endret seg",
+          "sv": "Lagringsanvändningen (%) har ändrats",
+          "ru": "Использование хранилища (%) изменилось",
+          "ko": "저장소 사용량 (%)이 변경되었습니다"
         },
         "highlight": true,
         "args": [
@@ -350,7 +639,16 @@
             "title": {
               "en": "Storage used (%)",
               "nl": "Opslag gebruikt (%)",
-              "pl": "Użyte miejsce do przechowywania (%)"
+              "pl": "Użyte miejsce do przechowywania (%)",
+              "da": "Lager brugt (%)",
+              "de": "Genutzter Speicher (%)",
+              "es": "Almacenamiento utilizado (%)",
+              "fr": "Stockage utilisé (%)",
+              "it": "Spazio di archiviazione utilizzato (%)",
+              "no": "Brukt lagringsplass (%)",
+              "sv": "Använt lagringsutrymme (%)",
+              "ru": "Используемое хранилище (%)",
+              "ko": "사용된 저장소 (%)"
             },
             "example": 50
           }
@@ -361,7 +659,16 @@
         "title": {
           "en": "The number of users changed",
           "nl": "Het aantal gebruikers is veranderd",
-          "pl": "Liczba użytkowników uległa zmianie"
+          "pl": "Liczba użytkowników uległa zmianie",
+          "da": "Antallet af brugere ændrede sig",
+          "de": "Die Anzahl der Benutzer hat sich geändert",
+          "es": "El número de usuarios cambió",
+          "fr": "Le nombre d'utilisateurs a changé",
+          "it": "Il numero di utenti è cambiato",
+          "no": "Antallet av brukere endret seg",
+          "sv": "Antalet användare ändrades",
+          "ru": "Количество пользователей изменилось",
+          "ko": "사용자 수가 변경되었습니다"
         },
         "highlight": true,
         "args": [
@@ -378,7 +685,16 @@
             "title": {
               "en": "Number of users",
               "nl": "Aantal gebruikers",
-              "pl": "Liczba użytkowników"
+              "pl": "Liczba użytkowników",
+              "da": "Antal brugere",
+              "de": "Anzahl der Benutzer",
+              "es": "Número de usuarios",
+              "fr": "Nombre d'utilisateurs",
+              "it": "Numero di utenti",
+              "no": "Antall brukere",
+              "sv": "Antal användare",
+              "ru": "Количество пользователей",
+              "ko": "사용자 수"
             },
             "example": 3
           }
@@ -389,7 +705,16 @@
         "title": {
           "en": "A user logged in",
           "nl": "Een gebruiker is ingelogd",
-          "pl": "Użytkownik się zalogował"
+          "pl": "Użytkownik się zalogował",
+          "da": "En bruger logget ind",
+          "de": "Ein Benutzer hat sich angemeldet",
+          "es": "Un usuario ha iniciado sesión",
+          "fr": "Un utilisateur s'est connecté",
+          "it": "Un utente ha effettuato l'accesso",
+          "no": "En bruker har logget inn",
+          "sv": "En användare har loggat in",
+          "ru": "Пользователь вошёл в систему",
+          "ko": "사용자가 로그인했습니다"
         },
         "highlight": true,
         "args": [
@@ -406,7 +731,16 @@
             "title": {
               "en": "User name",
               "nl": "Gebruikersnaam",
-              "pl": "Nazwa użytkownika"
+              "pl": "Nazwa użytkownika",
+              "da": "Brugernavn",
+              "de": "Benutzername",
+              "es": "Nombre de usuario",
+              "fr": "Nom d'utilisateur",
+              "it": "Nome utente",
+              "no": "Brukernavn",
+              "sv": "Användarnamn",
+              "ru": "Имя пользователя",
+              "ko": "사용자 이름"
             },
             "example": "pi"
           },
@@ -416,7 +750,16 @@
             "title": {
               "en": "TTY",
               "nl": "TTY",
-              "pl": "TTY"
+              "pl": "TTY",
+              "da": "TTY",
+              "de": "TTY",
+              "es": "TTY",
+              "fr": "TTY",
+              "it": "TTY",
+              "no": "TTY",
+              "sv": "TTY",
+              "ru": "TTY",
+              "ko": "TTY"
             },
             "example": "pts/0"
           },
@@ -426,7 +769,16 @@
             "title": {
               "en": "Host",
               "nl": "Host",
-              "pl": "Host"
+              "pl": "Host",
+              "da": "Vært",
+              "de": "Host",
+              "es": "Host",
+              "fr": "Hôte",
+              "it": "Host",
+              "no": "Vert",
+              "sv": "Värd",
+              "ru": "Хост",
+              "ko": "호스트"
             },
             "example": "192.168.1.46"
           },
@@ -436,7 +788,16 @@
             "title": {
               "en": "Login time",
               "nl": "Login tijd",
-              "pl": "Czas zalogowania"
+              "pl": "Czas zalogowania",
+              "da": "Login tid",
+              "de": "Anmeldzeit",
+              "es": "Hora de inicio de sesión",
+              "fr": "Heure de connexion",
+              "it": "Orario di accesso",
+              "no": "Innloggingstid",
+              "sv": "Inloggningstid",
+              "ru": "Время входа",
+              "ko": "로그인 시간"
             },
             "example": "2024-08-06T10:52:20+02:00"
           },
@@ -446,7 +807,16 @@
             "title": {
               "en": "Logout time",
               "nl": "Logout tijd",
-              "pl": "Czas wylogowania"
+              "pl": "Czas wylogowania",
+              "da": "Logout tid",
+              "de": "Abmeldezeit",
+              "es": "Hora de cierre de sesión",
+              "fr": "Heure de déconnexion",
+              "it": "Orario di disconnessione",
+              "no": "Utloggingstid",
+              "sv": "Utloggningstid",
+              "ru": "Время выхода",
+              "ko": "로그아웃 시간"
             },
             "example": " "
           },
@@ -456,7 +826,16 @@
             "title": {
               "en": "Duration",
               "nl": "Duur",
-              "pl": "Czas trwania"
+              "pl": "Czas trwania",
+              "da": "Varighed",
+              "de": "Dauer",
+              "es": "Duración",
+              "fr": "Durée",
+              "it": "Durata",
+              "no": "Varighet",
+              "sv": "Varaktighet",
+              "ru": "Длительность",
+              "ko": "지속 시간"
             },
             "example": " "
           },
@@ -466,7 +845,16 @@
             "title": {
               "en": "Info",
               "nl": "Info",
-              "pl": "Info"
+              "pl": "Info",
+              "da": "Info",
+              "de": "Info",
+              "es": "Información",
+              "fr": "Info",
+              "it": "Info",
+              "no": "Info",
+              "sv": "Information",
+              "ru": "Информация",
+              "ko": "정보"
             },
             "example": "still logged in"
           }
@@ -477,7 +865,16 @@
         "title": {
           "en": "A user logged out",
           "nl": "Een gebruiker is uitgelogd",
-          "pl": "Użytkownik się wylogował"
+          "pl": "Użytkownik się wylogował",
+          "da": "En bruger er logget ud",
+          "de": "Ein Benutzer hat sich abgemeldet",
+          "es": "Un usuario ha cerrado sesión",
+          "fr": "Un utilisateur s'est déconnecté",
+          "it": "Un utente ha effettuato il logout",
+          "no": "En bruker har logget ut",
+          "sv": "En användare har loggat ut",
+          "ru": "Пользователь вышел",
+          "ko": "사용자가 로그아웃했습니다"
         },
         "highlight": true,
         "args": [
@@ -494,7 +891,16 @@
             "title": {
               "en": "User name",
               "nl": "Gebruikersnaam",
-              "pl": "Nazwa użytkownika"
+              "pl": "Nazwa użytkownika",
+              "da": "Brugernavn",
+              "de": "Benutzername",
+              "es": "Nombre de usuario",
+              "fr": "Nom d'utilisateur",
+              "it": "Nome utente",
+              "no": "Brukernavn",
+              "sv": "Användarnamn",
+              "ru": "Имя пользователя",
+              "ko": "사용자 이름"
             },
             "example": "pi"
           },
@@ -504,7 +910,16 @@
             "title": {
               "en": "TTY",
               "nl": "TTY",
-              "pl": "TTY"
+              "pl": "TTY",
+              "da": "TTY",
+              "de": "TTY",
+              "es": "TTY",
+              "fr": "TTY",
+              "it": "TTY",
+              "no": "TTY",
+              "sv": "TTY",
+              "ru": "TTY",
+              "ko": "TTY"
             },
             "example": "pts/0"
           },
@@ -514,7 +929,16 @@
             "title": {
               "en": "Host",
               "nl": "Host",
-              "pl": "Host"
+              "pl": "Host",
+              "da": "Vært",
+              "de": "Host",
+              "es": "Host",
+              "fr": "Hôte",
+              "it": "Host",
+              "no": "Vert",
+              "sv": "Värd",
+              "ru": "Хост",
+              "ko": "호스트"
             },
             "example": "192.168.1.46"
           },
@@ -524,7 +948,16 @@
             "title": {
               "en": "Login time",
               "nl": "Login tijd",
-              "pl": "Czas zalogowania"
+              "pl": "Czas zalogowania",
+              "da": "Login tid",
+              "de": "Anmeldezeit",
+              "es": "Hora de inicio de sesión",
+              "fr": "Heure de connexion",
+              "it": "Ora di accesso",
+              "no": "Innloggingstid",
+              "sv": "Inloggningstid",
+              "ru": "Время входа",
+              "ko": "로그인 시간"
             },
             "example": "2024-08-06T10:52:20+02:00"
           },
@@ -534,7 +967,16 @@
             "title": {
               "en": "Logout time",
               "nl": "Logout tijd",
-              "pl": "Czas wylogowania"
+              "pl": "Czas wylogowania",
+              "da": "Logout tid",
+              "de": "Abmeldezeit",
+              "es": "Hora de cierre de sesión",
+              "fr": "Heure de déconnexion",
+              "it": "Ora di disconnessione",
+              "no": "Utloggingstid",
+              "sv": "Utloggningstid",
+              "ru": "Время выхода",
+              "ko": "로그아웃 시간"
             },
             "example": "2024-08-06T10:59:20+02:00"
           },
@@ -544,7 +986,16 @@
             "title": {
               "en": "Duration",
               "nl": "Duur",
-              "pl": "Czas trwania"
+              "pl": "Czas trwania",
+              "da": "Varighed",
+              "de": "Dauer",
+              "es": "Duración",
+              "fr": "Durée",
+              "it": "Durata",
+              "no": "Varighet",
+              "sv": "Varaktighet",
+              "ru": "Длительность",
+              "ko": "지속 시간"
             },
             "example": "00:07"
           },
@@ -554,7 +1005,16 @@
             "title": {
               "en": "Info",
               "nl": "Info",
-              "pl": "Info"
+              "pl": "Info",
+              "da": "Info",
+              "de": "Info",
+              "es": "Información",
+              "fr": "Info",
+              "it": "Info",
+              "no": "Info",
+              "sv": "Info",
+              "ru": "Информация",
+              "ko": "정보"
             },
             "example": "gone - no logout"
           }
@@ -568,15 +1028,43 @@
         "title": {
           "en": "GPIO is !{{high|low}}",
           "nl": "GPIO is !{{hoog|laag}}",
-          "pl": "GPIO jest !{{wysokie|niskie}}"
+          "pl": "GPIO jest !{{wysokie|niskie}}",
+          "da": "GPIO er !{{høj|lav}}",
+          "de": "GPIO ist !{{hoch|niedrig}}",
+          "es": "GPIO es !{{alto|bajo}}",
+          "fr": "GPIO est !{{haut|bas}}",
+          "it": "GPIO è !{{alto|basso}}",
+          "no": "GPIO er !{{høy|lav}}",
+          "sv": "GPIO är !{{hög|låg}}",
+          "ru": "GPIO это !{{высокий|низкий}}",
+          "ko": "GPIO는 !{{높음|낮음}}"
         },
         "titleFormatted": {
           "en": "GPIO[[io]] is !{{high|low}}",
           "nl": "GPIO[[io]] is !{{hoog|laag}}",
-          "pl": "GPIO[[io]] jest !{{wysokie|niskie}}"
+          "pl": "GPIO[[io]] jest !{{wysokie|niskie}}",
+          "da": "GPIO[[io]] er !{{høj|lav}}",
+          "de": "GPIO[[io]] ist !{{hoch|niedrig}}",
+          "es": "GPIO[[io]] es !{{alto|bajo}}",
+          "fr": "GPIO[[io]] est !{{haut|bas}}",
+          "it": "GPIO[[io]] è !{{alto|basso}}",
+          "no": "GPIO[[io]] er !{{høy|lav}}",
+          "sv": "GPIO[[io]] är !{{hög|låg}}",
+          "ru": "GPIO[[io]] это !{{высокий|низкий}}",
+          "ko": "GPIO[[io]]는 !{{높음|낮음}}"
         },
         "hint": {
-          "en": "GPIO 0-53"
+          "en": "GPIO 0-53",
+          "da": "GPIO 0-53",
+          "de": "GPIO 0-53",
+          "es": "GPIO 0-53",
+          "fr": "GPIO 0-53",
+          "it": "GPIO 0-53",
+          "no": "GPIO 0-53",
+          "sv": "GPIO 0-53",
+          "pl": "GPIO 0-53",
+          "ru": "GPIO 0-53",
+          "ko": "GPIO 0-53"
         },
         "args": [
           {
@@ -588,7 +1076,17 @@
             "type": "number",
             "name": "io",
             "title": {
-              "en": "GPIO"
+              "en": "GPIO",
+              "da": "GPIO",
+              "de": "GPIO",
+              "es": "GPIO",
+              "fr": "GPIO",
+              "it": "GPIO",
+              "no": "GPIO",
+              "sv": "GPIO",
+              "pl": "GPIO",
+              "ru": "GPIO",
+              "ko": "GPIO"
             },
             "value": 0,
             "min": 0,
@@ -603,17 +1101,44 @@
         "title": {
           "en": "Execute a command",
           "nl": "Voer een commando uit",
-          "pl": "Wykonaj polecenie"
+          "pl": "Wykonaj polecenie",
+          "da": "Udfør en kommando",
+          "de": "Einen Befehl ausführen",
+          "es": "Ejecutar un comando",
+          "fr": "Exécuter une commande",
+          "it": "Esegui un comando",
+          "no": "Utfør en kommando",
+          "sv": "Kör ett kommando",
+          "ru": "Выполнить команду",
+          "ko": "명령 실행"
         },
         "titleFormatted": {
           "en": "Execute [[command]]",
           "nl": "Uitvoeren [[command]]",
-          "pl": "Wykonaj [[command]]"
+          "pl": "Wykonaj [[command]]",
+          "da": "Udfør [[command]]",
+          "de": "Führe [[command]] aus",
+          "es": "Ejecutar [[command]]",
+          "fr": "Exécuter [[command]]",
+          "it": "Esegui [[command]]",
+          "no": "Utfør [[command]]",
+          "sv": "Kör [[command]]",
+          "ru": "Выполнить [[command]]",
+          "ko": "[[command]] 실행"
         },
         "hint": {
           "en": "Execute a CLI command.",
           "nl": "Voer een CLI commando uit.",
-          "pl": "Wykonaj polecenie CLI."
+          "pl": "Wykonaj polecenie CLI.",
+          "da": "Udfør en CLI-kommando.",
+          "de": "Führe einen CLI-Befehl aus.",
+          "es": "Ejecuta un comando CLI.",
+          "fr": "Exécutez une commande CLI.",
+          "it": "Esegui un comando CLI.",
+          "no": "Utfør en CLI-kommando.",
+          "sv": "Kör ett CLI-kommando.",
+          "ru": "Выполните команду CLI.",
+          "ko": "CLI 명령을 실행합니다."
         },
         "highlight": true,
         "args": [
@@ -628,7 +1153,16 @@
             "title": {
               "en": "Command",
               "nl": "Commando",
-              "pl": "Polecenie"
+              "pl": "Polecenie",
+              "da": "Kommando",
+              "de": "Befehl",
+              "es": "Comando",
+              "fr": "Commande",
+              "it": "Comando",
+              "no": "Kommando",
+              "sv": "Kommando",
+              "ru": "Команда",
+              "ko": "명령어"
             },
             "placeholder": {
               "en": "sudo who -u"
@@ -641,7 +1175,16 @@
             "title": {
               "en": "Response",
               "nl": "Respons",
-              "pl": "Odpowiedź"
+              "pl": "Odpowiedź",
+              "da": "Respons",
+              "de": "Antwort",
+              "es": "Respuesta",
+              "fr": "Réponse",
+              "it": "Risposta",
+              "no": "Respons",
+              "sv": "Svar",
+              "ru": "Ответ",
+              "ko": "응답"
             },
             "type": "string",
             "example": "pi pts/1 2024-08-19 11:09 . 76414 (192.168.0.18)"
@@ -653,12 +1196,30 @@
         "title": {
           "en": "List containers (JSON)",
           "nl": "Lijst containers (JSON)",
-          "pl": "Wyświetl wszystkie kontenery (JSON)"
+          "pl": "Wyświetl wszystkie kontenery (JSON)",
+          "da": "List containere (JSON)",
+          "de": "Container auflisten (JSON)",
+          "es": "Lista de contenedores (JSON)",
+          "fr": "Lister les conteneurs (JSON)",
+          "it": "Elenco dei contenitori (JSON)",
+          "no": "Liste containere (JSON)",
+          "sv": "Lista containrar (JSON)",
+          "ru": "Список контейнеров (JSON)",
+          "ko": "컨테이너 목록 (JSON)"
         },
         "hint": {
           "en": "Get a list and status of all Docker containers in JSON format.",
           "nl": "Geeft een lijst en status van alle Docker containers in JSON formaat.",
-          "pl": "Pobierz listę i status wszystkich kontenerów Docker w formacie JSON."
+          "pl": "Pobierz listę i status wszystkich kontenerów Docker w formacie JSON.",
+          "da": "Få en liste og status for alle Docker-containere i JSON-format.",
+          "de": "Holen Sie sich eine Liste und den Status aller Docker-Container im JSON-Format.",
+          "es": "Obtén una lista y estado de todos los contenedores Docker en formato JSON.",
+          "fr": "Obtenez une liste et le statut de tous les conteneurs Docker au format JSON.",
+          "it": "Ottieni un elenco e lo stato di tutti i contenitori Docker in formato JSON.",
+          "no": "Få en liste og status for alle Docker-containere i JSON-format.",
+          "sv": "Få en lista och status för alla Docker-containrar i JSON-format.",
+          "ru": "Получите список и статус всех контейнеров Docker в формате JSON.",
+          "ko": "JSON 형식으로 모든 Docker 컨테이너의 목록과 상태를 가져옵니다."
         },
         "highlight": true,
         "args": [
@@ -674,7 +1235,16 @@
             "title": {
               "en": "Containers",
               "nl": "Containers",
-              "pl": "Kontenery"
+              "pl": "Kontenery",
+              "da": "Containere",
+              "de": "Container",
+              "es": "Contenedores",
+              "fr": "Conteneurs",
+              "it": "Contenitori",
+              "no": "Containere",
+              "sv": "Containrar",
+              "ru": "Контейнеры",
+              "ko": "컨테이너"
             },
             "type": "string",
             "example": "[{'CONTAINER ID':'b1a043344f3d','IMAGE':'VPNserver:latest','COMMAND':'/init','CREATED':'3 weeks ago','STATUS':'Up About an hour','PORTS':'0.0.0.0:1234->1234','NAMES':'VPNserver'}]"
@@ -686,12 +1256,30 @@
         "title": {
           "en": "Power off (!)",
           "nl": "Uitschakelen (!)",
-          "pl": "Wyłącz zasilanie (!)"
+          "pl": "Wyłącz zasilanie (!)",
+          "da": "Sluk for strømmen (!)",
+          "de": "Ausschalten (!)",
+          "es": "Apagar (!)",
+          "fr": "Éteindre (!)",
+          "it": "Spegni (!)",
+          "no": "Slå av (!)",
+          "sv": "Stäng av (!)",
+          "ru": "Выключить (!)",
+          "ko": "전원 끄기 (!)"
         },
         "hint": {
           "en": "ATTENTION! There is no command to power on the RPi.",
           "nl": "LET OP! Er is geen commando om de RPI op te starten.",
-          "pl": "UWAGA! Nie istnieje polecenie do włączenia RPi."
+          "pl": "UWAGA! Nie istnieje polecenie do włączenia RPi.",
+          "da": "OPMÆRKSOMHED! Der er ingen kommando til at tænde for RPi.",
+          "de": "ACHTUNG! Es gibt keinen Befehl, um den RPi einzuschalten.",
+          "es": "¡ATENCIÓN! No hay ningún comando para encender el RPi.",
+          "fr": "ATTENTION ! Il n'y a pas de commande pour allumer le RPi.",
+          "it": "ATTENZIONE! Non esiste un comando per accendere il RPi.",
+          "no": "VIKTIG! Det finnes ingen kommando for å starte RPi.",
+          "sv": "UPPMÄRKSAMHET! Det finns inget kommando för att slå på RPi.",
+          "ru": "ВНИМАНИЕ! Нет команды для включения RPi.",
+          "ko": "주의! RPi를 켜는 명령이 없습니다."
         },
         "highlight": true,
         "args": [
@@ -707,7 +1295,16 @@
         "title": {
           "en": "Reboot",
           "nl": "Herstart",
-          "pl": "Ponowne uruchomienie"
+          "pl": "Ponowne uruchomienie",
+          "da": "Genstart",
+          "de": "Neustart",
+          "es": "Reiniciar",
+          "fr": "Redémarrer",
+          "it": "Riavvia",
+          "no": "Omstart",
+          "sv": "Starta om",
+          "ru": "Перезагрузка",
+          "ko": "재부팅"
         },
         "highlight": true,
         "args": [
@@ -723,12 +1320,30 @@
         "title": {
           "en": "Restart container",
           "nl": "Restart container",
-          "pl": "Uruchom ponownie kontener"
+          "pl": "Uruchom ponownie kontener",
+          "da": "Genstart container",
+          "de": "Container neu starten",
+          "es": "Reiniciar contenedor",
+          "fr": "Redémarrer le conteneur",
+          "it": "Riavvia contenitore",
+          "no": "Start på nytt container",
+          "sv": "Starta om container",
+          "ru": "Перезапустить контейнер",
+          "ko": "컨테이너 재시작"
         },
         "titleFormatted": {
           "en": "Restart container [[id]]",
           "nl": "Restart container [[id]]",
-          "pl": "Uruchom ponownie kontener [[id]]"
+          "pl": "Uruchom ponownie kontener [[id]]",
+          "da": "Genstart container [[id]]",
+          "de": "Container neu starten [[id]]",
+          "es": "Reiniciar contenedor [[id]]",
+          "fr": "Redémarrer le conteneur [[id]]",
+          "it": "Riavvia contenitore [[id]]",
+          "no": "Start på nytt container [[id]]",
+          "sv": "Starta om container [[id]]",
+          "ru": "Перезапустить контейнер [[id]]",
+          "ko": "컨테이너 재시작 [[id]]"
         },
         "highlight": true,
         "args": [
@@ -741,10 +1356,30 @@
             "name": "id",
             "type": "autocomplete",
             "title": {
-              "en": "ID"
+              "en": "ID",
+              "da": "ID",
+              "de": "ID",
+              "es": "ID",
+              "fr": "ID",
+              "it": "ID",
+              "no": "ID",
+              "sv": "ID",
+              "pl": "ID",
+              "ru": "ID",
+              "ko": "ID"
             },
             "placeholder": {
-              "en": "VPNserver"
+              "en": "VPNserver",
+              "da": "VPNserver",
+              "de": "VPNserver",
+              "es": "VPNserver",
+              "fr": "VPNserver",
+              "it": "VPNserver",
+              "no": "VPNserver",
+              "sv": "VPNserver",
+              "pl": "VPNserver",
+              "ru": "VPNserver",
+              "ko": "VPNserver"
             }
           }
         ],
@@ -754,12 +1389,30 @@
         "title": {
           "en": "Set GPIO output high/low",
           "nl": "Zet GPIO uitgang hoog/laag",
-          "pl": "Ustaw wyjście GPIO na wysokie/niskie"
+          "pl": "Ustaw wyjście GPIO na wysokie/niskie",
+          "da": "Indstil GPIO-udgang høj/lav",
+          "de": "Setze GPIO-Ausgang hoch/niedrig",
+          "es": "Establecer salida GPIO alta/baja",
+          "fr": "Définir la sortie GPIO haute/basse",
+          "it": "Imposta l'uscita GPIO alta/bassa",
+          "no": "Sett GPIO-utgang høy/lav",
+          "sv": "Ställ GPIO-utgång hög/låg",
+          "ru": "Установите выход GPIO в высокий/низкий",
+          "ko": "GPIO 출력을 높음/낮음으로 설정"
         },
         "titleFormatted": {
           "en": "Set GPIO[[io]] to [[high]]",
           "nl": "Zet GPIO[[io]] naar [[high]]",
-          "pl": "Ustaw GPIO[[io]] na [[high]]"
+          "pl": "Ustaw GPIO[[io]] na [[high]]",
+          "da": "Indstil GPIO[[io]] til [[high]]",
+          "de": "Setze GPIO[[io]] auf [[high]]",
+          "es": "Establecer GPIO[[io]] en [[high]]",
+          "fr": "Définir GPIO[[io]] sur [[high]]",
+          "it": "Imposta GPIO[[io]] su [[high]]",
+          "no": "Sett GPIO[[io]] til [[high]]",
+          "sv": "Ställ GPIO[[io]] till [[high]]",
+          "ru": "Установите GPIO[[io]] на [[high]]",
+          "ko": "GPIO[[io]]를 [[high]]으로 설정"
         },
         "highlight": true,
         "args": [
@@ -772,10 +1425,30 @@
             "name": "io",
             "type": "number",
             "title": {
-              "en": "GPIO"
+              "en": "GPIO",
+              "da": "GPIO",
+              "de": "GPIO",
+              "es": "GPIO",
+              "fr": "GPIO",
+              "it": "GPIO",
+              "no": "GPIO",
+              "sv": "GPIO",
+              "pl": "GPIO",
+              "ru": "GPIO",
+              "ko": "GPIO"
             },
             "placeholder": {
-              "en": "GPIO 0-53"
+              "en": "GPIO 0-53",
+              "da": "GPIO 0-53",
+              "de": "GPIO 0-53",
+              "es": "GPIO 0-53",
+              "fr": "GPIO 0-53",
+              "it": "GPIO 0-53",
+              "no": "GPIO 0-53",
+              "sv": "GPIO 0-53",
+              "pl": "GPIO 0-53",
+              "ru": "GPIO 0-53",
+              "ko": "GPIO 0-53"
             }
           },
           {
@@ -784,7 +1457,16 @@
             "title": {
               "en": "High/Low",
               "nl": "Hoog/Laag",
-              "pl": "Wysoki/Niski"
+              "pl": "Wysoki/Niski",
+              "da": "Høj/Lav",
+              "de": "Hoch/Niedrig",
+              "es": "Alto/Bajo",
+              "fr": "Haut/Bas",
+              "it": "Alto/Basso",
+              "no": "Høy Lav",
+              "sv": "Hög/Låg",
+              "ru": "Высокий/Низкий",
+              "ko": "높음/낮음"
             }
           }
         ],
@@ -794,12 +1476,30 @@
         "title": {
           "en": "Start container",
           "nl": "Start container",
-          "pl": "Uruchom kontener"
+          "pl": "Uruchom kontener",
+          "da": "Start container",
+          "de": "Container starten",
+          "es": "Iniciar contenedor",
+          "fr": "Démarrer le conteneur",
+          "it": "Avvia contenitore",
+          "no": "Start container",
+          "sv": "Starta behållare",
+          "ru": "Запустить контейнер",
+          "ko": "컨테이너 시작"
         },
         "titleFormatted": {
           "en": "Start container [[id]]",
           "nl": "Start container [[id]]",
-          "pl": "Uruchom kontener [[id]]"
+          "pl": "Uruchom kontener [[id]]",
+          "da": "Start container [[id]]",
+          "de": "Container starten [[id]]",
+          "es": "Iniciar contenedor [[id]]",
+          "fr": "Démarrer le conteneur [[id]]",
+          "it": "Avvia contenitore [[id]]",
+          "no": "Start container [[id]]",
+          "sv": "Starta behållare [[id]]",
+          "ru": "Запустить контейнер [[id]]",
+          "ko": "컨테이너 시작 [[id]]"
         },
         "highlight": true,
         "args": [
@@ -812,10 +1512,30 @@
             "name": "id",
             "type": "autocomplete",
             "title": {
-              "en": "ID"
+              "en": "ID",
+              "da": "ID",
+              "de": "ID",
+              "es": "ID",
+              "fr": "ID",
+              "it": "ID",
+              "no": "ID",
+              "sv": "ID",
+              "pl": "ID",
+              "ru": "ИД",
+              "ko": "ID"
             },
             "placeholder": {
-              "en": "VPNserver"
+              "en": "VPNserver",
+              "da": "VPNserver",
+              "de": "VPNserver",
+              "es": "ServidorVPN",
+              "fr": "ServeurVPN",
+              "it": "ServerVPN",
+              "no": "VPNserver",
+              "sv": "VPNserver",
+              "pl": "VPNserwer",
+              "ru": "VPNсервер",
+              "ko": "VPN 서버"
             }
           }
         ],
@@ -825,12 +1545,30 @@
         "title": {
           "en": "Stop container",
           "nl": "Stop container",
-          "pl": "Zatrzymaj kontener"
+          "pl": "Zatrzymaj kontener",
+          "da": "Stop beholder",
+          "de": "Container stoppen",
+          "es": "Detener contenedor",
+          "fr": "Arrêter le conteneur",
+          "it": "Ferma contenitore",
+          "no": "Stop container",
+          "sv": "Stoppa behållare",
+          "ru": "Остановить контейнер",
+          "ko": "컨테이너 중지"
         },
         "titleFormatted": {
           "en": "Stop container [[id]]",
           "nl": "Stop container [[id]]",
-          "pl": "Zatrzymaj kontener [[id]]"
+          "pl": "Zatrzymaj kontener [[id]]",
+          "da": "Stop beholder [[id]]",
+          "de": "Container stoppen [[id]]",
+          "es": "Detener contenedor [[id]]",
+          "fr": "Arrêter le conteneur [[id]]",
+          "it": "Ferma contenitore [[id]]",
+          "no": "Stop container [[id]]",
+          "sv": "Stoppa behållare [[id]]",
+          "ru": "Остановить контейнер [[id]]",
+          "ko": "컨테이너 중지 [[id]]"
         },
         "highlight": true,
         "args": [
@@ -843,10 +1581,30 @@
             "name": "id",
             "type": "autocomplete",
             "title": {
-              "en": "ID"
+              "en": "ID",
+              "da": "ID",
+              "de": "ID",
+              "es": "ID",
+              "fr": "ID",
+              "it": "ID",
+              "no": "ID",
+              "sv": "ID",
+              "pl": "ID",
+              "ru": "ИД",
+              "ko": "아이디"
             },
             "placeholder": {
-              "en": "VPNserver"
+              "en": "VPNserver",
+              "da": "VPNserver",
+              "de": "VPNserver",
+              "es": "ServidorVPN",
+              "fr": "ServeurVPN",
+              "it": "ServerVPN",
+              "no": "VPN-server",
+              "sv": "VPNserver",
+              "pl": "SerwerVPN",
+              "ru": "VPN-сервер",
+              "ko": "VPN 서버"
             }
           }
         ],
@@ -856,12 +1614,30 @@
         "title": {
           "en": "Update OS (!)",
           "nl": "OS Updaten (!)",
-          "pl": "Zaktualizuj system operacyjny (!)"
+          "pl": "Zaktualizuj system operacyjny (!)",
+          "da": "Opdater OS (!)",
+          "de": "OS aktualisieren (!)",
+          "es": "Actualizar OS (!)",
+          "fr": "Mettre à jour le système d'exploitation (!)",
+          "it": "Aggiorna OS (!)",
+          "no": "Oppdater OS (!)",
+          "sv": "Uppdatera OS (!)",
+          "ru": "Обновить ОС (!)",
+          "ko": "OS 업데이트 (!)"
         },
         "hint": {
           "en": "ATTENTION! This will automatically update the OS without feedback.",
           "nl": "LET OP! Dit zal automatisch het OS updaten zonder feedback.",
-          "pl": "UWAGA! To automatycznie zaktualizuje system operacyjny bez informacji zwrotnej."
+          "pl": "UWAGA! To automatycznie zaktualizuje system operacyjny bez informacji zwrotnej.",
+          "da": "OPMÆRKSOMHED! Dette vil automatisk opdatere OS uden feedback.",
+          "de": "ACHTUNG! Dies wird das OS automatisch ohne Rückmeldung aktualisieren.",
+          "es": "¡ATENCIÓN! Esto actualizará automáticamente el sistema operativo sin comentarios.",
+          "fr": "ATTENTION! Cela mettra automatiquement à jour le système d'exploitation sans retour.",
+          "it": "ATTENZIONE! Questo aggiornerà automaticamente il sistema operativo senza feedback.",
+          "no": "OPPMERKSOMHET! Dette vil automatisk oppdatere OS uten tilbakemelding.",
+          "sv": "UPPMÄRKSAMHET! Detta kommer att automatiskt uppdatera OS utan feedback.",
+          "ru": "ВНИМАНИЕ! Это автоматически обновит ОС без обратной связи.",
+          "ko": "주의! 이는 피드백 없이 OS를 자동으로 업데이트합니다."
         },
         "highlight": true,
         "args": [
@@ -878,7 +1654,18 @@
   "drivers": [
     {
       "name": {
-        "en": "RPi"
+        "en": "RPi",
+        "nl": "RPi",
+        "da": "RPi",
+        "de": "RPi",
+        "es": "RPi",
+        "fr": "RPi",
+        "it": "RPi",
+        "no": "RPi",
+        "sv": "RPi",
+        "pl": "RPi",
+        "ru": "RPi",
+        "ko": "RPi"
       },
       "class": "other",
       "capabilities": [
@@ -897,151 +1684,726 @@
         "meter_download_speed.wlan0",
         "meter_upload_speed.wlan0",
         "onoff.gpio0",
+        "button.gpio0",
         "onoff.gpio1",
+        "button.gpio1",
         "onoff.gpio2",
+        "button.gpio2",
         "onoff.gpio3",
+        "button.gpio3",
         "onoff.gpio4",
+        "button.gpio4",
         "onoff.gpio5",
+        "button.gpio5",
         "onoff.gpio6",
+        "button.gpio6",
         "onoff.gpio7",
+        "button.gpio7",
         "onoff.gpio8",
+        "button.gpio8",
         "onoff.gpio9",
+        "button.gpio9",
         "onoff.gpio10",
+        "button.gpio10",
         "onoff.gpio11",
+        "button.gpio11",
         "onoff.gpio12",
+        "button.gpio12",
         "onoff.gpio13",
+        "button.gpio13",
         "onoff.gpio14",
-        "onoff.gpio15"
+        "button.gpio14",
+        "onoff.gpio15",
+        "button.gpio15"
       ],
       "capabilitiesOptions": {
         "measure_temperature.gpu": {
           "title": {
             "en": "GPU Temp",
             "nl": "GPU Temp",
-            "pl": "Temperatura GPU"
+            "da": "GPU Temp",
+            "de": "GPU-Temperatur",
+            "es": "Temp GPU",
+            "fr": "Temp GPU",
+            "it": "Temperatura GPU",
+            "no": "GPU Temp",
+            "sv": "GPU Temp",
+            "pl": "Temperatura GPU",
+            "ru": "Температура GPU",
+            "ko": "GPU 온도"
           }
         },
         "measure_temperature.cpu": {
           "title": {
             "en": "CPU Temp",
             "nl": "CPU Temp",
-            "pl": "Temperatura CPU"
+            "da": "CPU Temp",
+            "de": "CPU-Temperatur",
+            "es": "Temp CPU",
+            "fr": "Temp CPU",
+            "it": "Temperatura CPU",
+            "no": "CPU Temp",
+            "sv": "CPU Temp",
+            "pl": "Temperatura CPU",
+            "ru": "Температура CPU",
+            "ko": "CPU 온도"
           }
         },
         "meter_processes.running": {
           "title": {
             "en": "Running processes",
             "nl": "Lopende processen",
-            "pl": "Aktywne procesy"
+            "da": "Kørende processer",
+            "de": "Laufende Prozesse",
+            "es": "Procesos en ejecución",
+            "fr": "Processus en cours",
+            "it": "Processi in esecuzione",
+            "no": "Kjørende prosesser",
+            "sv": "Aktiva processer",
+            "pl": "Uruchomione procesy",
+            "ru": "Запущенные процессы",
+            "ko": "실행 중인 프로세스"
           }
         },
         "meter_download_speed.eth0": {
           "title": {
             "en": "ETH down speed",
             "nl": "ETH down snelheid",
-            "pl": "Szybkość pob ETH"
+            "da": "ETH downloadhastighed",
+            "de": "ETH Download-Geschwindigkeit",
+            "es": "Velocidad de descarga ETH",
+            "fr": "Vitesse de téléchargement ETH",
+            "it": "Velocità di download ETH",
+            "no": "ETH nedlastingshastighet",
+            "sv": "ETH nedladdningshastighet",
+            "pl": "Prędkość pobierania ETH",
+            "ru": "Скорость загрузки ETH",
+            "ko": "ETH 다운로드 속도"
           }
         },
         "meter_upload_speed.eth0": {
           "title": {
             "en": "ETH up speed",
             "nl": "ETH up snelheid",
-            "pl": "Szybkość wys ETH"
+            "da": "ETH uploadhastighed",
+            "de": "ETH Upload-Geschwindigkeit",
+            "es": "Velocidad de subida ETH",
+            "fr": "Vitesse d'envoi ETH",
+            "it": "Velocità di upload ETH",
+            "no": "ETH opplastingshastighet",
+            "sv": "ETH uppladdningshastighet",
+            "pl": "Prędkość wysyłania ETH",
+            "ru": "Скорость загрузки ETH",
+            "ko": "ETH 업로드 속도"
           }
         },
         "meter_download_speed.wlan0": {
           "title": {
             "en": "WLAN down speed",
             "nl": "WLAN down snelheid",
-            "pl": "Szybkość pob WLAN"
+            "da": "WLAN downloadhastighed",
+            "de": "WLAN Download-Geschwindigkeit",
+            "es": "Velocidad de descarga WLAN",
+            "fr": "Vitesse de téléchargement WLAN",
+            "it": "Velocità di download WLAN",
+            "no": "WLAN nedlastingshastighet",
+            "sv": "WLAN nedladdningshastighet",
+            "pl": "Prędkość pobierania WLAN",
+            "ru": "Скорость загрузки WLAN",
+            "ko": "WLAN 다운로드 속도"
           }
         },
         "meter_upload_speed.wlan0": {
           "title": {
             "en": "WLAN up speed",
             "nl": "WLAN up snelheid",
-            "pl": "Szypkość wys WLAN"
+            "da": "WLAN uploadhastighed",
+            "de": "WLAN Upload-Geschwindigkeit",
+            "es": "Velocidad de subida WLAN",
+            "fr": "Vitesse d'envoi WLAN",
+            "it": "Velocità di upload WLAN",
+            "no": "WLAN opplastingshastighet",
+            "sv": "WLAN uppladdningshastighet",
+            "pl": "Prędkość wysyłania WLAN",
+            "ru": "Скорость загрузки WLAN",
+            "ko": "WLAN 업로드 속도"
           }
         },
         "onoff.gpio0": {
           "title": {
-            "en": "GPIO 00"
-          }
+            "en": "GPIO 00",
+            "da": "GPIO 00",
+            "de": "GPIO 00",
+            "es": "GPIO 00",
+            "fr": "GPIO 00",
+            "it": "GPIO 00",
+            "no": "GPIO 00",
+            "sv": "GPIO 00",
+            "pl": "GPIO 00",
+            "ru": "GPIO 00",
+            "ko": "GPIO 00"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false
         },
         "onoff.gpio1": {
           "title": {
-            "en": "GPIO 01"
-          }
+            "en": "GPIO 01",
+            "da": "GPIO 01",
+            "de": "GPIO 01",
+            "es": "GPIO 01",
+            "fr": "GPIO 01",
+            "it": "GPIO 01",
+            "no": "GPIO 01",
+            "sv": "GPIO 01",
+            "pl": "GPIO 01",
+            "ru": "GPIO 01",
+            "ko": "GPIO 01"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false
         },
         "onoff.gpio2": {
           "title": {
-            "en": "GPIO 02"
-          }
+            "en": "GPIO 02",
+            "da": "GPIO 02",
+            "de": "GPIO 02",
+            "es": "GPIO 02",
+            "fr": "GPIO 02",
+            "it": "GPIO 02",
+            "no": "GPIO 02",
+            "sv": "GPIO 02",
+            "pl": "GPIO 02",
+            "ru": "GPIO 02",
+            "ko": "GPIO 02"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false
         },
         "onoff.gpio3": {
           "title": {
-            "en": "GPIO 03"
-          }
+            "en": "GPIO 03",
+            "da": "GPIO 03",
+            "de": "GPIO 03",
+            "es": "GPIO 03",
+            "fr": "GPIO 03",
+            "it": "GPIO 03",
+            "no": "GPIO 03",
+            "sv": "GPIO 03",
+            "pl": "GPIO 03",
+            "ru": "GPIO 03",
+            "ko": "GPIO 03"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false
         },
         "onoff.gpio4": {
           "title": {
-            "en": "GPIO 04"
-          }
+            "en": "GPIO 04",
+            "da": "GPIO 04",
+            "de": "GPIO 04",
+            "es": "GPIO 04",
+            "fr": "GPIO 04",
+            "it": "GPIO 04",
+            "no": "GPIO 04",
+            "sv": "GPIO 04",
+            "pl": "GPIO 04",
+            "ru": "GPIO 04",
+            "ko": "GPIO 04"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false
         },
         "onoff.gpio5": {
           "title": {
-            "en": "GPIO 05"
-          }
+            "en": "GPIO 05",
+            "da": "GPIO 05",
+            "de": "GPIO 05",
+            "es": "GPIO 05",
+            "fr": "GPIO 05",
+            "it": "GPIO 05",
+            "no": "GPIO 05",
+            "sv": "GPIO 05",
+            "pl": "GPIO 05",
+            "ru": "GPIO 05",
+            "ko": "GPIO 05"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false
         },
         "onoff.gpio6": {
           "title": {
-            "en": "GPIO 06"
-          }
+            "en": "GPIO 06",
+            "da": "GPIO 06",
+            "de": "GPIO 06",
+            "es": "GPIO 06",
+            "fr": "GPIO 06",
+            "it": "GPIO 06",
+            "no": "GPIO 06",
+            "sv": "GPIO 06",
+            "pl": "GPIO 06",
+            "ru": "GPIO 06",
+            "ko": "GPIO 06"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false
         },
         "onoff.gpio7": {
           "title": {
-            "en": "GPIO 07"
-          }
+            "en": "GPIO 07",
+            "da": "GPIO 07",
+            "de": "GPIO 07",
+            "es": "GPIO 07",
+            "fr": "GPIO 07",
+            "it": "GPIO 07",
+            "no": "GPIO 07",
+            "sv": "GPIO 07",
+            "pl": "GPIO 07",
+            "ru": "GPIO 07",
+            "ko": "GPIO 07"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false
         },
         "onoff.gpio8": {
           "title": {
-            "en": "GPIO 08"
-          }
+            "en": "GPIO 08",
+            "da": "GPIO 08",
+            "de": "GPIO 08",
+            "es": "GPIO 08",
+            "fr": "GPIO 08",
+            "it": "GPIO 08",
+            "no": "GPIO 08",
+            "sv": "GPIO 08",
+            "pl": "GPIO 08",
+            "ru": "GPIO 08",
+            "ko": "GPIO 08"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false
         },
         "onoff.gpio9": {
           "title": {
-            "en": "GPIO 09"
-          }
+            "en": "GPIO 09",
+            "da": "GPIO 09",
+            "de": "GPIO 09",
+            "es": "GPIO 09",
+            "fr": "GPIO 09",
+            "it": "GPIO 09",
+            "no": "GPIO 09",
+            "sv": "GPIO 09",
+            "pl": "GPIO 09",
+            "ru": "GPIO 09",
+            "ko": "GPIO 09"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false
         },
         "onoff.gpio10": {
           "title": {
-            "en": "GPIO 10"
-          }
+            "en": "GPIO 10",
+            "da": "GPIO 10",
+            "de": "GPIO 10",
+            "es": "GPIO 10",
+            "fr": "GPIO 10",
+            "it": "GPIO 10",
+            "no": "GPIO 10",
+            "sv": "GPIO 10",
+            "pl": "GPIO 10",
+            "ru": "GPIO 10",
+            "ko": "GPIO 10"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false
         },
         "onoff.gpio11": {
           "title": {
-            "en": "GPIO 11"
-          }
+            "en": "GPIO 11",
+            "da": "GPIO 11",
+            "de": "GPIO 11",
+            "es": "GPIO 11",
+            "fr": "GPIO 11",
+            "it": "GPIO 11",
+            "no": "GPIO 11",
+            "sv": "GPIO 11",
+            "pl": "GPIO 11",
+            "ru": "GPIO 11",
+            "ko": "GPIO 11"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false
         },
         "onoff.gpio12": {
           "title": {
-            "en": "GPIO 12"
-          }
+            "en": "GPIO 12",
+            "da": "GPIO 12",
+            "de": "GPIO 12",
+            "es": "GPIO 12",
+            "fr": "GPIO 12",
+            "it": "GPIO 12",
+            "no": "GPIO 12",
+            "sv": "GPIO 12",
+            "pl": "GPIO 12",
+            "ru": "GPIO 12",
+            "ko": "GPIO 12"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false
         },
         "onoff.gpio13": {
           "title": {
-            "en": "GPIO 13"
-          }
+            "en": "GPIO 13",
+            "da": "GPIO 13",
+            "de": "GPIO 13",
+            "es": "GPIO 13",
+            "fr": "GPIO 13",
+            "it": "GPIO 13",
+            "no": "GPIO 13",
+            "sv": "GPIO 13",
+            "pl": "GPIO 13",
+            "ru": "GPIO 13",
+            "ko": "GPIO 13"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false
         },
         "onoff.gpio14": {
           "title": {
-            "en": "GPIO 14"
-          }
+            "en": "GPIO 14",
+            "da": "GPIO 14",
+            "de": "GPIO 14",
+            "es": "GPIO 14",
+            "fr": "GPIO 14",
+            "it": "GPIO 14",
+            "no": "GPIO 14",
+            "sv": "GPIO 14",
+            "pl": "GPIO 14",
+            "ru": "GPIO 14",
+            "ko": "GPIO 14"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false
         },
         "onoff.gpio15": {
           "title": {
-            "en": "GPIO 15"
-          }
+            "en": "GPIO 15",
+            "da": "GPIO 15",
+            "de": "GPIO 15",
+            "es": "GPIO 15",
+            "fr": "GPIO 15",
+            "it": "GPIO 15",
+            "no": "GPIO 15",
+            "sv": "GPIO 15",
+            "pl": "GPIO 15",
+            "ru": "GPIO 15",
+            "ko": "GPIO 15"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false
+        },
+        "button.gpio0": {
+          "title": {
+            "en": "GPIO 00 is OUTPUT",
+            "da": "GPIO 00 er OUTPUT",
+            "de": "GPIO 00 ist OUTPUT",
+            "es": "GPIO 00 es SALIDA",
+            "fr": "GPIO 00 est SORTIE",
+            "it": "GPIO 00 è OUTPUT",
+            "no": "GPIO 00 er UTGANG",
+            "sv": "GPIO 00 är UTTAG",
+            "pl": "GPIO 00 to WYJŚCIE",
+            "ru": "GPIO 00 является ВЫХОДОМ",
+            "ko": "GPIO 00은 출력입니다"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false,
+          "getable": true,
+          "setable": true
+        },
+        "button.gpio1": {
+          "title": {
+            "en": "GPIO 01 is OUTPUT",
+            "da": "GPIO 01 er OUTPUT",
+            "de": "GPIO 01 ist OUTPUT",
+            "es": "GPIO 01 es SALIDA",
+            "fr": "GPIO 01 est SORTIE",
+            "it": "GPIO 01 è OUTPUT",
+            "no": "GPIO 01 er UTGANG",
+            "sv": "GPIO 01 är UTTAG",
+            "pl": "GPIO 01 to WYJŚCIE",
+            "ru": "GPIO 01 является ВЫХОДОМ",
+            "ko": "GPIO 01은 출력입니다"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false,
+          "getable": true,
+          "setable": true
+        },
+        "button.gpio2": {
+          "title": {
+            "en": "GPIO 02 is OUTPUT",
+            "da": "GPIO 02 er OUTPUT",
+            "de": "GPIO 02 ist OUTPUT",
+            "es": "GPIO 02 es SALIDA",
+            "fr": "GPIO 02 est SORTIE",
+            "it": "GPIO 02 è OUTPUT",
+            "no": "GPIO 02 er UTGANG",
+            "sv": "GPIO 02 är UTTAG",
+            "pl": "GPIO 02 to WYJŚCIE",
+            "ru": "GPIO 02 является ВЫХОДОМ",
+            "ko": "GPIO 02은 출력입니다"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false,
+          "getable": true,
+          "setable": true
+        },
+        "button.gpio3": {
+          "title": {
+            "en": "GPIO 03 is OUTPUT",
+            "da": "GPIO 03 er OUTPUT",
+            "de": "GPIO 03 ist OUTPUT",
+            "es": "GPIO 03 es SALIDA",
+            "fr": "GPIO 03 est SORTIE",
+            "it": "GPIO 03 è OUTPUT",
+            "no": "GPIO 03 er UTGANG",
+            "sv": "GPIO 03 är UTTAG",
+            "pl": "GPIO 03 to WYJŚCIE",
+            "ru": "GPIO 03 является ВЫХОДОМ",
+            "ko": "GPIO 03은 출력입니다"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false,
+          "getable": true,
+          "setable": true
+        },
+        "button.gpio4": {
+          "title": {
+            "en": "GPIO 04 is OUTPUT",
+            "da": "GPIO 04 er OUTPUT",
+            "de": "GPIO 04 ist OUTPUT",
+            "es": "GPIO 04 es SALIDA",
+            "fr": "GPIO 04 est SORTIE",
+            "it": "GPIO 04 è OUTPUT",
+            "no": "GPIO 04 er UTGANG",
+            "sv": "GPIO 04 är UTTAG",
+            "pl": "GPIO 04 to WYJŚCIE",
+            "ru": "GPIO 04 является ВЫХОДОМ",
+            "ko": "GPIO 04은 출력입니다"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false,
+          "getable": true,
+          "setable": true
+        },
+        "button.gpio5": {
+          "title": {
+            "en": "GPIO 05 is OUTPUT",
+            "da": "GPIO 05 er OUTPUT",
+            "de": "GPIO 05 ist OUTPUT",
+            "es": "GPIO 05 es SALIDA",
+            "fr": "GPIO 05 est SORTIE",
+            "it": "GPIO 05 è OUTPUT",
+            "no": "GPIO 05 er UTGANG",
+            "sv": "GPIO 05 är UTTAG",
+            "pl": "GPIO 05 to WYJŚCIE",
+            "ru": "GPIO 05 является ВЫХОДОМ",
+            "ko": "GPIO 05은 출력입니다"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false,
+          "getable": true,
+          "setable": true
+        },
+        "button.gpio6": {
+          "title": {
+            "en": "GPIO 06 is OUTPUT",
+            "da": "GPIO 06 er OUTPUT",
+            "de": "GPIO 06 ist OUTPUT",
+            "es": "GPIO 06 es SALIDA",
+            "fr": "GPIO 06 est SORTIE",
+            "it": "GPIO 06 è OUTPUT",
+            "no": "GPIO 06 er UTGANG",
+            "sv": "GPIO 06 är UTTAG",
+            "pl": "GPIO 06 to WYJŚCIE",
+            "ru": "GPIO 06 является ВЫХОДОМ",
+            "ko": "GPIO 06은 출력입니다"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false,
+          "getable": true,
+          "setable": true
+        },
+        "button.gpio7": {
+          "title": {
+            "en": "GPIO 07 is OUTPUT",
+            "da": "GPIO 07 er OUTPUT",
+            "de": "GPIO 07 ist OUTPUT",
+            "es": "GPIO 07 es SALIDA",
+            "fr": "GPIO 07 est SORTIE",
+            "it": "GPIO 07 è OUTPUT",
+            "no": "GPIO 07 er UTGANG",
+            "sv": "GPIO 07 är UTTAG",
+            "pl": "GPIO 07 to WYJŚCIE",
+            "ru": "GPIO 07 является ВЫХОДОМ",
+            "ko": "GPIO 07은 출력입니다"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false,
+          "getable": true,
+          "setable": true
+        },
+        "button.gpio8": {
+          "title": {
+            "en": "GPIO 08 is OUTPUT",
+            "da": "GPIO 08 er OUTPUT",
+            "de": "GPIO 08 ist OUTPUT",
+            "es": "GPIO 08 es SALIDA",
+            "fr": "GPIO 08 est SORTIE",
+            "it": "GPIO 08 è OUTPUT",
+            "no": "GPIO 08 er UTGANG",
+            "sv": "GPIO 08 är UTTAG",
+            "pl": "GPIO 08 to WYJŚCIE",
+            "ru": "GPIO 08 является ВЫХОДОМ",
+            "ko": "GPIO 08은 출력입니다"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false,
+          "getable": true,
+          "setable": true
+        },
+        "button.gpio9": {
+          "title": {
+            "en": "GPIO 09 is OUTPUT",
+            "da": "GPIO 09 er OUTPUT",
+            "de": "GPIO 09 ist OUTPUT",
+            "es": "GPIO 09 es SALIDA",
+            "fr": "GPIO 09 est SORTIE",
+            "it": "GPIO 09 è OUTPUT",
+            "no": "GPIO 09 er UTGANG",
+            "sv": "GPIO 09 är UTTAG",
+            "pl": "GPIO 09 to WYJŚCIE",
+            "ru": "GPIO 09 является ВЫХОДОМ",
+            "ko": "GPIO 09은 출력입니다"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false,
+          "getable": true,
+          "setable": true
+        },
+        "button.gpio10": {
+          "title": {
+            "en": "GPIO 10 is OUTPUT",
+            "da": "GPIO 10 er OUTPUT",
+            "de": "GPIO 10 ist OUTPUT",
+            "es": "GPIO 10 es SALIDA",
+            "fr": "GPIO 10 est SORTIE",
+            "it": "GPIO 10 è OUTPUT",
+            "no": "GPIO 10 er UTGANG",
+            "sv": "GPIO 10 är UTTAG",
+            "pl": "GPIO 10 to WYJŚCIE",
+            "ru": "GPIO 10 является ВЫХОДОМ",
+            "ko": "GPIO 10은 출력입니다"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false,
+          "getable": true,
+          "setable": true
+        },
+        "button.gpio11": {
+          "title": {
+            "en": "GPIO 11 is OUTPUT",
+            "da": "GPIO 11 er OUTPUT",
+            "de": "GPIO 11 ist OUTPUT",
+            "es": "GPIO 11 es SALIDA",
+            "fr": "GPIO 11 est SORTIE",
+            "it": "GPIO 11 è OUTPUT",
+            "no": "GPIO 11 er UTGANG",
+            "sv": "GPIO 11 är UTTAG",
+            "pl": "GPIO 11 to WYJŚCIE",
+            "ru": "GPIO 11 является ВЫХОДОМ",
+            "ko": "GPIO 11은 출력입니다"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false,
+          "getable": true,
+          "setable": true
+        },
+        "button.gpio12": {
+          "title": {
+            "en": "GPIO 12 is OUTPUT",
+            "da": "GPIO 12 er OUTPUT",
+            "de": "GPIO 12 ist OUTPUT",
+            "es": "GPIO 12 es SALIDA",
+            "fr": "GPIO 12 est SORTIE",
+            "it": "GPIO 12 è OUTPUT",
+            "no": "GPIO 12 er UTGANG",
+            "sv": "GPIO 12 är UTTAG",
+            "pl": "GPIO 12 to WYJŚCIE",
+            "ru": "GPIO 12 является ВЫХОДОМ",
+            "ko": "GPIO 12은 출력입니다"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false,
+          "getable": true,
+          "setable": true
+        },
+        "button.gpio13": {
+          "title": {
+            "en": "GPIO 13 is OUTPUT",
+            "da": "GPIO 13 er OUTPUT",
+            "de": "GPIO 13 ist OUTPUT",
+            "es": "GPIO 13 es SALIDA",
+            "fr": "GPIO 13 est SORTIE",
+            "it": "GPIO 13 è OUTPUT",
+            "no": "GPIO 13 er UTGANG",
+            "sv": "GPIO 13 är UTTAG",
+            "pl": "GPIO 13 to WYJŚCIE",
+            "ru": "GPIO 13 является ВЫХОДОМ",
+            "ko": "GPIO 13은 출력입니다"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false,
+          "getable": true,
+          "setable": true
+        },
+        "button.gpio14": {
+          "title": {
+            "en": "GPIO 14 is OUTPUT",
+            "da": "GPIO 14 er OUTPUT",
+            "de": "GPIO 14 ist OUTPUT",
+            "es": "GPIO 14 es SALIDA",
+            "fr": "GPIO 14 est SORTIE",
+            "it": "GPIO 14 è OUTPUT",
+            "no": "GPIO 14 er UTGANG",
+            "sv": "GPIO 14 är UTTAG",
+            "pl": "GPIO 14 to WYJŚCIE",
+            "ru": "GPIO 14 является ВЫХОДОМ",
+            "ko": "GPIO 14은 출력입니다"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false,
+          "getable": true,
+          "setable": true
+        },
+        "button.gpio15": {
+          "title": {
+            "en": "GPIO 15 is OUTPUT",
+            "da": "GPIO 15 er OUTPUT",
+            "de": "GPIO 15 ist OUTPUT",
+            "es": "GPIO 15 es SALIDA",
+            "fr": "GPIO 15 est SORTIE",
+            "it": "GPIO 15 è OUTPUT",
+            "no": "GPIO 15 er UTGANG",
+            "sv": "GPIO 15 är UTTAG",
+            "pl": "GPIO 15 to WYJŚCIE",
+            "ru": "GPIO 15 является ВЫХОДОМ",
+            "ko": "GPIO 15은 출력입니다"
+          },
+          "uiComponent": "button",
+          "uiQuickAction": false,
+          "getable": true,
+          "setable": true
         }
       },
       "platforms": [
@@ -1086,7 +2448,16 @@
           "label": {
             "en": "RPi information",
             "nl": "RPi informatie",
-            "pl": "Informacje o RPi"
+            "pl": "Informacje o RPi",
+            "da": "RPi information",
+            "de": "RPi Informationen",
+            "es": "Información de RPi",
+            "fr": "Informations sur RPi",
+            "it": "Informazioni su RPi",
+            "no": "RPi informasjon",
+            "sv": "RPi-information",
+            "ru": "Информация о RPi",
+            "ko": "RPi 정보"
           },
           "children": [
             {
@@ -1095,7 +2466,16 @@
               "label": {
                 "en": "Name on network",
                 "nl": "Naam in het netwerk",
-                "pl": "Nazwa w sieci"
+                "pl": "Nazwa w sieci",
+                "da": "Navn på netværk",
+                "de": "Name im Netzwerk",
+                "es": "Nombre en la red",
+                "fr": "Nom sur le réseau",
+                "it": "Nome sulla rete",
+                "no": "Navn på nettverket",
+                "sv": "Namn på nätverket",
+                "ru": "Имя в сети",
+                "ko": "네트워크의 이름"
               },
               "value": ""
             },
@@ -1105,7 +2485,16 @@
               "label": {
                 "en": "Model",
                 "nl": "Model",
-                "pl": "Model"
+                "pl": "Model",
+                "da": "Model",
+                "de": "Modell",
+                "es": "Modelo",
+                "fr": "Modèle",
+                "it": "Modello",
+                "no": "Modell",
+                "sv": "Modell",
+                "ru": "Модель",
+                "ko": "모델"
               },
               "value": ""
             },
@@ -1115,7 +2504,16 @@
               "label": {
                 "en": "Revision",
                 "nl": "Revisie",
-                "pl": "Rewizja"
+                "pl": "Rewizja",
+                "da": "Revision",
+                "de": "Revision",
+                "es": "Revisión",
+                "fr": "Révision",
+                "it": "Revisione",
+                "no": "Revisjon",
+                "sv": "Revision",
+                "ru": "Ревизия",
+                "ko": "수정"
               },
               "value": ""
             },
@@ -1125,7 +2523,16 @@
               "label": {
                 "en": "S/N",
                 "nl": "S/N",
-                "pl": "Numer Seryjny"
+                "pl": "Numer Seryjny",
+                "da": "S/N",
+                "de": "S/N",
+                "es": "N/S",
+                "fr": "S/N",
+                "it": "S/N",
+                "no": "S/N",
+                "sv": "S/N",
+                "ru": "С/Н",
+                "ko": "일련 번호"
               },
               "value": ""
             },
@@ -1135,7 +2542,16 @@
               "label": {
                 "en": "Processors",
                 "nl": "Processoren",
-                "pl": "Procesory"
+                "pl": "Procesory",
+                "da": "Processorer",
+                "de": "Prozessoren",
+                "es": "Procesadores",
+                "fr": "Processeurs",
+                "it": "Processori",
+                "no": "Prosessorer",
+                "sv": "Processorer",
+                "ru": "Процессоры",
+                "ko": "프로세서"
               },
               "value": ""
             },
@@ -1145,7 +2561,16 @@
               "label": {
                 "en": "OS Architecture",
                 "nl": "OS Architectuur",
-                "pl": "Architektura systemu operacyjnego"
+                "pl": "Architektura systemu operacyjnego",
+                "da": "OS-arkitektur",
+                "de": "Betriebssystemarchitektur",
+                "es": "Arquitectura del SO",
+                "fr": "Architecture OS",
+                "it": "Architettura OS",
+                "no": "OS-arkitektur",
+                "sv": "OS-arkitektur",
+                "ru": "Архитектура ОС",
+                "ko": "운영 체제 아키텍처"
               },
               "value": ""
             },
@@ -1155,7 +2580,16 @@
               "label": {
                 "en": "OS Name",
                 "nl": "OS Naam",
-                "pl": "Nazwa systemu operacyjnego"
+                "pl": "Nazwa systemu operacyjnego",
+                "da": "OS-navn",
+                "de": "Betriebssystemname",
+                "es": "Nombre del SO",
+                "fr": "Nom du système d'exploitation",
+                "it": "Nome del sistema operativo",
+                "no": "OS-navn",
+                "sv": "OS-namn",
+                "ru": "Имя ОС",
+                "ko": "운영 체제 이름"
               },
               "value": ""
             },
@@ -1165,7 +2599,16 @@
               "label": {
                 "en": "OS Version",
                 "nl": "OS Versie",
-                "pl": "Wersja systemu operacyjnego"
+                "pl": "Wersja systemu operacyjnego",
+                "da": "OS-version",
+                "de": "Betriebssystemversion",
+                "es": "Versión del SO",
+                "fr": "Version de l'OS",
+                "it": "Versione del sistema operativo",
+                "no": "OS-versjon",
+                "sv": "OS-version",
+                "ru": "Версия ОС",
+                "ko": "운영 체제 버전"
               },
               "value": ""
             }
@@ -1176,7 +2619,16 @@
           "label": {
             "en": "Connection settings",
             "nl": "Verbinding instellingen",
-            "pl": "Ustawienia połączenia"
+            "pl": "Ustawienia połączenia",
+            "da": "Forbindelsesindstillinger",
+            "de": "Verbindungseinstellungen",
+            "es": "Ajustes de conexión",
+            "fr": "Paramètres de connexion",
+            "it": "Impostazioni di connessione",
+            "no": "Tilkoblingsinnstillinger",
+            "sv": "Anslutningsinställningar",
+            "ru": "Настройки подключения",
+            "ko": "연결 설정"
           },
           "children": [
             {
@@ -1185,7 +2637,16 @@
               "label": {
                 "en": "URL or IP address",
                 "nl": "URL of IP adres",
-                "pl": "URL adresu IP"
+                "pl": "URL adresu IP",
+                "da": "URL eller IP-adresse",
+                "de": "URL oder IP-Adresse",
+                "es": "URL o dirección IP",
+                "fr": "URL ou adresse IP",
+                "it": "URL o indirizzo IP",
+                "no": "URL eller IP-adresse",
+                "sv": "URL eller IP-adress",
+                "ru": "URL или IP-адрес",
+                "ko": "URL 또는 IP 주소"
               },
               "value": ""
             },
@@ -1195,12 +2656,30 @@
               "label": {
                 "en": "Port",
                 "nl": "Poort",
-                "pl": "Port"
+                "pl": "Port",
+                "da": "Port",
+                "de": "Port",
+                "es": "Puerto",
+                "fr": "Port",
+                "it": "Porta",
+                "no": "Port",
+                "sv": "Port",
+                "ru": "Порт",
+                "ko": "포트"
               },
               "hint": {
                 "en": "Default is 22.",
                 "nl": "Standaard is 22.",
-                "pl": "Domyślny to 22."
+                "pl": "Domyślny to 22.",
+                "da": "Standard er 22.",
+                "de": "Standard ist 22.",
+                "es": "El valor predeterminado es 22.",
+                "fr": "La valeur par défaut est 22.",
+                "it": "Il valore predefinito è 22.",
+                "no": "Standard er 22.",
+                "sv": "Standard är 22.",
+                "ru": "По умолчанию 22.",
+                "ko": "기본값은 22입니다."
               },
               "value": 22
             },
@@ -1210,12 +2689,30 @@
               "label": {
                 "en": "Username",
                 "nl": "Gebruikersnaam",
-                "pl": "Nazwa użytkownika"
+                "pl": "Nazwa użytkownika",
+                "da": "Brugernavn",
+                "de": "Benutzername",
+                "es": "Nombre de usuario",
+                "fr": "Nom d'utilisateur",
+                "it": "Nome utente",
+                "no": "Brukernavn",
+                "sv": "Användarnamn",
+                "ru": "Имя пользователя",
+                "ko": "사용자 이름"
               },
               "hint": {
                 "en": "Default is pi.",
                 "nl": "Standaard is pi.",
-                "pl": "Domyślna to pi"
+                "pl": "Domyślna to pi",
+                "da": "Standard er pi.",
+                "de": "Standard ist pi.",
+                "es": "El valor predeterminado es pi.",
+                "fr": "La valeur par défaut est pi.",
+                "it": "Il valore predefinito è pi.",
+                "no": "Standard er pi.",
+                "sv": "Standard är pi.",
+                "ru": "По умолчанию pi.",
+                "ko": "기본값은 pi입니다."
               },
               "value": ""
             },
@@ -1225,12 +2722,30 @@
               "label": {
                 "en": "Password",
                 "nl": "Wachtwoord",
-                "pl": "Hasło"
+                "pl": "Hasło",
+                "da": "Adgangskode",
+                "de": "Passwort",
+                "es": "Contraseña",
+                "fr": "Mot de passe",
+                "it": "Password",
+                "no": "Passord",
+                "sv": "Lösenord",
+                "ru": "Пароль",
+                "ko": "비밀번호"
               },
               "hint": {
                 "en": "Deault is raspberry.",
                 "nl": "Standaard is raspberry.",
-                "pl": "Domyślne to raspberry"
+                "pl": "Domyślne to raspberry",
+                "da": "Standard er hindbær.",
+                "de": "Standard ist Himbeere.",
+                "es": "El valor predeterminado es raspberry.",
+                "fr": "La valeur par défaut est raspberry.",
+                "it": "Il valore predefinito è raspberry.",
+                "no": "Standard er bringebær.",
+                "sv": "Standard är hallon.",
+                "ru": "По умолчанию малиновый.",
+                "ko": "기본값은 라즈베리입니다."
               },
               "value": ""
             }
@@ -1241,7 +2756,16 @@
           "label": {
             "en": "Monitoring settings",
             "nl": "Monitoring instellingen",
-            "pl": "Ustawienia monitorowania"
+            "pl": "Ustawienia monitorowania",
+            "da": "Overvågningsindstillinger",
+            "de": "Überwachungseinstellungen",
+            "es": "Configuración de monitoreo",
+            "fr": "Paramètres de surveillance",
+            "it": "Impostazioni di monitoraggio",
+            "no": "Overvåkingsinnstillinger",
+            "sv": "Övervakningsinställningar",
+            "ru": "Настройки мониторинга",
+            "ko": "모니터링 설정"
           },
           "children": [
             {
@@ -1250,12 +2774,30 @@
               "label": {
                 "en": "Status update interval (s)",
                 "nl": "Status update interval (s)",
-                "pl": "Interwał aktualizacji statusu (s)"
+                "pl": "Interwał aktualizacji statusu (s)",
+                "da": "Statusopdateringsinterval (s)",
+                "de": "Statusaktualisierungsintervall (s)",
+                "es": "Intervalo de actualización de estado (s)",
+                "fr": "Intervalle de mise à jour de l'état (s)",
+                "it": "Intervallo di aggiornamento dello stato (s)",
+                "no": "Statusoppdateringsintervall (s)",
+                "sv": "Statusuppdateringsintervall (s)",
+                "ru": "Интервал обновления статуса (с)",
+                "ko": "상태 업데이트 간격 (초)"
               },
               "hint": {
                 "en": "A lower value provides faster updates in Homey.",
                 "nl": "Een lagere waarde geeft snellere updates in Homey.",
-                "pl": "Niższa wartość zapewnia szybsze aktualizacje w Homey."
+                "pl": "Niższa wartość zapewnia szybsze aktualizacje w Homey.",
+                "da": "En lavere værdi giver hurtigere opdateringer i Homey.",
+                "de": "Ein niedrigerer Wert führt zu schnelleren Updates in Homey.",
+                "es": "Un valor más bajo proporciona actualizaciones más rápidas en Homey.",
+                "fr": "Une valeur plus basse permet des mises à jour plus rapides dans Homey.",
+                "it": "Un valore più basso fornisce aggiornamenti più rapidi in Homey.",
+                "no": "En lavere verdi gir raskere oppdateringer i Homey.",
+                "sv": "Ett lägre värde ger snabbare uppdateringar i Homey.",
+                "ru": "Нижнее значение обеспечивает более быстрые обновления в Homey.",
+                "ko": "더 낮은 값은 Homey에서 더 빠른 업데이트를 제공합니다."
               },
               "min": 5,
               "max": 60,
@@ -1268,12 +2810,30 @@
               "label": {
                 "en": "GPIO status update interval (s)",
                 "nl": "GPIO status update interval (s)",
-                "pl": "Interwał aktualizacji statusu GPIO (s)"
+                "pl": "Interwał aktualizacji statusu GPIO (s)",
+                "da": "GPIO-statusopdateringsinterval (s)",
+                "de": "GPIO-Statusaktualisierungsintervall (s)",
+                "es": "Intervalo de actualización del estado GPIO (s)",
+                "fr": "Intervalle de mise à jour de l'état GPIO (s)",
+                "it": "Intervallo di aggiornamento dello stato GPIO (s)",
+                "no": "GPIO-statusoppdateringsintervall (s)",
+                "sv": "GPIO-statusuppdateringsintervall (s)",
+                "ru": "Интервал обновления статуса GPIO (с)",
+                "ko": "GPIO 상태 업데이트 간격 (초)"
               },
               "hint": {
                 "en": "A lower value provides faster updates in Homey. Set to 0 to disable GPIO status polling.",
                 "nl": "Een lagere waarde geeft snellere updates in Homey. Zet op 0 om GPIO status polling uit te zetten.",
-                "pl": "Niższa wartość zapewnia szybsze aktualizacje w Homey. Ustaw na 0, aby wyłączyć sondowanie stanu GPIO."
+                "pl": "Niższa wartość zapewnia szybsze aktualizacje w Homey. Ustaw na 0, aby wyłączyć sondowanie stanu GPIO.",
+                "da": "En lavere værdi giver hurtigere opdateringer i Homey. Indstil til 0 for at deaktivere GPIO-statuspolling.",
+                "de": "Ein niedrigerer Wert führt zu schnelleren Updates in Homey. Stellen Sie auf 0 ein, um die GPIO-Statusabfrage zu deaktivieren.",
+                "es": "Un valor más bajo proporciona actualizaciones más rápidas en Homey. Ajusta a 0 para deshabilitar la sondeo del estado GPIO.",
+                "fr": "Une valeur plus basse permet des mises à jour plus rapides dans Homey. Réglez sur 0 pour désactiver le sondage de l'état GPIO.",
+                "it": "Un valore più basso fornisce aggiornamenti più rapidi in Homey. Imposta a 0 per disabilitare il polling dello stato GPIO.",
+                "no": "En lavere verdi gir raskere oppdateringer i Homey. Sett til 0 for å deaktivere GPIO-statuspolling.",
+                "sv": "Ett lägre värde ger snabbare uppdateringar i Homey. Ställ in på 0 för att inaktivera GPIO-statuspolling.",
+                "ru": "Нижнее значение обеспечивает более быстрые обновления в Homey. Установите значение 0, чтобы отключить опрос состояния GPIO.",
+                "ko": "더 낮은 값은 Homey에서 더 빠른 업데이트를 제공합니다. GPIO 상태 폴링을 비활성화하려면 0으로 설정하십시오."
               },
               "min": 0,
               "max": 5,
@@ -1291,12 +2851,31 @@
       "title": {
         "en": "CPU scaling",
         "nl": "CPU schaling",
-        "pl": "Skalowanie CPU"
+        "pl": "Skalowanie CPU",
+        "da": "CPU skalering",
+        "de": "CPU Skalierung",
+        "es": "Escalado de CPU",
+        "fr": "Mise à l'échelle du CPU",
+        "it": "Scalabilità della CPU",
+        "no": "CPU skalering",
+        "sv": "CPU skalning",
+        "ru": "Масштабирование ЦП",
+        "ko": "CPU 스케일링"
       },
       "getable": true,
       "setable": false,
       "units": {
-        "en": "%"
+        "en": "%",
+        "da": "%",
+        "de": "%",
+        "es": "%",
+        "fr": "%",
+        "it": "%",
+        "no": "%",
+        "sv": "%",
+        "pl": "%",
+        "ru": "%",
+        "ko": "%"
       },
       "decimals": 0,
       "insights": true,
@@ -1307,12 +2886,31 @@
       "title": {
         "en": "CPU used",
         "nl": "CPU gebruikt",
-        "pl": "Wykorzystanie CPU"
+        "pl": "Wykorzystanie CPU",
+        "da": "CPU brugt",
+        "de": "CPU genutzt",
+        "es": "CPU utilizado",
+        "fr": "CPU utilisé",
+        "it": "CPU utilizzato",
+        "no": "CPU brukt",
+        "sv": "CPU-användning",
+        "ru": "Использование ЦП",
+        "ko": "사용된 CPU"
       },
       "getable": true,
       "setable": false,
       "units": {
-        "en": "%"
+        "en": "%",
+        "da": "%",
+        "de": "%",
+        "es": "%",
+        "fr": "%",
+        "it": "%",
+        "no": "%",
+        "sv": "%",
+        "pl": "%",
+        "ru": "%",
+        "ko": "%"
       },
       "decimals": 0,
       "insights": true,
@@ -1323,14 +2921,31 @@
       "title": {
         "en": "Download speed",
         "nl": "Download snelheid",
-        "pl": "Prędkość pobierania"
+        "pl": "Prędkość pobierania",
+        "da": "Downloadhastighed",
+        "de": "Downloadgeschwindigkeit",
+        "es": "Velocidad de descarga",
+        "fr": "Vitesse de téléchargement",
+        "it": "Velocità di download",
+        "no": "Nedlastingshastighet",
+        "sv": "Nedladdningshastighet",
+        "ru": "Скорость загрузки",
+        "ko": "다운로드 속도"
       },
       "getable": true,
       "setable": false,
       "units": {
         "en": "Mbit/s",
         "de": "Mbit/s",
-        "pl": "Mbit/s"
+        "pl": "Mbit/s",
+        "da": "Mbit/s",
+        "es": "Mbit/s",
+        "fr": "Mbit/s",
+        "it": "Mbit/s",
+        "no": "Mbit/s",
+        "sv": "Mbit/s",
+        "ru": "Mbit/s",
+        "ko": "Mbit/s"
       },
       "decimals": 2,
       "insights": true,
@@ -1341,12 +2956,31 @@
       "title": {
         "en": "Memory used",
         "nl": "Geheugen gebruikt",
-        "pl": "Wykorzystanie pamięci"
+        "pl": "Wykorzystanie pamięci",
+        "da": "Brugt hukommelse",
+        "de": "Verwendeter Speicher",
+        "es": "Memoria utilizada",
+        "fr": "Mémoire utilisée",
+        "it": "Memoria utilizzata",
+        "no": "Brukt minne",
+        "sv": "Använt minne",
+        "ru": "Используемая память",
+        "ko": "사용된 메모리"
       },
       "getable": true,
       "setable": false,
       "units": {
-        "en": "%"
+        "en": "%",
+        "da": "%",
+        "de": "%",
+        "es": "%",
+        "fr": "%",
+        "it": "%",
+        "no": "%",
+        "sv": "%",
+        "pl": "%",
+        "ru": "%",
+        "ko": "%"
       },
       "decimals": 0,
       "insights": true,
@@ -1357,7 +2991,16 @@
       "title": {
         "en": "Active processes",
         "nl": "Aktieve processen",
-        "pl": "Aktywne procesy"
+        "pl": "Aktywne procesy",
+        "da": "Aktive processer",
+        "de": "Aktive Prozesse",
+        "es": "Procesos activos",
+        "fr": "Processus actifs",
+        "it": "Processi attivi",
+        "no": "Aktive prosesser",
+        "sv": "Aktiva processer",
+        "ru": "Активные процессы",
+        "ko": "활성 프로세스"
       },
       "getable": true,
       "setable": false,
@@ -1369,12 +3012,31 @@
       "title": {
         "en": "Storage used",
         "nl": "Opslag gebruikt",
-        "pl": "Użyte miejsce do przechowywania"
+        "pl": "Użyte miejsce do przechowywania",
+        "da": "Brugt lagerplads",
+        "de": "Verwendeter Speicher",
+        "es": "Almacenamiento usado",
+        "fr": "Stockage utilisé",
+        "it": "Storage utilizzato",
+        "no": "Brukt lagringsplass",
+        "sv": "Använt lagringsutrymme",
+        "ru": "Используемое хранилище",
+        "ko": "사용 중인 저장공간"
       },
       "getable": true,
       "setable": false,
       "units": {
-        "en": "%"
+        "en": "%",
+        "da": "%",
+        "de": "%",
+        "es": "%",
+        "fr": "%",
+        "it": "%",
+        "no": "%",
+        "sv": "%",
+        "pl": "%",
+        "ru": "%",
+        "ko": "%"
       },
       "decimals": 0,
       "insights": true,
@@ -1385,14 +3047,31 @@
       "title": {
         "en": "Upload speed",
         "nl": "Upload snelheid",
-        "pl": "Prędkość wysyłania"
+        "pl": "Prędkość wysyłania",
+        "da": "Uploadhastighed",
+        "de": "Uploadgeschwindigkeit",
+        "es": "Velocidad de carga",
+        "fr": "Vitesse de téléchargement",
+        "it": "Velocità di upload",
+        "no": "Opplastingshastighet",
+        "sv": "Uppladdningshastighet",
+        "ru": "Скорость загрузки",
+        "ko": "업로드 속도"
       },
       "getable": true,
       "setable": false,
       "units": {
         "en": "Mbit/s",
         "de": "Mbit/s",
-        "pl": "Mbit/s"
+        "pl": "Mbit/s",
+        "da": "Mbit/s",
+        "es": "Mbit/s",
+        "fr": "Mbit/s",
+        "it": "Mbit/s",
+        "no": "Mbit/s",
+        "sv": "Mbit/s",
+        "ru": "Mbit/s",
+        "ko": "Mbit/s"
       },
       "decimals": 2,
       "insights": true,
@@ -1403,7 +3082,16 @@
       "title": {
         "en": "Users",
         "nl": "Gebruikers",
-        "pl": "Użytkownicy"
+        "pl": "Użytkownicy",
+        "da": "Brugere",
+        "de": "Benutzer",
+        "es": "Usuarios",
+        "fr": "Utilisateurs",
+        "it": "Utenti",
+        "no": "Brukere",
+        "sv": "Användare",
+        "ru": "Пользователи",
+        "ko": "사용자"
       },
       "getable": true,
       "setable": false,
@@ -1414,7 +3102,17 @@
       "type": "string",
       "title": {
         "en": "Uptime",
-        "pl": "Czas działania"
+        "pl": "Czas działania",
+        "nl": "Uptime",
+        "da": "Oppetid",
+        "de": "Betriebszeit",
+        "es": "Tiempo activo",
+        "fr": "Temps de disponibilité",
+        "it": "Tempo di attività",
+        "no": "Driftstid",
+        "sv": "Driftstid",
+        "ru": "Время работы",
+        "ko": "가동 시간"
       },
       "getable": true,
       "setable": false,

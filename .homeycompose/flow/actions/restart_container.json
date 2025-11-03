@@ -2,28 +2,66 @@
   "title": {
     "en": "Restart container",
     "nl": "Restart container",
-    "pl": "Uruchom ponownie kontener"
+    "pl": "Uruchom ponownie kontener",
+    "da": "Genstart container",
+    "de": "Container neu starten",
+    "es": "Reiniciar contenedor",
+    "fr": "Redémarrer le conteneur",
+    "it": "Riavvia contenitore",
+    "no": "Start på nytt container",
+    "sv": "Starta om container",
+    "ru": "Перезапустить контейнер",
+    "ko": "컨테이너 재시작"
   },
   "titleFormatted": {
     "en": "Restart container [[id]]",
     "nl": "Restart container [[id]]",
-    "pl": "Uruchom ponownie kontener [[id]]"
+    "pl": "Uruchom ponownie kontener [[id]]",
+    "da": "Genstart container [[id]]",
+    "de": "Container neu starten [[id]]",
+    "es": "Reiniciar contenedor [[id]]",
+    "fr": "Redémarrer le conteneur [[id]]",
+    "it": "Riavvia contenitore [[id]]",
+    "no": "Start på nytt container [[id]]",
+    "sv": "Starta om container [[id]]",
+    "ru": "Перезапустить контейнер [[id]]",
+    "ko": "컨테이너 재시작 [[id]]"
   },
   "highlight": true,
   "args": [
     {
-		  "type": "device",
-		  "name": "device",
-		  "filter": "driver_id=rpi"
-		},
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=rpi"
+    },
     {
       "name": "id",
       "type": "autocomplete",
       "title": {
-        "en": "ID"
+        "en": "ID",
+        "da": "ID",
+        "de": "ID",
+        "es": "ID",
+        "fr": "ID",
+        "it": "ID",
+        "no": "ID",
+        "sv": "ID",
+        "pl": "ID",
+        "ru": "ID",
+        "ko": "ID"
       },
       "placeholder": {
-        "en": "VPNserver"
+        "en": "VPNserver",
+        "da": "VPNserver",
+        "de": "VPNserver",
+        "es": "VPNserver",
+        "fr": "VPNserver",
+        "it": "VPNserver",
+        "no": "VPNserver",
+        "sv": "VPNserver",
+        "pl": "VPNserver",
+        "ru": "VPNserver",
+        "ko": "VPNserver"
       }
     }
   ]

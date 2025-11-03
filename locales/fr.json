@@ -1,0 +1,15 @@
+{
+  "pair": {
+    "title": "Connecter un Raspberry Pi",
+    "text": "Cette application est destinée à être utilisée avec des RPi sous Raspberry OS. D'autres matériels ou distributions Linux peuvent également fonctionner partiellement. SSH doit être activé, et vous devez utiliser des identifiants avec suffisamment de droits.",
+    "host": "Adresse IP ou URL",
+    "port": "Port SSH",
+    "username": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "incomplete": "L'adresse IP ou l'URL, le nom d'utilisateur et le mot de passe doivent être renseignés !",
+    "continue": "CONTINUER"
+  },
+  "device": {
+    "connectionError": "Erreur de connexion, redémarrage maintenant"
+  }
+}

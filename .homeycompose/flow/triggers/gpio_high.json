@@ -1,29 +1,61 @@
 {
-	"highlight": true,
-	"title": {
-		"en": "GPIO turned high",
-		"nl": "GPIO werd hoog",
-		"pl": "GPIO zmieniło się na wysokie"
-	},
-	"titleFormatted": {
-		"en": "GPIO[[io]] turned high",
-		"nl": "GPIO[[io]] werd hoog",
-		"pl": "GPIO[[io]] zmieniło się na wysokie"
-	},
-	"hint": { "en": "GPIO 0-53" },
-	"args": [
-		{
-		  "type": "device",
-		  "name": "device",
-		  "filter": "driver_id=rpi"
-		},
-		{
-			"type": "number",
-			"name": "io",
-			"title": { "en": "GPIO" },
-			"value": 0,
-			"min": 0,
-			"max": 53
-		}
-	]
+  "highlight": true,
+  "title": {
+    "en": "GPIO turned high",
+    "nl": "GPIO werd hoog",
+    "pl": "GPIO zmieniło się na wysokie",
+    "da": "GPIO blev høj",
+    "de": "GPIO wurde hoch",
+    "es": "GPIO se activó",
+    "fr": "GPIO devenu haut",
+    "it": "GPIO attivato",
+    "no": "GPIO ble høy",
+    "sv": "GPIO blev hög",
+    "ru": "GPIO включен",
+    "ko": "GPIO가 높게 설정됨"
+  },
+  "titleFormatted": {
+    "en": "GPIO[[io]] turned high",
+    "nl": "GPIO[[io]] werd hoog",
+    "pl": "GPIO[[io]] zmieniło się na wysokie",
+    "da": "GPIO[[io]] blev høj",
+    "de": "GPIO[[io]] wurde hoch",
+    "es": "GPIO[[io]] se activó",
+    "fr": "GPIO[[io]] devenu haut",
+    "it": "GPIO[[io]] attivato",
+    "no": "GPIO[[io]] ble høy",
+    "sv": "GPIO[[io]] blev hög",
+    "ru": "GPIO[[io]] включен",
+    "ko": "GPIO[[io]]가 높게 설정됨"
+  },
+  "hint": {
+    "en": "GPIO 0-53"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=rpi"
+    },
+    {
+      "type": "number",
+      "name": "io",
+      "title": {
+        "en": "GPIO",
+        "da": "GPIO",
+        "de": "GPIO",
+        "es": "GPIO",
+        "fr": "GPIO",
+        "it": "GPIO",
+        "no": "GPIO",
+        "sv": "GPIO",
+        "pl": "GPIO",
+        "ru": "GPIO",
+        "ko": "GPIO"
+      },
+      "value": 0,
+      "min": 0,
+      "max": 53
+    }
+  ]
 }

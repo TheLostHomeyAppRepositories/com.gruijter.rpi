@@ -1,27 +1,45 @@
 {
-	"title": { 
-		"en": "The GPU temperature changed",
-		"nl": "De GPU temperatuur is veranderd",
-		"pl": "Temperatura GPU uległa zmianie"
-	},
-	"highlight": true,
-	"args": [
-		{
-				"type": "device",
-				"name": "device",
-				"filter": "driver_id=rpi"
-		}
-	],
-	"tokens": [
-		{
-			"name": "measure_temperature.gpu",
-			"type": "number",
-			"title": { 
-				"en": "GPU temperature",
-				"nl": "GPU temperatuur",
-				"pl": "Temperatura GPU"
-			},
-			"example": 50
-		}
-	]
+  "title": {
+    "en": "The GPU temperature changed",
+    "nl": "De GPU temperatuur is veranderd",
+    "pl": "Temperatura GPU uległa zmianie",
+    "da": "GPU-temperaturen ændrede sig",
+    "de": "Die GPU-Temperatur hat sich geändert",
+    "es": "La temperatura de la GPU cambió",
+    "fr": "La température du GPU a changé",
+    "it": "La temperatura della GPU è cambiata",
+    "no": "GPU-temperaturen endret seg",
+    "sv": "GPU-temperaturen ändrades",
+    "ru": "Температура GPU изменилась",
+    "ko": "GPU 온도가 변경되었습니다"
+  },
+  "highlight": true,
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=rpi"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "measure_temperature.gpu",
+      "type": "number",
+      "title": {
+        "en": "GPU temperature",
+        "nl": "GPU temperatuur",
+        "pl": "Temperatura GPU",
+        "da": "GPU-temperatur",
+        "de": "GPU-Temperatur",
+        "es": "Temperatura de la GPU",
+        "fr": "Température du GPU",
+        "it": "Temperatura della GPU",
+        "no": "GPU-temperatur",
+        "sv": "GPU-temperatur",
+        "ru": "Температура GPU",
+        "ko": "GPU 온도"
+      },
+      "example": 50
+    }
+  ]
 }

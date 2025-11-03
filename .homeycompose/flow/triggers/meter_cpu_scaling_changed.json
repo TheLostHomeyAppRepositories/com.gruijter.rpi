@@ -1,27 +1,45 @@
 {
-	"title": { 
-		"en": "The CPU scaling (%) changed",
-		"nl": "De CPU schaling (%) is veranderd",
-		"pl": "Skalowanie procesora (%) uległo zmianie"
-	},
-	"highlight": true,
-	"args": [
-		{
-				"type": "device",
-				"name": "device",
-				"filter": "driver_id=rpi"
-		}
-	],
-	"tokens": [
-		{
-			"name": "meter_cpu_scaling",
-			"type": "number",
-			"title": { 
-				"en": "CPU scaling (%)",
-				"nl": "CPU schaling (%)",
-				"pl": "Skalowanie CPU (%)"
-			},
-			"example": 60
-		}
-	]
+  "title": {
+    "en": "The CPU scaling (%) changed",
+    "nl": "De CPU schaling (%) is veranderd",
+    "pl": "Skalowanie procesora (%) uległo zmianie",
+    "da": "CPU-skaleringen (%) er ændret",
+    "de": "Die CPU-Skalierung (%) hat sich geändert",
+    "es": "La escala de la CPU (%) ha cambiado",
+    "fr": "L'échelle du CPU (%) a changé",
+    "it": "La scalabilità della CPU (%) è cambiata",
+    "no": "CPU-skaleringen (%) har endret seg",
+    "sv": "CPU-skalan (%) har ändrats",
+    "ru": "Масштабирование процессора (%) изменилось",
+    "ko": "CPU 스케일링 (%)이 변경되었습니다"
+  },
+  "highlight": true,
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=rpi"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "meter_cpu_scaling",
+      "type": "number",
+      "title": {
+        "en": "CPU scaling (%)",
+        "nl": "CPU schaling (%)",
+        "pl": "Skalowanie CPU (%)",
+        "da": "CPU-skalering (%)",
+        "de": "CPU-Skalierung (%)",
+        "es": "Escala de CPU (%)",
+        "fr": "Échelle de CPU (%)",
+        "it": "Scalabilità della CPU (%)",
+        "no": "CPU-skala (%)",
+        "sv": "CPU-skala (%)",
+        "ru": "Масштабирование CPU (%)",
+        "ko": "CPU 스케일링 (%)"
+      },
+      "example": 60
+    }
+  ]
 }

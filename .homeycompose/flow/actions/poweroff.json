@@ -2,19 +2,37 @@
   "title": {
     "en": "Power off (!)",
     "nl": "Uitschakelen (!)",
-    "pl": "Wyłącz zasilanie (!)"
+    "pl": "Wyłącz zasilanie (!)",
+    "da": "Sluk for strømmen (!)",
+    "de": "Ausschalten (!)",
+    "es": "Apagar (!)",
+    "fr": "Éteindre (!)",
+    "it": "Spegni (!)",
+    "no": "Slå av (!)",
+    "sv": "Stäng av (!)",
+    "ru": "Выключить (!)",
+    "ko": "전원 끄기 (!)"
   },
   "hint": {
     "en": "ATTENTION! There is no command to power on the RPi.",
     "nl": "LET OP! Er is geen commando om de RPI op te starten.",
-    "pl": "UWAGA! Nie istnieje polecenie do włączenia RPi."
+    "pl": "UWAGA! Nie istnieje polecenie do włączenia RPi.",
+    "da": "OPMÆRKSOMHED! Der er ingen kommando til at tænde for RPi.",
+    "de": "ACHTUNG! Es gibt keinen Befehl, um den RPi einzuschalten.",
+    "es": "¡ATENCIÓN! No hay ningún comando para encender el RPi.",
+    "fr": "ATTENTION ! Il n'y a pas de commande pour allumer le RPi.",
+    "it": "ATTENZIONE! Non esiste un comando per accendere il RPi.",
+    "no": "VIKTIG! Det finnes ingen kommando for å starte RPi.",
+    "sv": "UPPMÄRKSAMHET! Det finns inget kommando för att slå på RPi.",
+    "ru": "ВНИМАНИЕ! Нет команды для включения RPi.",
+    "ko": "주의! RPi를 켜는 명령이 없습니다."
   },
   "highlight": true,
   "args": [
     {
-		  "type": "device",
-		  "name": "device",
-		  "filter": "driver_id=rpi"
-		}
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=rpi"
+    }
   ]
 }

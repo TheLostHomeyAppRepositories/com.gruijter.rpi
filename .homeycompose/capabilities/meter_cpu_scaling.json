@@ -3,12 +3,31 @@
   "title": {
     "en": "CPU scaling",
     "nl": "CPU schaling",
-    "pl": "Skalowanie CPU"
+    "pl": "Skalowanie CPU",
+    "da": "CPU skalering",
+    "de": "CPU Skalierung",
+    "es": "Escalado de CPU",
+    "fr": "Mise à l'échelle du CPU",
+    "it": "Scalabilità della CPU",
+    "no": "CPU skalering",
+    "sv": "CPU skalning",
+    "ru": "Масштабирование ЦП",
+    "ko": "CPU 스케일링"
   },
   "getable": true,
   "setable": false,
   "units": {
-    "en": "%"
+    "en": "%",
+    "da": "%",
+    "de": "%",
+    "es": "%",
+    "fr": "%",
+    "it": "%",
+    "no": "%",
+    "sv": "%",
+    "pl": "%",
+    "ru": "%",
+    "ko": "%"
   },
   "decimals": 0,
   "insights": true,

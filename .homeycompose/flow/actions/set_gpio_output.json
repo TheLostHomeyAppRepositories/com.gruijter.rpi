@@ -2,28 +2,66 @@
   "title": {
     "en": "Set GPIO output high/low",
     "nl": "Zet GPIO uitgang hoog/laag",
-    "pl": "Ustaw wyjście GPIO na wysokie/niskie"
+    "pl": "Ustaw wyjście GPIO na wysokie/niskie",
+    "da": "Indstil GPIO-udgang høj/lav",
+    "de": "Setze GPIO-Ausgang hoch/niedrig",
+    "es": "Establecer salida GPIO alta/baja",
+    "fr": "Définir la sortie GPIO haute/basse",
+    "it": "Imposta l'uscita GPIO alta/bassa",
+    "no": "Sett GPIO-utgang høy/lav",
+    "sv": "Ställ GPIO-utgång hög/låg",
+    "ru": "Установите выход GPIO в высокий/низкий",
+    "ko": "GPIO 출력을 높음/낮음으로 설정"
   },
   "titleFormatted": {
     "en": "Set GPIO[[io]] to [[high]]",
     "nl": "Zet GPIO[[io]] naar [[high]]",
-    "pl": "Ustaw GPIO[[io]] na [[high]]"
+    "pl": "Ustaw GPIO[[io]] na [[high]]",
+    "da": "Indstil GPIO[[io]] til [[high]]",
+    "de": "Setze GPIO[[io]] auf [[high]]",
+    "es": "Establecer GPIO[[io]] en [[high]]",
+    "fr": "Définir GPIO[[io]] sur [[high]]",
+    "it": "Imposta GPIO[[io]] su [[high]]",
+    "no": "Sett GPIO[[io]] til [[high]]",
+    "sv": "Ställ GPIO[[io]] till [[high]]",
+    "ru": "Установите GPIO[[io]] на [[high]]",
+    "ko": "GPIO[[io]]를 [[high]]으로 설정"
   },
   "highlight": true,
   "args": [
     {
-		  "type": "device",
-		  "name": "device",
-		  "filter": "driver_id=rpi"
-		},
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=rpi"
+    },
     {
       "name": "io",
       "type": "number",
       "title": {
-        "en": "GPIO"
+        "en": "GPIO",
+        "da": "GPIO",
+        "de": "GPIO",
+        "es": "GPIO",
+        "fr": "GPIO",
+        "it": "GPIO",
+        "no": "GPIO",
+        "sv": "GPIO",
+        "pl": "GPIO",
+        "ru": "GPIO",
+        "ko": "GPIO"
       },
       "placeholder": {
-        "en": "GPIO 0-53"
+        "en": "GPIO 0-53",
+        "da": "GPIO 0-53",
+        "de": "GPIO 0-53",
+        "es": "GPIO 0-53",
+        "fr": "GPIO 0-53",
+        "it": "GPIO 0-53",
+        "no": "GPIO 0-53",
+        "sv": "GPIO 0-53",
+        "pl": "GPIO 0-53",
+        "ru": "GPIO 0-53",
+        "ko": "GPIO 0-53"
       }
     },
     {
@@ -32,7 +70,16 @@
       "title": {
         "en": "High/Low",
         "nl": "Hoog/Laag",
-        "pl": "Wysoki/Niski"
+        "pl": "Wysoki/Niski",
+        "da": "Høj/Lav",
+        "de": "Hoch/Niedrig",
+        "es": "Alto/Bajo",
+        "fr": "Haut/Bas",
+        "it": "Alto/Basso",
+        "no": "Høy Lav",
+        "sv": "Hög/Låg",
+        "ru": "Высокий/Низкий",
+        "ko": "높음/낮음"
       }
     }
   ]

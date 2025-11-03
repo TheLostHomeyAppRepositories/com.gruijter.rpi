@@ -1,203 +1,401 @@
 [
-	{
-		"type": "group",
-		"label": {
-				"en": "RPi information",
-				"nl": "RPi informatie",
-				"pl": "Informacje o RPi"
-		},
-		"children": [
-			{
-				"id": "hostName",
-				"type": "label",
-				"label": {
-						"en": "Name on network",
-						"nl": "Naam in het netwerk",
-						"pl": "Nazwa w sieci"
-				},
-				"value": ""
-			},
-			{
-				"id": "model",
-				"type": "label",
-				"label": {
-						"en": "Model",
-						"nl": "Model",
-						"pl": "Model"
-				},
-				"value": ""
-			},
-			{
-				"id": "revision",
-				"type": "label",
-				"label": {
-						"en": "Revision",
-						"nl": "Revisie",
-						"pl": "Rewizja"
-				},
-				"value": ""
-			},
-			{
-				"id": "serial",
-				"type": "label",
-				"label": {
-						"en": "S/N",
-						"nl": "S/N",
-						"pl": "Numer Seryjny"
-				},
-				"value": ""
-			},
-			{
-				"id": "processors",
-				"type": "label",
-				"label": {
-						"en": "Processors",
-						"nl": "Processoren",
-						"pl": "Procesory"
-				},
-				"value": ""
-			},
-			{
-				"id": "osArch",
-				"type": "label",
-				"label": {
-						"en": "OS Architecture",
-						"nl": "OS Architectuur",
-						"pl": "Architektura systemu operacyjnego"
-				},
-				"value": ""
-			},
-			{
-				"id": "osName",
-				"type": "label",
-				"label": {
-						"en": "OS Name",
-						"nl": "OS Naam",
-						"pl": "Nazwa systemu operacyjnego"
-				},
-				"value": ""
-			},
-			{
-				"id": "osVersion",
-				"type": "label",
-				"label": {
-						"en": "OS Version",
-						"nl": "OS Versie",
-						"pl": "Wersja systemu operacyjnego"
-				},
-				"value": ""
-			}
-		]
-	},
-	{
-		"type": "group",
-		"label": {
-				"en": "Connection settings",
-				"nl": "Verbinding instellingen",
-				"pl": "Ustawienia połączenia"
-		},
-		"children": [	
-			{
-				"id": "host",
-				"type": "text",
-				"label": {
-						"en": "URL or IP address",
-						"nl": "URL of IP adres",
-						"pl": "URL adresu IP"
-				},
-				"value": ""
-			},
-			{
-				"id": "port",
-				"type": "number",
-				"label": {
-						"en": "Port",
-						"nl": "Poort",
-						"pl": "Port"
-				},
-				"hint": {
-					"en": "Default is 22.",
-					"nl": "Standaard is 22.",
-					"pl": "Domyślny to 22."
-				},
-				"value": 22
-			},
-			{
-				"id": "username",
-				"type": "text",
-				"label": {
-						"en": "Username",
-						"nl": "Gebruikersnaam",
-						"pl": "Nazwa użytkownika"
-				},
-				"hint": {
-					"en": "Default is pi.",
-					"nl": "Standaard is pi.",
-					"pl": "Domyślna to pi"
-				},
-				"value": ""
-			},
-			{
-				"id": "password",
-				"type": "password",
-				"label": {
-						"en": "Password",
-						"nl": "Wachtwoord",
-						"pl": "Hasło"
-				},
-				"hint": {
-					"en": "Deault is raspberry.",
-					"nl": "Standaard is raspberry.",
-					"pl": "Domyślne to raspberry"
-				},
-				"value": ""
-			}
-		]
-	},
-	{
-		"type": "group",
-		"label": {
-				"en": "Monitoring settings",
-				"nl": "Monitoring instellingen",
-				"pl": "Ustawienia monitorowania"
-		},
-		"children": [
-			{
-				"id": "pollingIntervalSlow",
-				"type": "number",
-				"label": {
-						"en": "Status update interval (s)",
-						"nl": "Status update interval (s)",
-						"pl": "Interwał aktualizacji statusu (s)"
-				},
-				"hint": {
-					"en": "A lower value provides faster updates in Homey.",
-					"nl": "Een lagere waarde geeft snellere updates in Homey.",
-					"pl": "Niższa wartość zapewnia szybsze aktualizacje w Homey."
-				},
-				"min": 5,
-				"max": 60,
-				"step": 1,
-				"value": 10
-			},
-			{
-				"id": "pollingInterval",
-				"type": "number",
-				"label": {
-						"en": "GPIO status update interval (s)",
-						"nl": "GPIO status update interval (s)",
-						"pl": "Interwał aktualizacji statusu GPIO (s)"
-				},
-				"hint": {
-					"en": "A lower value provides faster updates in Homey. Set to 0 to disable GPIO status polling.",
-					"nl": "Een lagere waarde geeft snellere updates in Homey. Zet op 0 om GPIO status polling uit te zetten.",
-					"pl": "Niższa wartość zapewnia szybsze aktualizacje w Homey. Ustaw na 0, aby wyłączyć sondowanie stanu GPIO."
-				},
-				"min": 0,
-				"max": 5,
-				"step": 1,
-				"value": 5
-			}
-		]
-	}
+  {
+    "type": "group",
+    "label": {
+      "en": "RPi information",
+      "nl": "RPi informatie",
+      "pl": "Informacje o RPi",
+      "da": "RPi information",
+      "de": "RPi Informationen",
+      "es": "Información de RPi",
+      "fr": "Informations sur RPi",
+      "it": "Informazioni su RPi",
+      "no": "RPi informasjon",
+      "sv": "RPi-information",
+      "ru": "Информация о RPi",
+      "ko": "RPi 정보"
+    },
+    "children": [
+      {
+        "id": "hostName",
+        "type": "label",
+        "label": {
+          "en": "Name on network",
+          "nl": "Naam in het netwerk",
+          "pl": "Nazwa w sieci",
+          "da": "Navn på netværk",
+          "de": "Name im Netzwerk",
+          "es": "Nombre en la red",
+          "fr": "Nom sur le réseau",
+          "it": "Nome sulla rete",
+          "no": "Navn på nettverket",
+          "sv": "Namn på nätverket",
+          "ru": "Имя в сети",
+          "ko": "네트워크의 이름"
+        },
+        "value": ""
+      },
+      {
+        "id": "model",
+        "type": "label",
+        "label": {
+          "en": "Model",
+          "nl": "Model",
+          "pl": "Model",
+          "da": "Model",
+          "de": "Modell",
+          "es": "Modelo",
+          "fr": "Modèle",
+          "it": "Modello",
+          "no": "Modell",
+          "sv": "Modell",
+          "ru": "Модель",
+          "ko": "모델"
+        },
+        "value": ""
+      },
+      {
+        "id": "revision",
+        "type": "label",
+        "label": {
+          "en": "Revision",
+          "nl": "Revisie",
+          "pl": "Rewizja",
+          "da": "Revision",
+          "de": "Revision",
+          "es": "Revisión",
+          "fr": "Révision",
+          "it": "Revisione",
+          "no": "Revisjon",
+          "sv": "Revision",
+          "ru": "Ревизия",
+          "ko": "수정"
+        },
+        "value": ""
+      },
+      {
+        "id": "serial",
+        "type": "label",
+        "label": {
+          "en": "S/N",
+          "nl": "S/N",
+          "pl": "Numer Seryjny",
+          "da": "S/N",
+          "de": "S/N",
+          "es": "N/S",
+          "fr": "S/N",
+          "it": "S/N",
+          "no": "S/N",
+          "sv": "S/N",
+          "ru": "С/Н",
+          "ko": "일련 번호"
+        },
+        "value": ""
+      },
+      {
+        "id": "processors",
+        "type": "label",
+        "label": {
+          "en": "Processors",
+          "nl": "Processoren",
+          "pl": "Procesory",
+          "da": "Processorer",
+          "de": "Prozessoren",
+          "es": "Procesadores",
+          "fr": "Processeurs",
+          "it": "Processori",
+          "no": "Prosessorer",
+          "sv": "Processorer",
+          "ru": "Процессоры",
+          "ko": "프로세서"
+        },
+        "value": ""
+      },
+      {
+        "id": "osArch",
+        "type": "label",
+        "label": {
+          "en": "OS Architecture",
+          "nl": "OS Architectuur",
+          "pl": "Architektura systemu operacyjnego",
+          "da": "OS-arkitektur",
+          "de": "Betriebssystemarchitektur",
+          "es": "Arquitectura del SO",
+          "fr": "Architecture OS",
+          "it": "Architettura OS",
+          "no": "OS-arkitektur",
+          "sv": "OS-arkitektur",
+          "ru": "Архитектура ОС",
+          "ko": "운영 체제 아키텍처"
+        },
+        "value": ""
+      },
+      {
+        "id": "osName",
+        "type": "label",
+        "label": {
+          "en": "OS Name",
+          "nl": "OS Naam",
+          "pl": "Nazwa systemu operacyjnego",
+          "da": "OS-navn",
+          "de": "Betriebssystemname",
+          "es": "Nombre del SO",
+          "fr": "Nom du système d'exploitation",
+          "it": "Nome del sistema operativo",
+          "no": "OS-navn",
+          "sv": "OS-namn",
+          "ru": "Имя ОС",
+          "ko": "운영 체제 이름"
+        },
+        "value": ""
+      },
+      {
+        "id": "osVersion",
+        "type": "label",
+        "label": {
+          "en": "OS Version",
+          "nl": "OS Versie",
+          "pl": "Wersja systemu operacyjnego",
+          "da": "OS-version",
+          "de": "Betriebssystemversion",
+          "es": "Versión del SO",
+          "fr": "Version de l'OS",
+          "it": "Versione del sistema operativo",
+          "no": "OS-versjon",
+          "sv": "OS-version",
+          "ru": "Версия ОС",
+          "ko": "운영 체제 버전"
+        },
+        "value": ""
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Connection settings",
+      "nl": "Verbinding instellingen",
+      "pl": "Ustawienia połączenia",
+      "da": "Forbindelsesindstillinger",
+      "de": "Verbindungseinstellungen",
+      "es": "Ajustes de conexión",
+      "fr": "Paramètres de connexion",
+      "it": "Impostazioni di connessione",
+      "no": "Tilkoblingsinnstillinger",
+      "sv": "Anslutningsinställningar",
+      "ru": "Настройки подключения",
+      "ko": "연결 설정"
+    },
+    "children": [
+      {
+        "id": "host",
+        "type": "text",
+        "label": {
+          "en": "URL or IP address",
+          "nl": "URL of IP adres",
+          "pl": "URL adresu IP",
+          "da": "URL eller IP-adresse",
+          "de": "URL oder IP-Adresse",
+          "es": "URL o dirección IP",
+          "fr": "URL ou adresse IP",
+          "it": "URL o indirizzo IP",
+          "no": "URL eller IP-adresse",
+          "sv": "URL eller IP-adress",
+          "ru": "URL или IP-адрес",
+          "ko": "URL 또는 IP 주소"
+        },
+        "value": ""
+      },
+      {
+        "id": "port",
+        "type": "number",
+        "label": {
+          "en": "Port",
+          "nl": "Poort",
+          "pl": "Port",
+          "da": "Port",
+          "de": "Port",
+          "es": "Puerto",
+          "fr": "Port",
+          "it": "Porta",
+          "no": "Port",
+          "sv": "Port",
+          "ru": "Порт",
+          "ko": "포트"
+        },
+        "hint": {
+          "en": "Default is 22.",
+          "nl": "Standaard is 22.",
+          "pl": "Domyślny to 22.",
+          "da": "Standard er 22.",
+          "de": "Standard ist 22.",
+          "es": "El valor predeterminado es 22.",
+          "fr": "La valeur par défaut est 22.",
+          "it": "Il valore predefinito è 22.",
+          "no": "Standard er 22.",
+          "sv": "Standard är 22.",
+          "ru": "По умолчанию 22.",
+          "ko": "기본값은 22입니다."
+        },
+        "value": 22
+      },
+      {
+        "id": "username",
+        "type": "text",
+        "label": {
+          "en": "Username",
+          "nl": "Gebruikersnaam",
+          "pl": "Nazwa użytkownika",
+          "da": "Brugernavn",
+          "de": "Benutzername",
+          "es": "Nombre de usuario",
+          "fr": "Nom d'utilisateur",
+          "it": "Nome utente",
+          "no": "Brukernavn",
+          "sv": "Användarnamn",
+          "ru": "Имя пользователя",
+          "ko": "사용자 이름"
+        },
+        "hint": {
+          "en": "Default is pi.",
+          "nl": "Standaard is pi.",
+          "pl": "Domyślna to pi",
+          "da": "Standard er pi.",
+          "de": "Standard ist pi.",
+          "es": "El valor predeterminado es pi.",
+          "fr": "La valeur par défaut est pi.",
+          "it": "Il valore predefinito è pi.",
+          "no": "Standard er pi.",
+          "sv": "Standard är pi.",
+          "ru": "По умолчанию pi.",
+          "ko": "기본값은 pi입니다."
+        },
+        "value": ""
+      },
+      {
+        "id": "password",
+        "type": "password",
+        "label": {
+          "en": "Password",
+          "nl": "Wachtwoord",
+          "pl": "Hasło",
+          "da": "Adgangskode",
+          "de": "Passwort",
+          "es": "Contraseña",
+          "fr": "Mot de passe",
+          "it": "Password",
+          "no": "Passord",
+          "sv": "Lösenord",
+          "ru": "Пароль",
+          "ko": "비밀번호"
+        },
+        "hint": {
+          "en": "Deault is raspberry.",
+          "nl": "Standaard is raspberry.",
+          "pl": "Domyślne to raspberry",
+          "da": "Standard er hindbær.",
+          "de": "Standard ist Himbeere.",
+          "es": "El valor predeterminado es raspberry.",
+          "fr": "La valeur par défaut est raspberry.",
+          "it": "Il valore predefinito è raspberry.",
+          "no": "Standard er bringebær.",
+          "sv": "Standard är hallon.",
+          "ru": "По умолчанию малиновый.",
+          "ko": "기본값은 라즈베리입니다."
+        },
+        "value": ""
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Monitoring settings",
+      "nl": "Monitoring instellingen",
+      "pl": "Ustawienia monitorowania",
+      "da": "Overvågningsindstillinger",
+      "de": "Überwachungseinstellungen",
+      "es": "Configuración de monitoreo",
+      "fr": "Paramètres de surveillance",
+      "it": "Impostazioni di monitoraggio",
+      "no": "Overvåkingsinnstillinger",
+      "sv": "Övervakningsinställningar",
+      "ru": "Настройки мониторинга",
+      "ko": "모니터링 설정"
+    },
+    "children": [
+      {
+        "id": "pollingIntervalSlow",
+        "type": "number",
+        "label": {
+          "en": "Status update interval (s)",
+          "nl": "Status update interval (s)",
+          "pl": "Interwał aktualizacji statusu (s)",
+          "da": "Statusopdateringsinterval (s)",
+          "de": "Statusaktualisierungsintervall (s)",
+          "es": "Intervalo de actualización de estado (s)",
+          "fr": "Intervalle de mise à jour de l'état (s)",
+          "it": "Intervallo di aggiornamento dello stato (s)",
+          "no": "Statusoppdateringsintervall (s)",
+          "sv": "Statusuppdateringsintervall (s)",
+          "ru": "Интервал обновления статуса (с)",
+          "ko": "상태 업데이트 간격 (초)"
+        },
+        "hint": {
+          "en": "A lower value provides faster updates in Homey.",
+          "nl": "Een lagere waarde geeft snellere updates in Homey.",
+          "pl": "Niższa wartość zapewnia szybsze aktualizacje w Homey.",
+          "da": "En lavere værdi giver hurtigere opdateringer i Homey.",
+          "de": "Ein niedrigerer Wert führt zu schnelleren Updates in Homey.",
+          "es": "Un valor más bajo proporciona actualizaciones más rápidas en Homey.",
+          "fr": "Une valeur plus basse permet des mises à jour plus rapides dans Homey.",
+          "it": "Un valore più basso fornisce aggiornamenti più rapidi in Homey.",
+          "no": "En lavere verdi gir raskere oppdateringer i Homey.",
+          "sv": "Ett lägre värde ger snabbare uppdateringar i Homey.",
+          "ru": "Нижнее значение обеспечивает более быстрые обновления в Homey.",
+          "ko": "더 낮은 값은 Homey에서 더 빠른 업데이트를 제공합니다."
+        },
+        "min": 5,
+        "max": 60,
+        "step": 1,
+        "value": 10
+      },
+      {
+        "id": "pollingInterval",
+        "type": "number",
+        "label": {
+          "en": "GPIO status update interval (s)",
+          "nl": "GPIO status update interval (s)",
+          "pl": "Interwał aktualizacji statusu GPIO (s)",
+          "da": "GPIO-statusopdateringsinterval (s)",
+          "de": "GPIO-Statusaktualisierungsintervall (s)",
+          "es": "Intervalo de actualización del estado GPIO (s)",
+          "fr": "Intervalle de mise à jour de l'état GPIO (s)",
+          "it": "Intervallo di aggiornamento dello stato GPIO (s)",
+          "no": "GPIO-statusoppdateringsintervall (s)",
+          "sv": "GPIO-statusuppdateringsintervall (s)",
+          "ru": "Интервал обновления статуса GPIO (с)",
+          "ko": "GPIO 상태 업데이트 간격 (초)"
+        },
+        "hint": {
+          "en": "A lower value provides faster updates in Homey. Set to 0 to disable GPIO status polling.",
+          "nl": "Een lagere waarde geeft snellere updates in Homey. Zet op 0 om GPIO status polling uit te zetten.",
+          "pl": "Niższa wartość zapewnia szybsze aktualizacje w Homey. Ustaw na 0, aby wyłączyć sondowanie stanu GPIO.",
+          "da": "En lavere værdi giver hurtigere opdateringer i Homey. Indstil til 0 for at deaktivere GPIO-statuspolling.",
+          "de": "Ein niedrigerer Wert führt zu schnelleren Updates in Homey. Stellen Sie auf 0 ein, um die GPIO-Statusabfrage zu deaktivieren.",
+          "es": "Un valor más bajo proporciona actualizaciones más rápidas en Homey. Ajusta a 0 para deshabilitar la sondeo del estado GPIO.",
+          "fr": "Une valeur plus basse permet des mises à jour plus rapides dans Homey. Réglez sur 0 pour désactiver le sondage de l'état GPIO.",
+          "it": "Un valore più basso fornisce aggiornamenti più rapidi in Homey. Imposta a 0 per disabilitare il polling dello stato GPIO.",
+          "no": "En lavere verdi gir raskere oppdateringer i Homey. Sett til 0 for å deaktivere GPIO-statuspolling.",
+          "sv": "Ett lägre värde ger snabbare uppdateringar i Homey. Ställ in på 0 för att inaktivera GPIO-statuspolling.",
+          "ru": "Нижнее значение обеспечивает более быстрые обновления в Homey. Установите значение 0, чтобы отключить опрос состояния GPIO.",
+          "ko": "더 낮은 값은 Homey에서 더 빠른 업데이트를 제공합니다. GPIO 상태 폴링을 비활성화하려면 0으로 설정하십시오."
+        },
+        "min": 0,
+        "max": 5,
+        "step": 1,
+        "value": 5
+      }
+    ]
+  }
 ]

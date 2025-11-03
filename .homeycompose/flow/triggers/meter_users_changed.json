@@ -1,27 +1,45 @@
 {
-	"title": { 
-		"en": "The number of users changed",
-		"nl": "Het aantal gebruikers is veranderd",
-		"pl": "Liczba użytkowników uległa zmianie"
-	},
-	"highlight": true,
-	"args": [
-		{
-				"type": "device",
-				"name": "device",
-				"filter": "driver_id=rpi"
-		}
-	],
-	"tokens": [
-		{
-			"name": "meter_users",
-			"type": "number",
-			"title": { 
-				"en": "Number of users",
-				"nl": "Aantal gebruikers",
-				"pl": "Liczba użytkowników"
-			},
-			"example": 3
-		}
-	]
+  "title": {
+    "en": "The number of users changed",
+    "nl": "Het aantal gebruikers is veranderd",
+    "pl": "Liczba użytkowników uległa zmianie",
+    "da": "Antallet af brugere ændrede sig",
+    "de": "Die Anzahl der Benutzer hat sich geändert",
+    "es": "El número de usuarios cambió",
+    "fr": "Le nombre d'utilisateurs a changé",
+    "it": "Il numero di utenti è cambiato",
+    "no": "Antallet av brukere endret seg",
+    "sv": "Antalet användare ändrades",
+    "ru": "Количество пользователей изменилось",
+    "ko": "사용자 수가 변경되었습니다"
+  },
+  "highlight": true,
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=rpi"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "meter_users",
+      "type": "number",
+      "title": {
+        "en": "Number of users",
+        "nl": "Aantal gebruikers",
+        "pl": "Liczba użytkowników",
+        "da": "Antal brugere",
+        "de": "Anzahl der Benutzer",
+        "es": "Número de usuarios",
+        "fr": "Nombre d'utilisateurs",
+        "it": "Numero di utenti",
+        "no": "Antall brukere",
+        "sv": "Antal användare",
+        "ru": "Количество пользователей",
+        "ko": "사용자 수"
+      },
+      "example": 3
+    }
+  ]
 }

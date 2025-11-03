@@ -1,87 +1,159 @@
 {
-	"title": { 
-		"en": "A user logged out",
-		"nl": "Een gebruiker is uitgelogd",
-		"pl": "Użytkownik się wylogował"
-	},
-	"highlight": true,
-	"args": [
-		{
-				"type": "device",
-				"name": "device",
-				"filter": "driver_id=rpi"
-		}
-	],
-	"tokens": [
-		{
-			"name": "user",
-			"type": "string",
-			"title": { 
-				"en": "User name",
-				"nl": "Gebruikersnaam",
-				"pl": "Nazwa użytkownika"
-			},
-			"example": "pi"
-		},
-		{
-			"name": "tty",
-			"type": "string",
-			"title": { 
-				"en": "TTY",
-				"nl": "TTY",
-				"pl": "TTY"
-			},
-			"example": "pts/0"
-		},
-		{
-			"name": "host",
-			"type": "string",
-			"title": { 
-				"en": "Host",
-				"nl": "Host",
-				"pl": "Host"
-			},
-			"example": "192.168.1.46"
-		},
-		{
-			"name": "loginTime",
-			"type": "string",
-			"title": { 
-				"en": "Login time",
-				"nl": "Login tijd",
-				"pl": "Czas zalogowania"
-			},
-			"example": "2024-08-06T10:52:20+02:00"
-		},
-		{
-			"name": "logoutTime",
-			"type": "string",
-			"title": { 
-				"en": "Logout time",
-				"nl": "Logout tijd",
-				"pl": "Czas wylogowania"
-			},
-			"example": "2024-08-06T10:59:20+02:00"
-		},
-		{
-			"name": "duration",
-			"type": "string",
-			"title": { 
-				"en": "Duration",
-				"nl": "Duur",
-				"pl": "Czas trwania"
-			},
-			"example": "00:07"
-		},
-		{
-			"name": "info",
-			"type": "string",
-			"title": { 
-				"en": "Info",
-				"nl": "Info",
-				"pl": "Info"
-			},
-			"example": "gone - no logout"
-		}
-	]
+  "title": {
+    "en": "A user logged out",
+    "nl": "Een gebruiker is uitgelogd",
+    "pl": "Użytkownik się wylogował",
+    "da": "En bruger er logget ud",
+    "de": "Ein Benutzer hat sich abgemeldet",
+    "es": "Un usuario ha cerrado sesión",
+    "fr": "Un utilisateur s'est déconnecté",
+    "it": "Un utente ha effettuato il logout",
+    "no": "En bruker har logget ut",
+    "sv": "En användare har loggat ut",
+    "ru": "Пользователь вышел",
+    "ko": "사용자가 로그아웃했습니다"
+  },
+  "highlight": true,
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=rpi"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "user",
+      "type": "string",
+      "title": {
+        "en": "User name",
+        "nl": "Gebruikersnaam",
+        "pl": "Nazwa użytkownika",
+        "da": "Brugernavn",
+        "de": "Benutzername",
+        "es": "Nombre de usuario",
+        "fr": "Nom d'utilisateur",
+        "it": "Nome utente",
+        "no": "Brukernavn",
+        "sv": "Användarnamn",
+        "ru": "Имя пользователя",
+        "ko": "사용자 이름"
+      },
+      "example": "pi"
+    },
+    {
+      "name": "tty",
+      "type": "string",
+      "title": {
+        "en": "TTY",
+        "nl": "TTY",
+        "pl": "TTY",
+        "da": "TTY",
+        "de": "TTY",
+        "es": "TTY",
+        "fr": "TTY",
+        "it": "TTY",
+        "no": "TTY",
+        "sv": "TTY",
+        "ru": "TTY",
+        "ko": "TTY"
+      },
+      "example": "pts/0"
+    },
+    {
+      "name": "host",
+      "type": "string",
+      "title": {
+        "en": "Host",
+        "nl": "Host",
+        "pl": "Host",
+        "da": "Vært",
+        "de": "Host",
+        "es": "Host",
+        "fr": "Hôte",
+        "it": "Host",
+        "no": "Vert",
+        "sv": "Värd",
+        "ru": "Хост",
+        "ko": "호스트"
+      },
+      "example": "192.168.1.46"
+    },
+    {
+      "name": "loginTime",
+      "type": "string",
+      "title": {
+        "en": "Login time",
+        "nl": "Login tijd",
+        "pl": "Czas zalogowania",
+        "da": "Login tid",
+        "de": "Anmeldezeit",
+        "es": "Hora de inicio de sesión",
+        "fr": "Heure de connexion",
+        "it": "Ora di accesso",
+        "no": "Innloggingstid",
+        "sv": "Inloggningstid",
+        "ru": "Время входа",
+        "ko": "로그인 시간"
+      },
+      "example": "2024-08-06T10:52:20+02:00"
+    },
+    {
+      "name": "logoutTime",
+      "type": "string",
+      "title": {
+        "en": "Logout time",
+        "nl": "Logout tijd",
+        "pl": "Czas wylogowania",
+        "da": "Logout tid",
+        "de": "Abmeldezeit",
+        "es": "Hora de cierre de sesión",
+        "fr": "Heure de déconnexion",
+        "it": "Ora di disconnessione",
+        "no": "Utloggingstid",
+        "sv": "Utloggningstid",
+        "ru": "Время выхода",
+        "ko": "로그아웃 시간"
+      },
+      "example": "2024-08-06T10:59:20+02:00"
+    },
+    {
+      "name": "duration",
+      "type": "string",
+      "title": {
+        "en": "Duration",
+        "nl": "Duur",
+        "pl": "Czas trwania",
+        "da": "Varighed",
+        "de": "Dauer",
+        "es": "Duración",
+        "fr": "Durée",
+        "it": "Durata",
+        "no": "Varighet",
+        "sv": "Varaktighet",
+        "ru": "Длительность",
+        "ko": "지속 시간"
+      },
+      "example": "00:07"
+    },
+    {
+      "name": "info",
+      "type": "string",
+      "title": {
+        "en": "Info",
+        "nl": "Info",
+        "pl": "Info",
+        "da": "Info",
+        "de": "Info",
+        "es": "Información",
+        "fr": "Info",
+        "it": "Info",
+        "no": "Info",
+        "sv": "Info",
+        "ru": "Информация",
+        "ko": "정보"
+      },
+      "example": "gone - no logout"
+    }
+  ]
 }

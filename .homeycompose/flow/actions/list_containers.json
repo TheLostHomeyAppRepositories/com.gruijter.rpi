@@ -1,34 +1,59 @@
 {
-	"title": {
-		"en": "List containers (JSON)",
-		"nl": "Lijst containers (JSON)",
-		"pl": "Wyświetl wszystkie kontenery (JSON)"
-	},
-	"hint": {
-		"en": "Get a list and status of all Docker containers in JSON format.",
-		"nl": "Geeft een lijst en status van alle Docker containers in JSON formaat.",
-		"pl": "Pobierz listę i status wszystkich kontenerów Docker w formacie JSON."
-	},
-	"highlight": true,
-	"args": [
-		{
-		  "type": "device",
-		  "name": "device",
-		  "filter": "driver_id=rpi"
-		}
-	],
-	"tokens": [
-		{
-			"name": "containers",
-			"title": {
-				"en": "Containers",
-				"nl": "Containers",
-				"pl": "Kontenery"
-			},
-			"type": "string",
-			"example": "[{'CONTAINER ID':'b1a043344f3d','IMAGE':'VPNserver:latest','COMMAND':'/init','CREATED':'3 weeks ago','STATUS':'Up About an hour','PORTS':'0.0.0.0:1234->1234','NAMES':'VPNserver'}]"
-		}
-	]
+  "title": {
+    "en": "List containers (JSON)",
+    "nl": "Lijst containers (JSON)",
+    "pl": "Wyświetl wszystkie kontenery (JSON)",
+    "da": "List containere (JSON)",
+    "de": "Container auflisten (JSON)",
+    "es": "Lista de contenedores (JSON)",
+    "fr": "Lister les conteneurs (JSON)",
+    "it": "Elenco dei contenitori (JSON)",
+    "no": "Liste containere (JSON)",
+    "sv": "Lista containrar (JSON)",
+    "ru": "Список контейнеров (JSON)",
+    "ko": "컨테이너 목록 (JSON)"
+  },
+  "hint": {
+    "en": "Get a list and status of all Docker containers in JSON format.",
+    "nl": "Geeft een lijst en status van alle Docker containers in JSON formaat.",
+    "pl": "Pobierz listę i status wszystkich kontenerów Docker w formacie JSON.",
+    "da": "Få en liste og status for alle Docker-containere i JSON-format.",
+    "de": "Holen Sie sich eine Liste und den Status aller Docker-Container im JSON-Format.",
+    "es": "Obtén una lista y estado de todos los contenedores Docker en formato JSON.",
+    "fr": "Obtenez une liste et le statut de tous les conteneurs Docker au format JSON.",
+    "it": "Ottieni un elenco e lo stato di tutti i contenitori Docker in formato JSON.",
+    "no": "Få en liste og status for alle Docker-containere i JSON-format.",
+    "sv": "Få en lista och status för alla Docker-containrar i JSON-format.",
+    "ru": "Получите список и статус всех контейнеров Docker в формате JSON.",
+    "ko": "JSON 형식으로 모든 Docker 컨테이너의 목록과 상태를 가져옵니다."
+  },
+  "highlight": true,
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=rpi"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "containers",
+      "title": {
+        "en": "Containers",
+        "nl": "Containers",
+        "pl": "Kontenery",
+        "da": "Containere",
+        "de": "Container",
+        "es": "Contenedores",
+        "fr": "Conteneurs",
+        "it": "Contenitori",
+        "no": "Containere",
+        "sv": "Containrar",
+        "ru": "Контейнеры",
+        "ko": "컨테이너"
+      },
+      "type": "string",
+      "example": "[{'CONTAINER ID':'b1a043344f3d','IMAGE':'VPNserver:latest','COMMAND':'/init','CREATED':'3 weeks ago','STATUS':'Up About an hour','PORTS':'0.0.0.0:1234->1234','NAMES':'VPNserver'}]"
+    }
+  ]
 }
-
-

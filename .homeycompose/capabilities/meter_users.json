@@ -3,7 +3,16 @@
   "title": {
     "en": "Users",
     "nl": "Gebruikers",
-    "pl": "Użytkownicy"
+    "pl": "Użytkownicy",
+    "da": "Brugere",
+    "de": "Benutzer",
+    "es": "Usuarios",
+    "fr": "Utilisateurs",
+    "it": "Utenti",
+    "no": "Brukere",
+    "sv": "Användare",
+    "ru": "Пользователи",
+    "ko": "사용자"
   },
   "getable": true,
   "setable": false,

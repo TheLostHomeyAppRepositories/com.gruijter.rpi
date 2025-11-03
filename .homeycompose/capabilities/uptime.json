@@ -2,7 +2,17 @@
   "type": "string",
   "title": {
     "en": "Uptime",
-    "pl": "Czas działania"
+    "pl": "Czas działania",
+    "nl": "Uptime",
+    "da": "Oppetid",
+    "de": "Betriebszeit",
+    "es": "Tiempo activo",
+    "fr": "Temps de disponibilité",
+    "it": "Tempo di attività",
+    "no": "Driftstid",
+    "sv": "Driftstid",
+    "ru": "Время работы",
+    "ko": "가동 시간"
   },
   "getable": true,
   "setable": false,

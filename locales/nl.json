@@ -1,0 +1,15 @@
+{
+  "pair": {
+    "title": "Verbind een Raspberry Pi",
+    "text": "Deze app is bedoeld voor gebruik met RPi's op Raspberry OS. Andere hardware of Linux-distributies kunnen ook gedeeltelijk werken. SSH moet ingeschakeld zijn en je moet inloggen met voldoende rechten.",
+    "host": "IP-adres of URL",
+    "port": "SSH-poort",
+    "username": "Gebruikersnaam",
+    "password": "Wachtwoord",
+    "incomplete": "IP of URL, gebruikersnaam en wachtwoord moeten ingevuld worden!",
+    "continue": "DOORGAAN"
+  },
+  "device": {
+    "connectionError": "Verbindingsfout, opnieuw opstarten"
+  }
+}

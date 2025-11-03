@@ -3,12 +3,31 @@
   "title": {
     "en": "Storage used",
     "nl": "Opslag gebruikt",
-    "pl": "Użyte miejsce do przechowywania"
+    "pl": "Użyte miejsce do przechowywania",
+    "da": "Brugt lagerplads",
+    "de": "Verwendeter Speicher",
+    "es": "Almacenamiento usado",
+    "fr": "Stockage utilisé",
+    "it": "Storage utilizzato",
+    "no": "Brukt lagringsplass",
+    "sv": "Använt lagringsutrymme",
+    "ru": "Используемое хранилище",
+    "ko": "사용 중인 저장공간"
   },
   "getable": true,
   "setable": false,
   "units": {
-    "en": "%"
+    "en": "%",
+    "da": "%",
+    "de": "%",
+    "es": "%",
+    "fr": "%",
+    "it": "%",
+    "no": "%",
+    "sv": "%",
+    "pl": "%",
+    "ru": "%",
+    "ko": "%"
   },
   "decimals": 0,
   "insights": true,

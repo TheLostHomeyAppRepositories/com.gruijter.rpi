@@ -3,12 +3,31 @@
   "title": {
     "en": "Memory used",
     "nl": "Geheugen gebruikt",
-    "pl": "Wykorzystanie pamięci"
+    "pl": "Wykorzystanie pamięci",
+    "da": "Brugt hukommelse",
+    "de": "Verwendeter Speicher",
+    "es": "Memoria utilizada",
+    "fr": "Mémoire utilisée",
+    "it": "Memoria utilizzata",
+    "no": "Brukt minne",
+    "sv": "Använt minne",
+    "ru": "Используемая память",
+    "ko": "사용된 메모리"
   },
   "getable": true,
   "setable": false,
   "units": {
-    "en": "%"
+    "en": "%",
+    "da": "%",
+    "de": "%",
+    "es": "%",
+    "fr": "%",
+    "it": "%",
+    "no": "%",
+    "sv": "%",
+    "pl": "%",
+    "ru": "%",
+    "ko": "%"
   },
   "decimals": 0,
   "insights": true,

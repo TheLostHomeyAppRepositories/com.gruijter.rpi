@@ -1,27 +1,45 @@
 {
-	"title": { 
-		"en": "The CPU temperature changed",
-		"nl": "De CPU temperatuur is veranderd",
-		"pl": "Temperatura CPU uległa zmianie"
-	},
-	"highlight": true,
-	"args": [
-		{
-				"type": "device",
-				"name": "device",
-				"filter": "driver_id=rpi"
-		}
-	],
-	"tokens": [
-		{
-			"name": "measure_temperature.cpu",
-			"type": "number",
-			"title": { 
-				"en": "CPU temperature",
-				"nl": "CPU temperatuur",
-				"pl": "Temperatura CPU"
-			},
-			"example": 50
-		}
-	]
+  "title": {
+    "en": "The CPU temperature changed",
+    "nl": "De CPU temperatuur is veranderd",
+    "pl": "Temperatura CPU uległa zmianie",
+    "da": "CPU-temperaturen ændrede sig",
+    "de": "Die CPU-Temperatur hat sich geändert",
+    "es": "La temperatura de la CPU cambió",
+    "fr": "La température du CPU a changé",
+    "it": "La temperatura della CPU è cambiata",
+    "no": "CPU-temperaturen endret seg",
+    "sv": "CPU-temperaturen ändrades",
+    "ru": "Температура ЦП изменилась",
+    "ko": "CPU 온도가 변경되었습니다"
+  },
+  "highlight": true,
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=rpi"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "measure_temperature.cpu",
+      "type": "number",
+      "title": {
+        "en": "CPU temperature",
+        "nl": "CPU temperatuur",
+        "pl": "Temperatura CPU",
+        "da": "CPU temperatur",
+        "de": "CPU-Temperatur",
+        "es": "Temperatura de la CPU",
+        "fr": "Température du CPU",
+        "it": "Temperatura della CPU",
+        "no": "CPU-temperatur",
+        "sv": "CPU-temperatur",
+        "ru": "Температура ЦП",
+        "ko": "CPU 온도"
+      },
+      "example": 50
+    }
+  ]
 }

@@ -1,27 +1,45 @@
 {
-	"title": { 
-		"en": "The CPU usage (%) changed",
-		"nl": "Het CPU gebruik (%) is veranderd",
-		"pl": "Zużycie CPU (%) uległo zmianie"
-	},
-	"highlight": true,
-	"args": [
-		{
-				"type": "device",
-				"name": "device",
-				"filter": "driver_id=rpi"
-		}
-	],
-	"tokens": [
-		{
-			"name": "meter_cpu_utilization",
-			"type": "number",
-			"title": { 
-				"en": "CPU used (%)",
-				"nl": "CPU gebruikt (%)",
-				"pl": "Zużycie CPU (%)"
-			},
-			"example": 50
-		}
-	]
+  "title": {
+    "en": "The CPU usage (%) changed",
+    "nl": "Het CPU gebruik (%) is veranderd",
+    "pl": "Zużycie CPU (%) uległo zmianie",
+    "da": "CPU-brug (%) er ændret",
+    "de": "Die CPU-Auslastung (%) hat sich geändert",
+    "es": "El uso de CPU (%) ha cambiado",
+    "fr": "L'utilisation du CPU (%) a changé",
+    "it": "L'uso della CPU (%) è cambiato",
+    "no": "CPU-bruken (%) har endret seg",
+    "sv": "CPU-användningen (%) har ändrats",
+    "ru": "Использование ЦП (%) изменилось",
+    "ko": "CPU 사용량 (%)이 변경되었습니다"
+  },
+  "highlight": true,
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=rpi"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "meter_cpu_utilization",
+      "type": "number",
+      "title": {
+        "en": "CPU used (%)",
+        "nl": "CPU gebruikt (%)",
+        "pl": "Zużycie CPU (%)",
+        "da": "CPU brugt (%)",
+        "de": "CPU verwendet (%)",
+        "es": "CPU usado (%)",
+        "fr": "CPU utilisé (%)",
+        "it": "CPU utilizzato (%)",
+        "no": "CPU brukt (%)",
+        "sv": "CPU använd (%)",
+        "ru": "Использование ЦП (%)",
+        "ko": "CPU 사용 (%)"
+      },
+      "example": 50
+    }
+  ]
 }

@@ -1,0 +1,15 @@
+{
+  "pair": {
+    "title": "Collega un Raspberry Pi",
+    "text": "Questa app è pensata per essere utilizzata con RPi su Raspberry OS. Anche altre hardware o distribuzioni Linux potrebbero funzionare parzialmente. SSH deve essere attivato e devi usare credenziali con diritti sufficienti.",
+    "host": "Indirizzo IP o URL",
+    "port": "Porta SSH",
+    "username": "Nome utente",
+    "password": "Password",
+    "incomplete": "Devi inserire IP o URL, nome utente e password!",
+    "continue": "CONTINUA"
+  },
+  "device": {
+    "connectionError": "Errore di connessione, riavviando ora"
+  }
+}

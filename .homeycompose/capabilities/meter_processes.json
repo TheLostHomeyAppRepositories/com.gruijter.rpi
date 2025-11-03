@@ -3,7 +3,16 @@
   "title": {
     "en": "Active processes",
     "nl": "Aktieve processen",
-    "pl": "Aktywne procesy"
+    "pl": "Aktywne procesy",
+    "da": "Aktive processer",
+    "de": "Aktive Prozesse",
+    "es": "Procesos activos",
+    "fr": "Processus actifs",
+    "it": "Processi attivi",
+    "no": "Aktive prosesser",
+    "sv": "Aktiva processer",
+    "ru": "Активные процессы",
+    "ko": "활성 프로세스"
   },
   "getable": true,
   "setable": false,

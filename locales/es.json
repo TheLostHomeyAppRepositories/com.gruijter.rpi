@@ -1,0 +1,15 @@
+{
+  "pair": {
+    "title": "Conectar un Raspberry Pi",
+    "text": "Esta aplicación está destinada a ser utilizada con RPi en Raspberry OS. Otro hardware o distribuciones de Linux pueden funcionar parcialmente también. SSH debe estar habilitado y necesitas usar credenciales con suficientes derechos.",
+    "host": "Dirección IP o URL",
+    "port": "Puerto SSH",
+    "username": "Nombre de usuario",
+    "password": "Contraseña",
+    "incomplete": "¡Se deben ingresar la IP o URL, el nombre de usuario y la contraseña!",
+    "continue": "CONTINUAR"
+  },
+  "device": {
+    "connectionError": "Error de conexión, reiniciando ahora"
+  }
+}

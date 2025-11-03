@@ -2,32 +2,68 @@
   "title": {
     "en": "Execute a command",
     "nl": "Voer een commando uit",
-    "pl": "Wykonaj polecenie"
+    "pl": "Wykonaj polecenie",
+    "da": "Udfør en kommando",
+    "de": "Einen Befehl ausführen",
+    "es": "Ejecutar un comando",
+    "fr": "Exécuter une commande",
+    "it": "Esegui un comando",
+    "no": "Utfør en kommando",
+    "sv": "Kör ett kommando",
+    "ru": "Выполнить команду",
+    "ko": "명령 실행"
   },
   "titleFormatted": {
     "en": "Execute [[command]]",
     "nl": "Uitvoeren [[command]]",
-    "pl": "Wykonaj [[command]]"
+    "pl": "Wykonaj [[command]]",
+    "da": "Udfør [[command]]",
+    "de": "Führe [[command]] aus",
+    "es": "Ejecutar [[command]]",
+    "fr": "Exécuter [[command]]",
+    "it": "Esegui [[command]]",
+    "no": "Utfør [[command]]",
+    "sv": "Kör [[command]]",
+    "ru": "Выполнить [[command]]",
+    "ko": "[[command]] 실행"
   },
   "hint": {
     "en": "Execute a CLI command.",
     "nl": "Voer een CLI commando uit.",
-    "pl": "Wykonaj polecenie CLI."
+    "pl": "Wykonaj polecenie CLI.",
+    "da": "Udfør en CLI-kommando.",
+    "de": "Führe einen CLI-Befehl aus.",
+    "es": "Ejecuta un comando CLI.",
+    "fr": "Exécutez une commande CLI.",
+    "it": "Esegui un comando CLI.",
+    "no": "Utfør en CLI-kommando.",
+    "sv": "Kör ett CLI-kommando.",
+    "ru": "Выполните команду CLI.",
+    "ko": "CLI 명령을 실행합니다."
   },
   "highlight": true,
   "args": [
     {
-		  "type": "device",
-		  "name": "device",
-		  "filter": "driver_id=rpi"
-		},
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=rpi"
+    },
     {
       "name": "command",
       "type": "text",
       "title": {
         "en": "Command",
         "nl": "Commando",
-        "pl": "Polecenie"
+        "pl": "Polecenie",
+        "da": "Kommando",
+        "de": "Befehl",
+        "es": "Comando",
+        "fr": "Commande",
+        "it": "Comando",
+        "no": "Kommando",
+        "sv": "Kommando",
+        "ru": "Команда",
+        "ko": "명령어"
       },
       "placeholder": {
         "en": "sudo who -u"
@@ -35,15 +71,24 @@
     }
   ],
   "tokens": [
-		{
-			"name": "response",
-			"title": {
-				"en": "Response",
-				"nl": "Respons",
-        "pl": "Odpowiedź"
-			},
-			"type": "string",
-			"example": "pi pts/1 2024-08-19 11:09 . 76414 (192.168.0.18)"
-		}
-	]
+    {
+      "name": "response",
+      "title": {
+        "en": "Response",
+        "nl": "Respons",
+        "pl": "Odpowiedź",
+        "da": "Respons",
+        "de": "Antwort",
+        "es": "Respuesta",
+        "fr": "Réponse",
+        "it": "Risposta",
+        "no": "Respons",
+        "sv": "Svar",
+        "ru": "Ответ",
+        "ko": "응답"
+      },
+      "type": "string",
+      "example": "pi pts/1 2024-08-19 11:09 . 76414 (192.168.0.18)"
+    }
+  ]
 }

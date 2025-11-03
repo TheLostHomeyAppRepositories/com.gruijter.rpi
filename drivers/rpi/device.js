@@ -243,7 +243,10 @@ class RPiDevice extends Device {
       // add GPIO capability states for first 16 GPIO
       const capabilityStates = {};
       for (const [key, value] of Object.entries(gpio)) {
-        if (Number(key) < 16) capabilityStates[`onoff.gpio${key}`] = value.level;
+        if (Number(key) < 16) {
+          capabilityStates[`onoff.gpio${key}`] = value.level;
+          capabilityStates[`button.gpio${key}`] = value.func === 'OUTPUT';
+        }
       }
       // set the capabilities
       Object.entries(capabilityStates).forEach((entry) => {
@@ -344,8 +347,25 @@ class RPiDevice extends Device {
   async setGpioOutput(args, source) {
     try {
       if (!this.rpi) throw Error('Rpi not ready');
+      if (!this.lastGpio) {
+        const gpio = await this.rpi.getGPIOStates();
+        await this.updateGpioState(gpio);
+      }
+      if (this?.lastGpio[args.io]?.func !== 'OUTPUT') throw Error(`GPIO${args.io} is not set as OUTPUT`);
       this.log(`${this.getName()} Setting GPIO${args.io} to ${args.high} by ${source}`);
       await this.rpi.setGPIOState(args); // { io: 5, high: true }
+      return true;
+    } catch (error) {
+      this.error(`${this.getName()}`, error && error.message);
+      return Promise.reject(error);
+    }
+  }
+
+  async setGpioFunction(args, source) {
+    try {
+      if (!this.rpi) throw Error('Rpi not ready');
+      this.log(`${this.getName()} Setting GPIO${args.io} to OUTPUT ${args.output} by ${source}`);
+      await this.rpi.setGPIOFunction(args); // { io: 5, output: true }
       return true;
     } catch (error) {
       this.error(`${this.getName()}`, error && error.message);
@@ -445,6 +465,9 @@ class RPiDevice extends Device {
     for (let idx = 0; idx < 16; idx++) {
       this.registerCapabilityListener(`onoff.gpio${idx}`, async (value) => {
         await this.setGpioOutput({ io: idx, high: value }, 'user app');
+      });
+      this.registerCapabilityListener(`button.gpio${idx}`, async (value) => {
+        await this.setGpioFunction({ io: idx, output: value }, 'user app');
       });
     }
     this.listenersSet = true;

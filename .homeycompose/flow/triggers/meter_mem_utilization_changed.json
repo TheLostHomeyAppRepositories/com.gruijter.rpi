@@ -1,27 +1,45 @@
 {
-	"title": { 
-		"en": "The memory usage (%) changed",
-		"nl": "Het geheugen gebruik (%) is veranderd",
-		"pl": "Zużycie pamięci (%) uległo zmianie"
-	},
-	"highlight": true,
-	"args": [
-		{
-				"type": "device",
-				"name": "device",
-				"filter": "driver_id=rpi"
-		}
-	],
-	"tokens": [
-		{
-			"name": "meter_mem_utilization",
-			"type": "number",
-			"title": { 
-				"en": "Memory used (%)",
-				"nl": "Geheugen gebruikt (%)",
-				"pl": "Zużycie pamięci (%)"
-			},
-			"example": 50
-		}
-	]
+  "title": {
+    "en": "The memory usage (%) changed",
+    "nl": "Het geheugen gebruik (%) is veranderd",
+    "pl": "Zużycie pamięci (%) uległo zmianie",
+    "da": "Brugen af hukommelsen (%) er ændret",
+    "de": "Die Speichernutzung (%) hat sich geändert",
+    "es": "El uso de memoria (%) ha cambiado",
+    "fr": "L'utilisation de la mémoire (%) a changé",
+    "it": "L'uso della memoria (%) è cambiato",
+    "no": "Minnebruket (%) har endret seg",
+    "sv": "Minness användning (%) har ändrats",
+    "ru": "Использование памяти (%) изменилось",
+    "ko": "메모리 사용량 (%)이 변경되었습니다"
+  },
+  "highlight": true,
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=rpi"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "meter_mem_utilization",
+      "type": "number",
+      "title": {
+        "en": "Memory used (%)",
+        "nl": "Geheugen gebruikt (%)",
+        "pl": "Zużycie pamięci (%)",
+        "da": "Hukommelse brugt (%)",
+        "de": "Verwendeter Speicher (%)",
+        "es": "Memoria utilizada (%)",
+        "fr": "Mémoire utilisée (%)",
+        "it": "Memoria utilizzata (%)",
+        "no": "Minne brukt (%)",
+        "sv": "Använt minne (%)",
+        "ru": "Используемая память (%)",
+        "ko": "사용된 메모리 (%)"
+      },
+      "example": 50
+    }
+  ]
 }

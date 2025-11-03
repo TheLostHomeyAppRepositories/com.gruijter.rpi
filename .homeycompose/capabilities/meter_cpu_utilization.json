@@ -3,12 +3,31 @@
   "title": {
     "en": "CPU used",
     "nl": "CPU gebruikt",
-    "pl": "Wykorzystanie CPU"
+    "pl": "Wykorzystanie CPU",
+    "da": "CPU brugt",
+    "de": "CPU genutzt",
+    "es": "CPU utilizado",
+    "fr": "CPU utilisé",
+    "it": "CPU utilizzato",
+    "no": "CPU brukt",
+    "sv": "CPU-användning",
+    "ru": "Использование ЦП",
+    "ko": "사용된 CPU"
   },
   "getable": true,
   "setable": false,
   "units": {
-    "en": "%"
+    "en": "%",
+    "da": "%",
+    "de": "%",
+    "es": "%",
+    "fr": "%",
+    "it": "%",
+    "no": "%",
+    "sv": "%",
+    "pl": "%",
+    "ru": "%",
+    "ko": "%"
   },
   "decimals": 0,
   "insights": true,

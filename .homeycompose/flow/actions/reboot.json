@@ -2,14 +2,23 @@
   "title": {
     "en": "Reboot",
     "nl": "Herstart",
-    "pl": "Ponowne uruchomienie"
+    "pl": "Ponowne uruchomienie",
+    "da": "Genstart",
+    "de": "Neustart",
+    "es": "Reiniciar",
+    "fr": "Redémarrer",
+    "it": "Riavvia",
+    "no": "Omstart",
+    "sv": "Starta om",
+    "ru": "Перезагрузка",
+    "ko": "재부팅"
   },
   "highlight": true,
   "args": [
     {
-		  "type": "device",
-		  "name": "device",
-		  "filter": "driver_id=rpi"
-		}
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=rpi"
+    }
   ]
 }

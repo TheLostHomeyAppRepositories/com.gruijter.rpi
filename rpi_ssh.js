@@ -59,6 +59,8 @@ const update = 'sudo apt-get update && sudo apt-get upgrade -y';
 // used for GPIO
 const getGPIOStates = 'raspi-gpio get';
 const setGPIOState = 'raspi-gpio set';
+const getGPIOStatesNew = 'pinctrl get';
+const setGPIOStateNew = 'pinctrl set';
 
 // used for docker
 const getContainers = 'sudo docker ps -a';
@@ -436,32 +438,44 @@ class RPi {
     }
   }
 
-  // get GPIO states
   async getGPIOStates() {
     try {
       const gpioStates = {};
-      const gpioStatesRaw = await this.silentExec(getGPIOStates);
-      if (gpioStatesRaw) {
-        // const regex = /GPIO (\d+): level=(\d) func=(\w+) pull=(\w+)/g;
-        // const regex = /GPIO (\d+): level=(\d) fsel=(\d)(?: alt=(\d))? func=(\w+)(?: pull=(\w+))?/g;
-        const regex = /GPIO (\d+): level=(\d)(?: fsel=(\d+))?(?: alt=(\d+))? func=(\w+)(?: pull=(\w+))?/g;
-        let match;
-        // eslint-disable-next-line no-cond-assign
-        while ((match = regex.exec(gpioStatesRaw)) !== null) {
-          const gpioNumber = parseInt(match[1], 10);
-          const level = match[2] === '1';
-          const fsel = parseInt(match[3], 10);
-          const alt = match[4] ? parseInt(match[4], 10) : null;
-          const func = match[5];
-          const pull = match[6] || null;
-          gpioStates[gpioNumber] = {
-            level,
+      let raw = await this.silentExec(getGPIOStatesNew).catch(() => null);
+      if (raw) {
+        // Parse new format: "0: ip    pu | hi // ID_SDA/GPIO0 = input" or "0: op -- pu | lo // GPIO0 = output"
+        const regex = /(\d+): (\w+)(?:\s+--)?(?:\s+d[hl])?\s+p([und])\s+\|\s+(hi|lo)/g;
+        Array.from(raw.matchAll(regex)).forEach((match) => {
+          const [, num, mode, pullStr, levelStr] = match;
+          const gpio = parseInt(num, 10);
+          let func;
+          if (mode === 'ip') func = 'INPUT';
+          else if (mode === 'op') func = 'OUTPUT';
+          else if (mode.startsWith('a')) func = 'ALT';
+          let alt = null;
+          if (func === 'ALT') alt = parseInt(mode.substring(1), 10);
+          const pull = { u: 'UP', d: 'DOWN', n: 'NONE' }[pullStr];
+          gpioStates[gpio] = {
+            level: levelStr === 'hi',
             func,
             alt,
-            fsel,
             pull,
           };
-        }
+        });
+      } else {
+        // Parse old format: "GPIO XX: level=X [func=XXX] [alt=X] [pull=XXX]"
+        raw = await this.silentExec(getGPIOStates);
+        if (!raw) return gpioStates;
+        const regex = /GPIO\s*(\d+):\s*level=(\d)(?:\s*func=(\w+))?(?:\s*alt=(\d+))?(?:\s*pull=(\w+))?/g;
+        Array.from(raw.matchAll(regex)).forEach((match) => {
+          const [, num, level, func, alt, pull] = match;
+          gpioStates[parseInt(num, 10)] = {
+            level: level === '1',
+            func: func || null,
+            alt: alt ? parseInt(alt, 10) : null,
+            pull: pull || null,
+          };
+        });
       }
       return Promise.resolve(gpioStates);
     } catch (error) {
@@ -500,7 +514,24 @@ class RPi {
   async setGPIOState(set) {
     try {
       const drive = set.high ? 'dh' : 'dl';
-      await this.execute(`${setGPIOState} ${set.io} ${drive}`);
+      const executed = await this.execute(`${setGPIOStateNew} ${set.io} ${drive}`)
+        .then(() => true)
+        .catch(() => null);
+      if (!executed) await this.execute(`${setGPIOState} ${set.io} ${drive}`);
+      return Promise.resolve(true);
+    } catch (error) {
+      return Promise.reject(error);
+    }
+  }
+
+  // set a GPIO output { io: number , output: boolean}
+  async setGPIOFunction(set) {
+    try {
+      const func = set.output ? 'op' : 'ip';
+      const executed = await this.execute(`${setGPIOStateNew} ${set.io} ${func}`)
+        .then(() => true)
+        .catch(() => null);
+      if (!executed) await this.execute(`${setGPIOState} ${set.io} ${func}`);
       return Promise.resolve(true);
     } catch (error) {
       return Promise.reject(error);

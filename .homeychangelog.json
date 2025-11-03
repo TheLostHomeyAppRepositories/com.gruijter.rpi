@@ -1,4 +1,8 @@
 {
+  "2.0.0": {
+    "en": "Fixed GPIO Trixie support. GPIO usability improvements. Translations to all languages. node-ssh@13.2.1",
+    "pl": "Naprawiono wsparcie GPIO Trixie. Ulepszenia użyteczności GPIO. Tłumaczenia na wszystkie języki. node-ssh@13.2.1"
+  },    
   "1.0.3": {
     "en": "Updated Polish language support.",
     "pl": "Dodano wsparcie dla języka Polskiego."

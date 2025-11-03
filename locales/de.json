@@ -1,0 +1,15 @@
+{
+  "pair": {
+    "title": "Raspberry Pi verbinden",
+    "text": "Diese App ist für die Verwendung mit RPi's auf Raspberry OS gedacht. Andere Hardware oder Linux-Distributionen könnten auch teilweise funktionieren. SSH muss aktiviert sein, und du musst Anmeldedaten mit ausreichenden Rechten verwenden.",
+    "host": "IP-Adresse oder URL",
+    "port": "SSH-Port",
+    "username": "Benutzername",
+    "password": "Passwort",
+    "incomplete": "IP oder URL, Benutzername und Passwort müssen eingegeben werden!",
+    "continue": "WEITER"
+  },
+  "device": {
+    "connectionError": "Verbindungsfehler, wird jetzt neu gestartet"
+  }
+}

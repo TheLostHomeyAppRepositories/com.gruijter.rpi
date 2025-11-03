@@ -1,29 +1,61 @@
 {
-	"highlight": true,
-	"title": {
-		"en": "GPIO turned low",
-		"nl": "GPIO werd laag",
-		"pl": "GPIO zmieniło się na niskie"
-	},
-	"titleFormatted": {
-		"en": "GPIO[[io]] turned low",
-		"nl": "GPIO[[io]] werd laag",
-		"pl": "GPIO[[io]] zmieniło się na niskie"
-	},
-	"hint": { "en": "GPIO 0-53" },
-	"args": [
-		{
-		  "type": "device",
-		  "name": "device",
-		  "filter": "driver_id=rpi"
-		},
-		{
-			"type": "number",
-			"name": "io",
-			"title": { "en": "GPIO" },
-			"value": 0,
-			"min": 0,
-			"max": 53
-		}
-	]
+  "highlight": true,
+  "title": {
+    "en": "GPIO turned low",
+    "nl": "GPIO werd laag",
+    "pl": "GPIO zmieniło się na niskie",
+    "da": "GPIO blev lavt",
+    "de": "GPIO wurde niedrig",
+    "es": "GPIO se volvió bajo",
+    "fr": "GPIO est devenu bas",
+    "it": "GPIO è diventato basso",
+    "no": "GPIO ble lav",
+    "sv": "GPIO blev lågt",
+    "ru": "GPIO стал низким",
+    "ko": "GPIO가 낮아졌습니다"
+  },
+  "titleFormatted": {
+    "en": "GPIO[[io]] turned low",
+    "nl": "GPIO[[io]] werd laag",
+    "pl": "GPIO[[io]] zmieniło się na niskie",
+    "da": "GPIO[[io]] blev lavt",
+    "de": "GPIO[[io]] wurde niedrig",
+    "es": "GPIO[[io]] se volvió bajo",
+    "fr": "GPIO[[io]] est devenu bas",
+    "it": "GPIO[[io]] è diventato basso",
+    "no": "GPIO[[io]] ble lav",
+    "sv": "GPIO[[io]] blev lågt",
+    "ru": "GPIO[[io]] стал низким",
+    "ko": "GPIO[[io]]가 낮아졌습니다"
+  },
+  "hint": {
+    "en": "GPIO 0-53"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=rpi"
+    },
+    {
+      "type": "number",
+      "name": "io",
+      "title": {
+        "en": "GPIO",
+        "da": "GPIO",
+        "de": "GPIO",
+        "es": "GPIO",
+        "fr": "GPIO",
+        "it": "GPIO",
+        "no": "GPIO",
+        "sv": "GPIO",
+        "pl": "GPIO",
+        "ru": "GPIO",
+        "ko": "GPIO"
+      },
+      "value": 0,
+      "min": 0,
+      "max": 53
+    }
+  ]
 }

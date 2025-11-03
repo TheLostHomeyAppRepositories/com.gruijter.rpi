@@ -1,27 +1,45 @@
 {
-	"title": { 
-		"en": "The storage usage (%) changed",
-		"nl": "Het opslag gebruik (%) is veranderd",
-		"pl": "Wykorzystanie miejsca do przechowywania (%) uległo zmianie"
-	},
-	"highlight": true,
-	"args": [
-		{
-				"type": "device",
-				"name": "device",
-				"filter": "driver_id=rpi"
-		}
-	],
-	"tokens": [
-		{
-			"name": "meter_storage_utilization",
-			"type": "number",
-			"title": { 
-				"en": "Storage used (%)",
-				"nl": "Opslag gebruikt (%)",
-				"pl": "Użyte miejsce do przechowywania (%)"
-			},
-			"example": 50
-		}
-	]
+  "title": {
+    "en": "The storage usage (%) changed",
+    "nl": "Het opslag gebruik (%) is veranderd",
+    "pl": "Wykorzystanie miejsca do przechowywania (%) uległo zmianie",
+    "da": "Lagerforbruget (%) er ændret",
+    "de": "Die Speichernutzung (%) hat sich geändert",
+    "es": "El uso de almacenamiento (%) ha cambiado",
+    "fr": "L'utilisation de stockage (%) a changé",
+    "it": "L'uso di spazio di archiviazione (%) è cambiato",
+    "no": "Lagerbruket (%) har endret seg",
+    "sv": "Lagringsanvändningen (%) har ändrats",
+    "ru": "Использование хранилища (%) изменилось",
+    "ko": "저장소 사용량 (%)이 변경되었습니다"
+  },
+  "highlight": true,
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=rpi"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "meter_storage_utilization",
+      "type": "number",
+      "title": {
+        "en": "Storage used (%)",
+        "nl": "Opslag gebruikt (%)",
+        "pl": "Użyte miejsce do przechowywania (%)",
+        "da": "Lager brugt (%)",
+        "de": "Genutzter Speicher (%)",
+        "es": "Almacenamiento utilizado (%)",
+        "fr": "Stockage utilisé (%)",
+        "it": "Spazio di archiviazione utilizzato (%)",
+        "no": "Brukt lagringsplass (%)",
+        "sv": "Använt lagringsutrymme (%)",
+        "ru": "Используемое хранилище (%)",
+        "ko": "사용된 저장소 (%)"
+      },
+      "example": 50
+    }
+  ]
 }

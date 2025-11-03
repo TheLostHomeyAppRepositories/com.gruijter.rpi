@@ -1,27 +1,45 @@
 {
-	"title": { 
-		"en": "Active processes changed",
-		"nl": "Actieve processen is veranderd",
-		"pl": "Aktywne procesy uległy zmianie"
-	},
-	"highlight": true,
-	"args": [
-		{
-				"type": "device",
-				"name": "device",
-				"filter": "driver_id=rpi"
-		}
-	],
-	"tokens": [
-		{
-			"name": "meter_processes.active",
-			"type": "number",
-			"title": { 
-				"en": "Number of processes",
-				"nl": "Aantal processen",
-				"pl": "Liczba procesów"
-			},
-			"example": 3
-		}
-	]
+  "title": {
+    "en": "Active processes changed",
+    "nl": "Actieve processen is veranderd",
+    "pl": "Aktywne procesy uległy zmianie",
+    "da": "Aktive processer ændret",
+    "de": "Aktive Prozesse geändert",
+    "es": "Procesos activos cambiados",
+    "fr": "Processus actifs modifiés",
+    "it": "Processi attivi modificati",
+    "no": "Aktive prosesser endret",
+    "sv": "Aktiva processer ändrade",
+    "ru": "Активные процессы изменились",
+    "ko": "활성 프로세스 변경됨"
+  },
+  "highlight": true,
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=rpi"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "meter_processes.active",
+      "type": "number",
+      "title": {
+        "en": "Number of processes",
+        "nl": "Aantal processen",
+        "pl": "Liczba procesów",
+        "da": "Antal processer",
+        "de": "Anzahl der Prozesse",
+        "es": "Número de procesos",
+        "fr": "Nombre de processus",
+        "it": "Numero di processi",
+        "no": "Antall prosesser",
+        "sv": "Antal processer",
+        "ru": "Количество процессов",
+        "ko": "프로세스 수"
+      },
+      "example": 3
+    }
+  ]
 }

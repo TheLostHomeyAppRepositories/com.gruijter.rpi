@@ -1,6 +1,17 @@
 {
   "name": {
-    "en": "RPi"
+    "en": "RPi",
+    "nl": "RPi",
+    "da": "RPi",
+    "de": "RPi",
+    "es": "RPi",
+    "fr": "RPi",
+    "it": "RPi",
+    "no": "RPi",
+    "sv": "RPi",
+    "pl": "RPi",
+    "ru": "RPi",
+    "ko": "RPi"
   },
   "class": "other",
   "capabilities": [
@@ -19,91 +30,726 @@
     "meter_download_speed.wlan0",
     "meter_upload_speed.wlan0",
     "onoff.gpio0",
+    "button.gpio0",
     "onoff.gpio1",
+    "button.gpio1",
     "onoff.gpio2",
+    "button.gpio2",
     "onoff.gpio3",
+    "button.gpio3",
     "onoff.gpio4",
+    "button.gpio4",
     "onoff.gpio5",
+    "button.gpio5",
     "onoff.gpio6",
+    "button.gpio6",
     "onoff.gpio7",
+    "button.gpio7",
     "onoff.gpio8",
+    "button.gpio8",
     "onoff.gpio9",
+    "button.gpio9",
     "onoff.gpio10",
+    "button.gpio10",
     "onoff.gpio11",
+    "button.gpio11",
     "onoff.gpio12",
+    "button.gpio12",
     "onoff.gpio13",
+    "button.gpio13",
     "onoff.gpio14",
-    "onoff.gpio15"
+    "button.gpio14",
+    "onoff.gpio15",
+    "button.gpio15"
   ],
   "capabilitiesOptions": {
-    "measure_temperature.gpu": { 
-      "title": { "en": "GPU Temp", "nl": "GPU Temp", "pl": "Temperatura GPU" }
+    "measure_temperature.gpu": {
+      "title": {
+        "en": "GPU Temp",
+        "nl": "GPU Temp",
+        "da": "GPU Temp",
+        "de": "GPU-Temperatur",
+        "es": "Temp GPU",
+        "fr": "Temp GPU",
+        "it": "Temperatura GPU",
+        "no": "GPU Temp",
+        "sv": "GPU Temp",
+        "pl": "Temperatura GPU",
+        "ru": "Температура GPU",
+        "ko": "GPU 온도"
+      }
     },
-    "measure_temperature.cpu": { 
-      "title": { "en": "CPU Temp", "nl": "CPU Temp", "pl": "Temperatura CPU" }
+    "measure_temperature.cpu": {
+      "title": {
+        "en": "CPU Temp",
+        "nl": "CPU Temp",
+        "da": "CPU Temp",
+        "de": "CPU-Temperatur",
+        "es": "Temp CPU",
+        "fr": "Temp CPU",
+        "it": "Temperatura CPU",
+        "no": "CPU Temp",
+        "sv": "CPU Temp",
+        "pl": "Temperatura CPU",
+        "ru": "Температура CPU",
+        "ko": "CPU 온도"
+      }
     },
-    "meter_processes.running": { 
-      "title": { "en": "Running processes", "nl": "Lopende processen", "pl": "Aktywne procesy" }
+    "meter_processes.running": {
+      "title": {
+        "en": "Running processes",
+        "nl": "Lopende processen",
+        "da": "Kørende processer",
+        "de": "Laufende Prozesse",
+        "es": "Procesos en ejecución",
+        "fr": "Processus en cours",
+        "it": "Processi in esecuzione",
+        "no": "Kjørende prosesser",
+        "sv": "Aktiva processer",
+        "pl": "Uruchomione procesy",
+        "ru": "Запущенные процессы",
+        "ko": "실행 중인 프로세스"
+      }
     },
-    "meter_download_speed.eth0": { 
-      "title": { "en": "ETH down speed", "nl": "ETH down snelheid", "pl": "Szybkość pob ETH" }
+    "meter_download_speed.eth0": {
+      "title": {
+        "en": "ETH down speed",
+        "nl": "ETH down snelheid",
+        "da": "ETH downloadhastighed",
+        "de": "ETH Download-Geschwindigkeit",
+        "es": "Velocidad de descarga ETH",
+        "fr": "Vitesse de téléchargement ETH",
+        "it": "Velocità di download ETH",
+        "no": "ETH nedlastingshastighet",
+        "sv": "ETH nedladdningshastighet",
+        "pl": "Prędkość pobierania ETH",
+        "ru": "Скорость загрузки ETH",
+        "ko": "ETH 다운로드 속도"
+      }
     },
-    "meter_upload_speed.eth0": { 
-      "title": { "en": "ETH up speed", "nl": "ETH up snelheid", "pl": "Szybkość wys ETH" }
+    "meter_upload_speed.eth0": {
+      "title": {
+        "en": "ETH up speed",
+        "nl": "ETH up snelheid",
+        "da": "ETH uploadhastighed",
+        "de": "ETH Upload-Geschwindigkeit",
+        "es": "Velocidad de subida ETH",
+        "fr": "Vitesse d'envoi ETH",
+        "it": "Velocità di upload ETH",
+        "no": "ETH opplastingshastighet",
+        "sv": "ETH uppladdningshastighet",
+        "pl": "Prędkość wysyłania ETH",
+        "ru": "Скорость загрузки ETH",
+        "ko": "ETH 업로드 속도"
+      }
     },
-    "meter_download_speed.wlan0": { 
-      "title": { "en": "WLAN down speed", "nl": "WLAN down snelheid", "pl": "Szybkość pob WLAN" }
+    "meter_download_speed.wlan0": {
+      "title": {
+        "en": "WLAN down speed",
+        "nl": "WLAN down snelheid",
+        "da": "WLAN downloadhastighed",
+        "de": "WLAN Download-Geschwindigkeit",
+        "es": "Velocidad de descarga WLAN",
+        "fr": "Vitesse de téléchargement WLAN",
+        "it": "Velocità di download WLAN",
+        "no": "WLAN nedlastingshastighet",
+        "sv": "WLAN nedladdningshastighet",
+        "pl": "Prędkość pobierania WLAN",
+        "ru": "Скорость загрузки WLAN",
+        "ko": "WLAN 다운로드 속도"
+      }
     },
-    "meter_upload_speed.wlan0": { 
-      "title": { "en": "WLAN up speed", "nl": "WLAN up snelheid", "pl": "Szypkość wys WLAN" }
+    "meter_upload_speed.wlan0": {
+      "title": {
+        "en": "WLAN up speed",
+        "nl": "WLAN up snelheid",
+        "da": "WLAN uploadhastighed",
+        "de": "WLAN Upload-Geschwindigkeit",
+        "es": "Velocidad de subida WLAN",
+        "fr": "Vitesse d'envoi WLAN",
+        "it": "Velocità di upload WLAN",
+        "no": "WLAN opplastingshastighet",
+        "sv": "WLAN uppladdningshastighet",
+        "pl": "Prędkość wysyłania WLAN",
+        "ru": "Скорость загрузки WLAN",
+        "ko": "WLAN 업로드 속도"
+      }
     },
-    "onoff.gpio0": { 
-      "title": { "en": "GPIO 00" }
+    "onoff.gpio0": {
+      "title": {
+        "en": "GPIO 00",
+        "da": "GPIO 00",
+        "de": "GPIO 00",
+        "es": "GPIO 00",
+        "fr": "GPIO 00",
+        "it": "GPIO 00",
+        "no": "GPIO 00",
+        "sv": "GPIO 00",
+        "pl": "GPIO 00",
+        "ru": "GPIO 00",
+        "ko": "GPIO 00"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false
     },
-    "onoff.gpio1": { 
-      "title": { "en": "GPIO 01" }
+    "onoff.gpio1": {
+      "title": {
+        "en": "GPIO 01",
+        "da": "GPIO 01",
+        "de": "GPIO 01",
+        "es": "GPIO 01",
+        "fr": "GPIO 01",
+        "it": "GPIO 01",
+        "no": "GPIO 01",
+        "sv": "GPIO 01",
+        "pl": "GPIO 01",
+        "ru": "GPIO 01",
+        "ko": "GPIO 01"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false
     },
-    "onoff.gpio2": { 
-      "title": { "en": "GPIO 02" }
+    "onoff.gpio2": {
+      "title": {
+        "en": "GPIO 02",
+        "da": "GPIO 02",
+        "de": "GPIO 02",
+        "es": "GPIO 02",
+        "fr": "GPIO 02",
+        "it": "GPIO 02",
+        "no": "GPIO 02",
+        "sv": "GPIO 02",
+        "pl": "GPIO 02",
+        "ru": "GPIO 02",
+        "ko": "GPIO 02"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false
     },
-    "onoff.gpio3": { 
-      "title": { "en": "GPIO 03" }
+    "onoff.gpio3": {
+      "title": {
+        "en": "GPIO 03",
+        "da": "GPIO 03",
+        "de": "GPIO 03",
+        "es": "GPIO 03",
+        "fr": "GPIO 03",
+        "it": "GPIO 03",
+        "no": "GPIO 03",
+        "sv": "GPIO 03",
+        "pl": "GPIO 03",
+        "ru": "GPIO 03",
+        "ko": "GPIO 03"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false
     },
-    "onoff.gpio4": { 
-      "title": { "en": "GPIO 04" }
+    "onoff.gpio4": {
+      "title": {
+        "en": "GPIO 04",
+        "da": "GPIO 04",
+        "de": "GPIO 04",
+        "es": "GPIO 04",
+        "fr": "GPIO 04",
+        "it": "GPIO 04",
+        "no": "GPIO 04",
+        "sv": "GPIO 04",
+        "pl": "GPIO 04",
+        "ru": "GPIO 04",
+        "ko": "GPIO 04"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false
     },
-    "onoff.gpio5": { 
-      "title": { "en": "GPIO 05" }
+    "onoff.gpio5": {
+      "title": {
+        "en": "GPIO 05",
+        "da": "GPIO 05",
+        "de": "GPIO 05",
+        "es": "GPIO 05",
+        "fr": "GPIO 05",
+        "it": "GPIO 05",
+        "no": "GPIO 05",
+        "sv": "GPIO 05",
+        "pl": "GPIO 05",
+        "ru": "GPIO 05",
+        "ko": "GPIO 05"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false
     },
-    "onoff.gpio6": { 
-      "title": { "en": "GPIO 06" }
+    "onoff.gpio6": {
+      "title": {
+        "en": "GPIO 06",
+        "da": "GPIO 06",
+        "de": "GPIO 06",
+        "es": "GPIO 06",
+        "fr": "GPIO 06",
+        "it": "GPIO 06",
+        "no": "GPIO 06",
+        "sv": "GPIO 06",
+        "pl": "GPIO 06",
+        "ru": "GPIO 06",
+        "ko": "GPIO 06"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false
     },
-    "onoff.gpio7": { 
-      "title": { "en": "GPIO 07" }
+    "onoff.gpio7": {
+      "title": {
+        "en": "GPIO 07",
+        "da": "GPIO 07",
+        "de": "GPIO 07",
+        "es": "GPIO 07",
+        "fr": "GPIO 07",
+        "it": "GPIO 07",
+        "no": "GPIO 07",
+        "sv": "GPIO 07",
+        "pl": "GPIO 07",
+        "ru": "GPIO 07",
+        "ko": "GPIO 07"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false
     },
-    "onoff.gpio8": { 
-      "title": { "en": "GPIO 08" }
+    "onoff.gpio8": {
+      "title": {
+        "en": "GPIO 08",
+        "da": "GPIO 08",
+        "de": "GPIO 08",
+        "es": "GPIO 08",
+        "fr": "GPIO 08",
+        "it": "GPIO 08",
+        "no": "GPIO 08",
+        "sv": "GPIO 08",
+        "pl": "GPIO 08",
+        "ru": "GPIO 08",
+        "ko": "GPIO 08"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false
     },
-    "onoff.gpio9": { 
-      "title": { "en": "GPIO 09" }
+    "onoff.gpio9": {
+      "title": {
+        "en": "GPIO 09",
+        "da": "GPIO 09",
+        "de": "GPIO 09",
+        "es": "GPIO 09",
+        "fr": "GPIO 09",
+        "it": "GPIO 09",
+        "no": "GPIO 09",
+        "sv": "GPIO 09",
+        "pl": "GPIO 09",
+        "ru": "GPIO 09",
+        "ko": "GPIO 09"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false
     },
-    "onoff.gpio10": { 
-      "title": { "en": "GPIO 10" }
+    "onoff.gpio10": {
+      "title": {
+        "en": "GPIO 10",
+        "da": "GPIO 10",
+        "de": "GPIO 10",
+        "es": "GPIO 10",
+        "fr": "GPIO 10",
+        "it": "GPIO 10",
+        "no": "GPIO 10",
+        "sv": "GPIO 10",
+        "pl": "GPIO 10",
+        "ru": "GPIO 10",
+        "ko": "GPIO 10"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false
     },
-    "onoff.gpio11": { 
-      "title": { "en": "GPIO 11" }
+    "onoff.gpio11": {
+      "title": {
+        "en": "GPIO 11",
+        "da": "GPIO 11",
+        "de": "GPIO 11",
+        "es": "GPIO 11",
+        "fr": "GPIO 11",
+        "it": "GPIO 11",
+        "no": "GPIO 11",
+        "sv": "GPIO 11",
+        "pl": "GPIO 11",
+        "ru": "GPIO 11",
+        "ko": "GPIO 11"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false
     },
-    "onoff.gpio12": { 
-      "title": { "en": "GPIO 12" }
+    "onoff.gpio12": {
+      "title": {
+        "en": "GPIO 12",
+        "da": "GPIO 12",
+        "de": "GPIO 12",
+        "es": "GPIO 12",
+        "fr": "GPIO 12",
+        "it": "GPIO 12",
+        "no": "GPIO 12",
+        "sv": "GPIO 12",
+        "pl": "GPIO 12",
+        "ru": "GPIO 12",
+        "ko": "GPIO 12"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false
     },
-    "onoff.gpio13": { 
-      "title": { "en": "GPIO 13" }
+    "onoff.gpio13": {
+      "title": {
+        "en": "GPIO 13",
+        "da": "GPIO 13",
+        "de": "GPIO 13",
+        "es": "GPIO 13",
+        "fr": "GPIO 13",
+        "it": "GPIO 13",
+        "no": "GPIO 13",
+        "sv": "GPIO 13",
+        "pl": "GPIO 13",
+        "ru": "GPIO 13",
+        "ko": "GPIO 13"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false
     },
-    "onoff.gpio14": { 
-      "title": { "en": "GPIO 14" }
+    "onoff.gpio14": {
+      "title": {
+        "en": "GPIO 14",
+        "da": "GPIO 14",
+        "de": "GPIO 14",
+        "es": "GPIO 14",
+        "fr": "GPIO 14",
+        "it": "GPIO 14",
+        "no": "GPIO 14",
+        "sv": "GPIO 14",
+        "pl": "GPIO 14",
+        "ru": "GPIO 14",
+        "ko": "GPIO 14"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false
     },
-    "onoff.gpio15": { 
-      "title": { "en": "GPIO 15" }
+    "onoff.gpio15": {
+      "title": {
+        "en": "GPIO 15",
+        "da": "GPIO 15",
+        "de": "GPIO 15",
+        "es": "GPIO 15",
+        "fr": "GPIO 15",
+        "it": "GPIO 15",
+        "no": "GPIO 15",
+        "sv": "GPIO 15",
+        "pl": "GPIO 15",
+        "ru": "GPIO 15",
+        "ko": "GPIO 15"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false
+    },
+    "button.gpio0": {
+      "title": {
+        "en": "GPIO 00 is OUTPUT",
+        "da": "GPIO 00 er OUTPUT",
+        "de": "GPIO 00 ist OUTPUT",
+        "es": "GPIO 00 es SALIDA",
+        "fr": "GPIO 00 est SORTIE",
+        "it": "GPIO 00 è OUTPUT",
+        "no": "GPIO 00 er UTGANG",
+        "sv": "GPIO 00 är UTTAG",
+        "pl": "GPIO 00 to WYJŚCIE",
+        "ru": "GPIO 00 является ВЫХОДОМ",
+        "ko": "GPIO 00은 출력입니다"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false,
+      "getable": true,
+      "setable": true
+    },
+    "button.gpio1": {
+      "title": {
+        "en": "GPIO 01 is OUTPUT",
+        "da": "GPIO 01 er OUTPUT",
+        "de": "GPIO 01 ist OUTPUT",
+        "es": "GPIO 01 es SALIDA",
+        "fr": "GPIO 01 est SORTIE",
+        "it": "GPIO 01 è OUTPUT",
+        "no": "GPIO 01 er UTGANG",
+        "sv": "GPIO 01 är UTTAG",
+        "pl": "GPIO 01 to WYJŚCIE",
+        "ru": "GPIO 01 является ВЫХОДОМ",
+        "ko": "GPIO 01은 출력입니다"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false,
+      "getable": true,
+      "setable": true
+    },
+    "button.gpio2": {
+      "title": {
+        "en": "GPIO 02 is OUTPUT",
+        "da": "GPIO 02 er OUTPUT",
+        "de": "GPIO 02 ist OUTPUT",
+        "es": "GPIO 02 es SALIDA",
+        "fr": "GPIO 02 est SORTIE",
+        "it": "GPIO 02 è OUTPUT",
+        "no": "GPIO 02 er UTGANG",
+        "sv": "GPIO 02 är UTTAG",
+        "pl": "GPIO 02 to WYJŚCIE",
+        "ru": "GPIO 02 является ВЫХОДОМ",
+        "ko": "GPIO 02은 출력입니다"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false,
+      "getable": true,
+      "setable": true
+    },
+    "button.gpio3": {
+      "title": {
+        "en": "GPIO 03 is OUTPUT",
+        "da": "GPIO 03 er OUTPUT",
+        "de": "GPIO 03 ist OUTPUT",
+        "es": "GPIO 03 es SALIDA",
+        "fr": "GPIO 03 est SORTIE",
+        "it": "GPIO 03 è OUTPUT",
+        "no": "GPIO 03 er UTGANG",
+        "sv": "GPIO 03 är UTTAG",
+        "pl": "GPIO 03 to WYJŚCIE",
+        "ru": "GPIO 03 является ВЫХОДОМ",
+        "ko": "GPIO 03은 출력입니다"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false,
+      "getable": true,
+      "setable": true
+    },
+    "button.gpio4": {
+      "title": {
+        "en": "GPIO 04 is OUTPUT",
+        "da": "GPIO 04 er OUTPUT",
+        "de": "GPIO 04 ist OUTPUT",
+        "es": "GPIO 04 es SALIDA",
+        "fr": "GPIO 04 est SORTIE",
+        "it": "GPIO 04 è OUTPUT",
+        "no": "GPIO 04 er UTGANG",
+        "sv": "GPIO 04 är UTTAG",
+        "pl": "GPIO 04 to WYJŚCIE",
+        "ru": "GPIO 04 является ВЫХОДОМ",
+        "ko": "GPIO 04은 출력입니다"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false,
+      "getable": true,
+      "setable": true
+    },
+    "button.gpio5": {
+      "title": {
+        "en": "GPIO 05 is OUTPUT",
+        "da": "GPIO 05 er OUTPUT",
+        "de": "GPIO 05 ist OUTPUT",
+        "es": "GPIO 05 es SALIDA",
+        "fr": "GPIO 05 est SORTIE",
+        "it": "GPIO 05 è OUTPUT",
+        "no": "GPIO 05 er UTGANG",
+        "sv": "GPIO 05 är UTTAG",
+        "pl": "GPIO 05 to WYJŚCIE",
+        "ru": "GPIO 05 является ВЫХОДОМ",
+        "ko": "GPIO 05은 출력입니다"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false,
+      "getable": true,
+      "setable": true
+    },
+    "button.gpio6": {
+      "title": {
+        "en": "GPIO 06 is OUTPUT",
+        "da": "GPIO 06 er OUTPUT",
+        "de": "GPIO 06 ist OUTPUT",
+        "es": "GPIO 06 es SALIDA",
+        "fr": "GPIO 06 est SORTIE",
+        "it": "GPIO 06 è OUTPUT",
+        "no": "GPIO 06 er UTGANG",
+        "sv": "GPIO 06 är UTTAG",
+        "pl": "GPIO 06 to WYJŚCIE",
+        "ru": "GPIO 06 является ВЫХОДОМ",
+        "ko": "GPIO 06은 출력입니다"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false,
+      "getable": true,
+      "setable": true
+    },
+    "button.gpio7": {
+      "title": {
+        "en": "GPIO 07 is OUTPUT",
+        "da": "GPIO 07 er OUTPUT",
+        "de": "GPIO 07 ist OUTPUT",
+        "es": "GPIO 07 es SALIDA",
+        "fr": "GPIO 07 est SORTIE",
+        "it": "GPIO 07 è OUTPUT",
+        "no": "GPIO 07 er UTGANG",
+        "sv": "GPIO 07 är UTTAG",
+        "pl": "GPIO 07 to WYJŚCIE",
+        "ru": "GPIO 07 является ВЫХОДОМ",
+        "ko": "GPIO 07은 출력입니다"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false,
+      "getable": true,
+      "setable": true
+    },
+    "button.gpio8": {
+      "title": {
+        "en": "GPIO 08 is OUTPUT",
+        "da": "GPIO 08 er OUTPUT",
+        "de": "GPIO 08 ist OUTPUT",
+        "es": "GPIO 08 es SALIDA",
+        "fr": "GPIO 08 est SORTIE",
+        "it": "GPIO 08 è OUTPUT",
+        "no": "GPIO 08 er UTGANG",
+        "sv": "GPIO 08 är UTTAG",
+        "pl": "GPIO 08 to WYJŚCIE",
+        "ru": "GPIO 08 является ВЫХОДОМ",
+        "ko": "GPIO 08은 출력입니다"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false,
+      "getable": true,
+      "setable": true
+    },
+    "button.gpio9": {
+      "title": {
+        "en": "GPIO 09 is OUTPUT",
+        "da": "GPIO 09 er OUTPUT",
+        "de": "GPIO 09 ist OUTPUT",
+        "es": "GPIO 09 es SALIDA",
+        "fr": "GPIO 09 est SORTIE",
+        "it": "GPIO 09 è OUTPUT",
+        "no": "GPIO 09 er UTGANG",
+        "sv": "GPIO 09 är UTTAG",
+        "pl": "GPIO 09 to WYJŚCIE",
+        "ru": "GPIO 09 является ВЫХОДОМ",
+        "ko": "GPIO 09은 출력입니다"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false,
+      "getable": true,
+      "setable": true
+    },
+    "button.gpio10": {
+      "title": {
+        "en": "GPIO 10 is OUTPUT",
+        "da": "GPIO 10 er OUTPUT",
+        "de": "GPIO 10 ist OUTPUT",
+        "es": "GPIO 10 es SALIDA",
+        "fr": "GPIO 10 est SORTIE",
+        "it": "GPIO 10 è OUTPUT",
+        "no": "GPIO 10 er UTGANG",
+        "sv": "GPIO 10 är UTTAG",
+        "pl": "GPIO 10 to WYJŚCIE",
+        "ru": "GPIO 10 является ВЫХОДОМ",
+        "ko": "GPIO 10은 출력입니다"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false,
+      "getable": true,
+      "setable": true
+    },
+    "button.gpio11": {
+      "title": {
+        "en": "GPIO 11 is OUTPUT",
+        "da": "GPIO 11 er OUTPUT",
+        "de": "GPIO 11 ist OUTPUT",
+        "es": "GPIO 11 es SALIDA",
+        "fr": "GPIO 11 est SORTIE",
+        "it": "GPIO 11 è OUTPUT",
+        "no": "GPIO 11 er UTGANG",
+        "sv": "GPIO 11 är UTTAG",
+        "pl": "GPIO 11 to WYJŚCIE",
+        "ru": "GPIO 11 является ВЫХОДОМ",
+        "ko": "GPIO 11은 출력입니다"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false,
+      "getable": true,
+      "setable": true
+    },
+    "button.gpio12": {
+      "title": {
+        "en": "GPIO 12 is OUTPUT",
+        "da": "GPIO 12 er OUTPUT",
+        "de": "GPIO 12 ist OUTPUT",
+        "es": "GPIO 12 es SALIDA",
+        "fr": "GPIO 12 est SORTIE",
+        "it": "GPIO 12 è OUTPUT",
+        "no": "GPIO 12 er UTGANG",
+        "sv": "GPIO 12 är UTTAG",
+        "pl": "GPIO 12 to WYJŚCIE",
+        "ru": "GPIO 12 является ВЫХОДОМ",
+        "ko": "GPIO 12은 출력입니다"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false,
+      "getable": true,
+      "setable": true
+    },
+    "button.gpio13": {
+      "title": {
+        "en": "GPIO 13 is OUTPUT",
+        "da": "GPIO 13 er OUTPUT",
+        "de": "GPIO 13 ist OUTPUT",
+        "es": "GPIO 13 es SALIDA",
+        "fr": "GPIO 13 est SORTIE",
+        "it": "GPIO 13 è OUTPUT",
+        "no": "GPIO 13 er UTGANG",
+        "sv": "GPIO 13 är UTTAG",
+        "pl": "GPIO 13 to WYJŚCIE",
+        "ru": "GPIO 13 является ВЫХОДОМ",
+        "ko": "GPIO 13은 출력입니다"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false,
+      "getable": true,
+      "setable": true
+    },
+    "button.gpio14": {
+      "title": {
+        "en": "GPIO 14 is OUTPUT",
+        "da": "GPIO 14 er OUTPUT",
+        "de": "GPIO 14 ist OUTPUT",
+        "es": "GPIO 14 es SALIDA",
+        "fr": "GPIO 14 est SORTIE",
+        "it": "GPIO 14 è OUTPUT",
+        "no": "GPIO 14 er UTGANG",
+        "sv": "GPIO 14 är UTTAG",
+        "pl": "GPIO 14 to WYJŚCIE",
+        "ru": "GPIO 14 является ВЫХОДОМ",
+        "ko": "GPIO 14은 출력입니다"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false,
+      "getable": true,
+      "setable": true
+    },
+    "button.gpio15": {
+      "title": {
+        "en": "GPIO 15 is OUTPUT",
+        "da": "GPIO 15 er OUTPUT",
+        "de": "GPIO 15 ist OUTPUT",
+        "es": "GPIO 15 es SALIDA",
+        "fr": "GPIO 15 est SORTIE",
+        "it": "GPIO 15 è OUTPUT",
+        "no": "GPIO 15 er UTGANG",
+        "sv": "GPIO 15 är UTTAG",
+        "pl": "GPIO 15 to WYJŚCIE",
+        "ru": "GPIO 15 является ВЫХОДОМ",
+        "ko": "GPIO 15은 출력입니다"
+      },
+      "uiComponent": "button",
+      "uiQuickAction": false,
+      "getable": true,
+      "setable": true
     }
   },
   "platforms": [
@@ -120,23 +766,25 @@
   },
   "pair": [
     {
-			"id": "local_login"
-		},
+      "id": "local_login"
+    },
     {
-			"id": "list_devices",
-			"template": "list_devices",
-      "options": { "singular": false },
-			"navigation": {
-				"next": "add_devices"
-			}
-		},
-		{
-			"id": "add_devices",
-			"template": "add_devices"
-		},
+      "id": "list_devices",
+      "template": "list_devices",
+      "options": {
+        "singular": false
+      },
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
     {
-			"id": "done",
-			"template": "done"
-		}
-	]
+      "id": "add_devices",
+      "template": "add_devices"
+    },
+    {
+      "id": "done",
+      "template": "done"
+    }
+  ]
 }

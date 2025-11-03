@@ -2,28 +2,66 @@
   "title": {
     "en": "Stop container",
     "nl": "Stop container",
-    "pl": "Zatrzymaj kontener"
+    "pl": "Zatrzymaj kontener",
+    "da": "Stop beholder",
+    "de": "Container stoppen",
+    "es": "Detener contenedor",
+    "fr": "Arrêter le conteneur",
+    "it": "Ferma contenitore",
+    "no": "Stop container",
+    "sv": "Stoppa behållare",
+    "ru": "Остановить контейнер",
+    "ko": "컨테이너 중지"
   },
   "titleFormatted": {
     "en": "Stop container [[id]]",
     "nl": "Stop container [[id]]",
-    "pl": "Zatrzymaj kontener [[id]]"
+    "pl": "Zatrzymaj kontener [[id]]",
+    "da": "Stop beholder [[id]]",
+    "de": "Container stoppen [[id]]",
+    "es": "Detener contenedor [[id]]",
+    "fr": "Arrêter le conteneur [[id]]",
+    "it": "Ferma contenitore [[id]]",
+    "no": "Stop container [[id]]",
+    "sv": "Stoppa behållare [[id]]",
+    "ru": "Остановить контейнер [[id]]",
+    "ko": "컨테이너 중지 [[id]]"
   },
   "highlight": true,
   "args": [
     {
-		  "type": "device",
-		  "name": "device",
-		  "filter": "driver_id=rpi"
-		},
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=rpi"
+    },
     {
       "name": "id",
       "type": "autocomplete",
       "title": {
-        "en": "ID"
+        "en": "ID",
+        "da": "ID",
+        "de": "ID",
+        "es": "ID",
+        "fr": "ID",
+        "it": "ID",
+        "no": "ID",
+        "sv": "ID",
+        "pl": "ID",
+        "ru": "ИД",
+        "ko": "아이디"
       },
       "placeholder": {
-        "en": "VPNserver"
+        "en": "VPNserver",
+        "da": "VPNserver",
+        "de": "VPNserver",
+        "es": "ServidorVPN",
+        "fr": "ServeurVPN",
+        "it": "ServerVPN",
+        "no": "VPN-server",
+        "sv": "VPNserver",
+        "pl": "SerwerVPN",
+        "ru": "VPN-сервер",
+        "ko": "VPN 서버"
       }
     }
   ]

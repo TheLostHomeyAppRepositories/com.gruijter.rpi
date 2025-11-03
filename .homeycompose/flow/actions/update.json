@@ -2,19 +2,37 @@
   "title": {
     "en": "Update OS (!)",
     "nl": "OS Updaten (!)",
-    "pl": "Zaktualizuj system operacyjny (!)"
+    "pl": "Zaktualizuj system operacyjny (!)",
+    "da": "Opdater OS (!)",
+    "de": "OS aktualisieren (!)",
+    "es": "Actualizar OS (!)",
+    "fr": "Mettre à jour le système d'exploitation (!)",
+    "it": "Aggiorna OS (!)",
+    "no": "Oppdater OS (!)",
+    "sv": "Uppdatera OS (!)",
+    "ru": "Обновить ОС (!)",
+    "ko": "OS 업데이트 (!)"
   },
   "hint": {
     "en": "ATTENTION! This will automatically update the OS without feedback.",
     "nl": "LET OP! Dit zal automatisch het OS updaten zonder feedback.",
-    "pl": "UWAGA! To automatycznie zaktualizuje system operacyjny bez informacji zwrotnej."
+    "pl": "UWAGA! To automatycznie zaktualizuje system operacyjny bez informacji zwrotnej.",
+    "da": "OPMÆRKSOMHED! Dette vil automatisk opdatere OS uden feedback.",
+    "de": "ACHTUNG! Dies wird das OS automatisch ohne Rückmeldung aktualisieren.",
+    "es": "¡ATENCIÓN! Esto actualizará automáticamente el sistema operativo sin comentarios.",
+    "fr": "ATTENTION! Cela mettra automatiquement à jour le système d'exploitation sans retour.",
+    "it": "ATTENZIONE! Questo aggiornerà automaticamente il sistema operativo senza feedback.",
+    "no": "OPPMERKSOMHET! Dette vil automatisk oppdatere OS uten tilbakemelding.",
+    "sv": "UPPMÄRKSAMHET! Detta kommer att automatiskt uppdatera OS utan feedback.",
+    "ru": "ВНИМАНИЕ! Это автоматически обновит ОС без обратной связи.",
+    "ko": "주의! 이는 피드백 없이 OS를 자동으로 업데이트합니다."
   },
   "highlight": true,
   "args": [
     {
-		  "type": "device",
-		  "name": "device",
-		  "filter": "driver_id=rpi"
-		}
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=rpi"
+    }
   ]
 }
