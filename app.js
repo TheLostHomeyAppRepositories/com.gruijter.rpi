@@ -31,19 +31,15 @@ class MyApp extends Homey.App {
   registerFlowListeners() {
     // autocomplete helper
     const autoComplete = async (query, args) => {
-      try {
-        const containerList = await args.device.getContainers(args, 'autocomplete');
-        const results = containerList
-          .map((container) => ({ description: container['CONTAINER ID'], name: container.NAMES }))
-          .filter((result) => { // filter for query on ID and Name
-            const nameFound = result.name.toLowerCase().indexOf(query.toLowerCase()) > -1;
-            const idFound = result.description.indexOf(query.toLowerCase()) > -1;
-            return idFound || nameFound;
-          });
-        return results;
-      } catch (error) {
-        throw error;
-      }
+      const containerList = await args.device.getContainers(args, 'autocomplete');
+      const results = containerList
+        .map((container) => ({ description: container['CONTAINER ID'], name: container.NAMES }))
+        .filter((result) => { // filter for query on ID and Name
+          const nameFound = result.name.toLowerCase().indexOf(query.toLowerCase()) > -1;
+          const idFound = result.description.indexOf(query.toLowerCase()) > -1;
+          return idFound || nameFound;
+        });
+      return results;
     };
 
     // trigger cards

@@ -230,7 +230,7 @@ class RPiDevice extends Device {
     const newSysInfo = Object.fromEntries(
       Object.entries(sysInfo)
         .filter(([, value]) => value !== null && value !== undefined)
-        .map(([key, value]) => [key, String(value)])
+        .map(([key, value]) => [key, String(value)]),
     );
     let sysInfoChanged = false;
     Object.entries(newSysInfo).forEach((entry) => {
