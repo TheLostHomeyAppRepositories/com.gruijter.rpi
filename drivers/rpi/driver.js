@@ -1,5 +1,5 @@
 /*
-Copyright 2024, Robin de Gruijter (gruijter@hotmail.com)
+Copyright 2024 -2026, Robin de Gruijter (gruijter@hotmail.com)
 
 This file is part of com.gruijter.rpi.
 
@@ -20,7 +20,7 @@ along with com.gruijter.rpi. If not, see <http://www.gnu.org/licenses/>.
 'use strict';
 
 const { Driver } = require('homey');
-const RPI = require('../../rpi_ssh');
+const RPI = require('../../lib/rpi_ssh');
 
 const capabilities = [
   'measure_temperature.gpu',

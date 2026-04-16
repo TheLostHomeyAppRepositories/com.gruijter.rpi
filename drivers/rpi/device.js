@@ -1,5 +1,5 @@
 /*
-Copyright 2024, Robin de Gruijter (gruijter@hotmail.com)
+Copyright 2024 -2026, Robin de Gruijter (gruijter@hotmail.com)
 
 This file is part of com.gruijter.rpi.
 
@@ -22,7 +22,7 @@ along with com.gruijter.rpi. If not, see <http://www.gnu.org/licenses/>.
 const { Device } = require('homey');
 
 const util = require('util');
-const RPI = require('../../rpi_ssh');
+const RPI = require('../../lib/rpi_ssh');
 
 const setTimeoutPromise = util.promisify(setTimeout);
 
@@ -227,7 +227,11 @@ class RPiDevice extends Device {
 
   async updateSysInfo(sysInfo) {
     const currentSettings = { ...this.getSettings() };
-    const newSysInfo = Object.fromEntries(Object.entries(sysInfo).map(([key, value]) => [key, String(value)]));
+    const newSysInfo = Object.fromEntries(
+      Object.entries(sysInfo)
+        .filter(([, value]) => value !== null && value !== undefined)
+        .map(([key, value]) => [key, String(value)])
+    );
     let sysInfoChanged = false;
     Object.entries(newSysInfo).forEach((entry) => {
       if (currentSettings[entry[0]] && (currentSettings[entry[0]] !== entry[1].toString())) {

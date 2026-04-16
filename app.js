@@ -1,5 +1,5 @@
 /*
-Copyright 2024, Robin de Gruijter (gruijter@hotmail.com)
+Copyright 2024 -2026, Robin de Gruijter (gruijter@hotmail.com)
 
 This file is part of com.gruijter.rpi.
 
@@ -40,9 +40,9 @@ class MyApp extends Homey.App {
             const idFound = result.description.indexOf(query.toLowerCase()) > -1;
             return idFound || nameFound;
           });
-        return Promise.resolve(results);
+        return results;
       } catch (error) {
-        return Promise.reject(error);
+        throw error;
       }
     };
 
