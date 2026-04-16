@@ -31,15 +31,20 @@ class MyApp extends Homey.App {
   registerFlowListeners() {
     // autocomplete helper
     const autoComplete = async (query, args) => {
-      const containerList = await args.device.getContainers(args, 'autocomplete');
-      const results = containerList
-        .map((container) => ({ description: container['CONTAINER ID'], name: container.NAMES }))
-        .filter((result) => { // filter for query on ID and Name
-          const nameFound = result.name.toLowerCase().indexOf(query.toLowerCase()) > -1;
-          const idFound = result.description.indexOf(query.toLowerCase()) > -1;
-          return idFound || nameFound;
-        });
-      return results;
+      try {
+        const containerList = await args.device.getContainers(args, 'autocomplete');
+        const results = containerList
+          .map((container) => ({ description: container['CONTAINER ID'], name: container.NAMES }))
+          .filter((result) => { // filter for query on ID and Name
+            const nameFound = result.name.toLowerCase().indexOf(query.toLowerCase()) > -1;
+            const idFound = result.description.indexOf(query.toLowerCase()) > -1;
+            return idFound || nameFound;
+          });
+        return results;
+      } catch (error) {
+        this.error('Autocomplete error:', error.message);
+        return [];
+      }
     };
 
     // trigger cards
@@ -49,7 +54,7 @@ class MyApp extends Homey.App {
       this._userLogin
         .trigger(device, tokens, state)
         // .then(console.log(device.getName(), tokens, state))
-        .catch(this.error);
+        .catch((err) => this.error(err));
     };
     this._userLogout = this.homey.flow.getDeviceTriggerCard('user_logout');
     this._userLogout.registerRunListener((args, state) => true);
@@ -57,7 +62,7 @@ class MyApp extends Homey.App {
       this._userLogout
         .trigger(device, tokens, state)
         // .then(console.log(device.getName(), tokens, state))
-        .catch(this.error);
+        .catch((err) => this.error(err));
     };
 
     this._gpioHigh = this.homey.flow.getDeviceTriggerCard('gpio_high');
@@ -69,7 +74,7 @@ class MyApp extends Homey.App {
       this._gpioHigh
         .trigger(device, tokens, state)
         // .then(console.log(device.getName(), tokens, state))
-        .catch(this.error);
+        .catch((err) => this.error(err));
     };
     this._gpioLow = this.homey.flow.getDeviceTriggerCard('gpio_low');
     this._gpioLow.registerRunListener((args, state) => args.io === state.io);
@@ -77,7 +82,7 @@ class MyApp extends Homey.App {
       this._gpioLow
         .trigger(device, tokens, state)
         // .then(console.log(device.getName(), tokens, state))
-        .catch(this.error);
+        .catch((err) => this.error(err));
     };
 
     // condition cards

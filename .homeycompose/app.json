@@ -1,25 +1,14 @@
 {
   "id": "com.gruijter.rpi",
-  "version": "2.0.0",
-  "compatibility": ">=10.0.0",
+  "version": "2.1.0",
+  "compatibility": ">=12.9.0",
   "sdk": 3,
   "brandColor": "#c7053d",
   "platforms": [
     "local"
   ],
   "name": {
-    "en": "Raspberry Pi",
-    "nl": "Raspberry Pi",
-    "da": "Raspberry Pi",
-    "de": "Raspberry Pi",
-    "es": "Raspberry Pi",
-    "fr": "Raspberry Pi",
-    "it": "Raspberry Pi",
-    "no": "Raspberry Pi",
-    "sv": "Raspberry Pi",
-    "pl": "Raspberry Pi",
-    "ru": "Raspberry Pi",
-    "ko": "라즈베리 파이"
+    "en": "Raspberry Pi"
   },
   "description": {
     "en": "Monitor and control your RPi",
@@ -41,83 +30,6 @@
       "raspberry",
       "linux",
       "debian",
-      "ssh"
-    ],
-    "nl": [
-      "rpi",
-      "framboos",
-      "linux",
-      "debian",
-      "ssh"
-    ],
-    "da": [
-      "rpi",
-      "hindbær",
-      "linux",
-      "debian",
-      "ssh"
-    ],
-    "de": [
-      "rpi",
-      "himbeere",
-      "linux",
-      "debian",
-      "ssh"
-    ],
-    "es": [
-      "rpi",
-      "frambuesa",
-      "linux",
-      "debian",
-      "ssh"
-    ],
-    "fr": [
-      "rpi",
-      "framboise",
-      "linux",
-      "debian",
-      "ssh"
-    ],
-    "it": [
-      "rpi",
-      "lampone",
-      "linux",
-      "debian",
-      "ssh"
-    ],
-    "no": [
-      "rpi",
-      "bringebær",
-      "linux",
-      "debian",
-      "ssh"
-    ],
-    "sv": [
-      "rpi",
-      "hallon",
-      "linux",
-      "debian",
-      "ssh"
-    ],
-    "pl": [
-      "rpi",
-      "malina",
-      "linux",
-      "debian",
-      "ssh"
-    ],
-    "ru": [
-      "rpi",
-      "малина",
-      "линукс",
-      "дебиан",
-      "ssh"
-    ],
-    "ko": [
-      "rpi",
-      "라즈베리",
-      "리눅스",
-      "데비안",
       "ssh"
     ]
   },

@@ -40,18 +40,18 @@ class RPiDevice extends Device {
       this.lastPollSlowTm = 0;
       this.lastHourlyPollTm = 0;
       this.settings = { ...this.getSettings() };
-      await this.migrate().catch(this.error);
+      await this.migrate().catch((err) => this.error(err));
       if (this.rpi) await this.rpi.connect();
       if (!this.rpi) this.rpi = new RPI(this.settings, this.log.bind(this));
       // start polling device for info
       const pollingInterval = this.settings.pollingInterval ? this.settings.pollingInterval : this.settings.pollingIntervalSlow; // minimum 1 second, maximum 5 seconds
-      this.startPolling(pollingInterval).catch(this.error);
+      this.startPolling(pollingInterval).catch((err) => this.error(err));
       await this.registerListeners();
       this.log(`${this.getName()} has been initialized`);
     } catch (error) {
       this.error(error);
       // this.setUnavailable(error).catch(() => null);
-      this.restartDevice(60 * 1000).catch(this.error);
+      this.restartDevice(60 * 1000).catch((err) => this.error(err));
     }
   }
 
@@ -68,7 +68,7 @@ class RPiDevice extends Device {
         const caps = this.getCapabilities();
         const newCap = correctCaps[index];
         if (caps[index] !== newCap) {
-          this.setUnavailable('Device is migrating. Please wait!').catch(this.error);
+          this.setUnavailable('Device is migrating. Please wait!').catch((err) => this.error(err));
           capsChanged = true;
           // remove all caps from here
           for (let i = index; i < caps.length; i += 1) {
@@ -83,11 +83,11 @@ class RPiDevice extends Device {
           // restore capability state
           if (state[newCap]) this.log(`${this.getName()} restoring value ${newCap} to ${state[newCap]}`);
           // else this.log(`${this.getName()} has gotten a new capability ${newCap}!`);
-          if (state[newCap] !== undefined) this.setCapability(newCap, state[newCap]).catch(this.error);
+          if (state[newCap] !== undefined) this.setCapability(newCap, state[newCap]).catch((err) => this.error(err));
           await setTimeoutPromise(2 * 1000); // wait a bit for Homey to settle
         }
       }
-      if (capsChanged) this.restartDevice(1 * 1000).catch(this.error);
+      if (capsChanged) this.restartDevice(1 * 1000).catch((err) => this.error(err));
     } catch (error) {
       this.error(error);
     }
@@ -118,7 +118,7 @@ class RPiDevice extends Device {
       settingsToLog.password = '********';
     }
     this.log(`${this.getName()} settings where changed`, settingsToLog);
-    this.restartDevice(3 * 1000).catch(this.error);
+    this.restartDevice(3 * 1000).catch((err) => this.error(err));
   }
 
   async onDeleted() {
@@ -150,9 +150,9 @@ class RPiDevice extends Device {
   async startPolling(interval) {
     this.homey.clearInterval(this.intervalIdPoll);
     this.log(`start polling ${this.getName()} @${interval} seconds interval`);
-    await this.doPoll().catch(this.error);
+    await this.doPoll().catch((err) => this.error(err));
     this.intervalIdPoll = this.homey.setInterval(() => {
-      this.doPoll().catch(this.error);
+      this.doPoll().catch((err) => this.error(err));
     }, 1000); // interval * 1000); > try every second
   }
 
@@ -176,7 +176,7 @@ class RPiDevice extends Device {
         return;
       }
       this.restarting = false;
-      this.onInit().catch(this.error);
+      this.onInit().catch((err) => this.error(err));
     } catch (error) {
       this.error(error);
     }
@@ -187,7 +187,7 @@ class RPiDevice extends Device {
       if (this.watchDogCounter <= 0) {
         this.log('watchdog triggered, restarting Homey device now');
         this.setUnavailable(this.homey.__('device.connectionError')).catch(() => null);
-        this.restartDevice(60 * 1000).catch(this.error);
+        this.restartDevice(60 * 1000).catch((err) => this.error(err));
         return;
       }
       // check if any poll needs to be done this second
@@ -248,6 +248,7 @@ class RPiDevice extends Device {
       if (!oldstats) return {};
       // calculate speeds
       const deltaTime = (newstats.timestamp - oldstats.timestamp); // milliseconds
+      if (deltaTime <= 0) return {}; // Prevent division by zero
       let dseth = Math.round((8 * (newstats.ETH0Traffic.rxBytes - oldstats.ETH0Traffic.rxBytes)) / deltaTime) / 1000;
       let useth = Math.round((8 * (newstats.ETH0Traffic.txBytes - oldstats.ETH0Traffic.txBytes)) / deltaTime) / 1000;
       let dswlan = Math.round((8 * (newstats.WLAN0Traffic.rxBytes - oldstats.WLAN0Traffic.rxBytes)) / deltaTime) / 1000;
@@ -274,12 +275,12 @@ class RPiDevice extends Device {
     );
     let sysInfoChanged = false;
     Object.entries(newSysInfo).forEach((entry) => {
-      if (currentSettings[entry[0]] && (currentSettings[entry[0]] !== entry[1].toString())) {
-        this.log(`${this.getName()} updating sysInfo`, entry[0], entry[1].toString());
+      if (currentSettings[entry[0]] && (currentSettings[entry[0]] !== entry[1])) {
+        this.log(`${this.getName()} updating sysInfo`, entry[0], entry[1]);
         sysInfoChanged = true;
       }
     });
-    if (sysInfoChanged) this.setSettings(newSysInfo).catch(this.error);
+    if (sysInfoChanged) this.setSettings(newSysInfo).catch((err) => this.error(err));
   }
 
   async updateGpioState(gpio) {
@@ -294,7 +295,7 @@ class RPiDevice extends Device {
       }
       // set the capabilities
       Object.entries(capabilityStates).forEach((entry) => {
-        this.setCapability(entry[0], entry[1]).catch(this.error);
+        this.setCapability(entry[0], entry[1]).catch((err) => this.error(err));
       });
       // triggger GPIO flows on change
       if (this.lastGpio) {
@@ -340,7 +341,7 @@ class RPiDevice extends Device {
       };
       // set the capabilities
       Object.entries(capabilityStates).forEach((entry) => {
-        this.setCapability(entry[0], entry[1]).catch(this.error);
+        this.setCapability(entry[0], entry[1]).catch((err) => this.error(err));
       });
       // save last stats
       this.lastStats = { ...stats };
