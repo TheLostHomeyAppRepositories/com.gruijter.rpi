@@ -290,18 +290,18 @@
           "ko": "비밀번호"
         },
         "hint": {
-          "en": "Deault is raspberry.",
-          "nl": "Standaard is raspberry.",
-          "pl": "Domyślne to raspberry",
-          "da": "Standard er hindbær.",
-          "de": "Standard ist Himbeere.",
-          "es": "El valor predeterminado es raspberry.",
-          "fr": "La valeur par défaut est raspberry.",
-          "it": "Il valore predefinito è raspberry.",
-          "no": "Standard er bringebær.",
-          "sv": "Standard är hallon.",
-          "ru": "По умолчанию малиновый.",
-          "ko": "기본값은 라즈베리입니다."
+          "en": "If provided, this password will be used instead of the SSH key. Enter your password if key-based authentication fails. Default is raspberry.",
+          "nl": "Als dit is ingevuld, wordt dit wachtwoord gebruikt in plaats van de SSH-sleutel. Vul je wachtwoord in als sleutel-gebaseerde authenticatie mislukt. Standaard is raspberry.",
+          "pl": "Jeśli podano, to hasło zostanie użyte zamiast klucza SSH. Wpisz hasło, jeśli uwierzytelnianie oparte na kluczach nie powiedzie się. Domyślne to raspberry.",
+          "da": "Hvis det er angivet, vil denne adgangskode blive brugt i stedet for SSH-nøglen. Indtast din adgangskode, hvis nøglebaseret godkendelse mislykkes. Standard er hindbær.",
+          "de": "Falls angegeben, wird dieses Passwort anstelle des SSH-Schlüssels verwendet. Geben Sie Ihr Passwort ein, wenn die schlüsselbasierte Authentifizierung fehlschlägt. Standard ist Himbeere.",
+          "es": "Si se proporciona, esta contraseña se utilizará en lugar de la clave SSH. Ingrese su contraseña si falla la autenticación basada en claves. El valor predeterminado es raspberry.",
+          "fr": "S'il est fourni, ce mot de passe sera utilisé à la place de la clé SSH. Saisissez votre mot de passe si l'authentification par clé échoue. La valeur par défaut est raspberry.",
+          "it": "Se fornita, questa password verrà utilizzata al posto della chiave SSH. Inserisci la tua password se l'autenticazione basata su chiavi non riesce. Il valore predefinito è raspberry.",
+          "no": "Hvis oppgitt, vil dette passordet bli brukt i stedet for SSH-nøkkelen. Skriv inn passordet ditt hvis nøkkelbasert autentisering mislykkes. Standard er bringebær.",
+          "sv": "Om det anges används detta lösenord istället för SSH-nyckeln. Ange ditt lösenord om den nyckelbaserade autentiseringen misslyckas. Standard är hallon.",
+          "ru": "Если указан, этот пароль будет использоваться вместо SSH-ключа. Введите пароль, если аутентификация по ключу не удалась. По умолчанию малиновый.",
+          "ko": "제공된 경우 이 암호가 SSH 키 대신 사용됩니다. 키 기반 인증이 실패하면 암호를 입력하십시오. 기본값은 라즈베리입니다."
         },
         "value": ""
       }

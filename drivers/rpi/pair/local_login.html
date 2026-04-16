@@ -30,7 +30,11 @@
 				password: document.getElementById('password').value,
 			};
 			if (settings.host === '' || settings.username === '') throw Error(Homey.__('pair.incomplete'));
-			await Homey.emit('manual_login', settings);
+			const result = await Homey.emit('manual_login', settings);
+			Homey.hideLoadingOverlay();
+			if (result && result.warning) {
+				await Homey.alert(result.warning, 'info');
+			}
 			if (isRepair) {
 				Homey.done();
 			} else {

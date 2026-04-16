@@ -163,20 +163,32 @@ class RPiDriver extends Driver {
         });
         await tempRpi.connect();
 
-        // 3. Deploy public key to RPi's authorized_keys
-        this.log('Deploying public key to Raspberry Pi...');
-        // Ensure .ssh directory exists, remove old key, append new key, set permissions
-        const deployCommand = this.getDeployCommand(publicKey);
-        await tempRpi.execute(deployCommand);
-        await tempRpi.disconnect(); // Disconnect the temporary password-based connection
+        let keyDeployed = false;
+        try {
+          // 3. Deploy public key to RPi's authorized_keys
+          this.log('Deploying public key to Raspberry Pi...');
+          const deployCommand = this.getDeployCommand(publicKey);
+          await tempRpi.execute(deployCommand);
+          keyDeployed = true;
+        } catch (deployError) {
+          this.error('Key deployment failed:', deployError);
+        } finally {
+          await tempRpi.disconnect(); // Disconnect the temporary password-based connection
+        }
 
-        // 4. Store private key in settings and remove password for future connections
-        settings.privateKey = privateKey;
-        delete settings.password; // Remove password from stored settings
+        let warningMsg = null;
+        if (keyDeployed) {
+          // 4. Store private key in settings and remove password for future connections
+          settings.privateKey = privateKey;
+          delete settings.password; // Remove password from stored settings
+        } else {
+          warningMsg = 'SSH key deployment failed. The username and password will be stored and used for authentication instead.';
+          settings.privateKey = null;
+        }
 
-        // 5. Connect using the new private key and get system info
-        const rpi = new RPI(settings); // Re-initialize RPI with key-based settings
-        await rpi.connect(); // Connect using the private key
+        // 5. Connect using the new settings and get system info
+        const rpi = new RPI(settings); // Re-initialize RPI with the updated settings
+        await rpi.connect(); // Connect using the configured method
         const sysInfo = await rpi.getSysInfo();
         Object.entries(sysInfo).forEach((entry) => {
           if (entry[1]) settings[entry[0]] = entry[1].toString();
@@ -190,6 +202,7 @@ class RPiDriver extends Driver {
           settings, // These settings now contain the privateKey and no password
         };
         discovered = [device];
+        return { warning: warningMsg };
       } catch (error) {
         this.error(error);
         // Provide more user-friendly feedback during pairing
@@ -205,7 +218,6 @@ class RPiDriver extends Driver {
         // Generic fallback for other errors
         throw new Error(`An unexpected error occurred: ${error.message}`);
       }
-      return discovered;
     });
 
     session.setHandler('list_devices', async () => discovered);
@@ -246,15 +258,28 @@ class RPiDriver extends Driver {
         });
         await tempRpi.connect();
 
-        // 3. Deploy the new public key, removing any old key from this app
-        this.log('Deploying new public key to Raspberry Pi...');
-        const deployCommand = this.getDeployCommand(publicKey);
-        await tempRpi.execute(deployCommand);
-        await tempRpi.disconnect();
+        let keyDeployed = false;
+        try {
+          // 3. Deploy the new public key, removing any old key from this app
+          this.log('Deploying new public key to Raspberry Pi...');
+          const deployCommand = this.getDeployCommand(publicKey);
+          await tempRpi.execute(deployCommand);
+          keyDeployed = true;
+        } catch (deployError) {
+          this.error('Key deployment failed:', deployError);
+        } finally {
+          await tempRpi.disconnect();
+        }
 
-        // 4. Update device settings with the new private key and connection info
-        settings.privateKey = privateKey;
-        delete settings.password;
+        let warningMsg = null;
+        if (keyDeployed) {
+          // 4. Update device settings with the new private key and connection info
+          settings.privateKey = privateKey;
+          delete settings.password;
+        } else {
+          warningMsg = 'SSH key deployment failed. The username and password will be stored and used for authentication instead.';
+          settings.privateKey = null;
+        }
 
         // 5. Connect with the new key to verify and get updated sysInfo
         const rpi = new RPI(settings);
@@ -267,7 +292,7 @@ class RPiDriver extends Driver {
         // 6. Update the device's settings. This will trigger a restart of the device instance.
         await device.setSettings(settings);
 
-        return true; // Indicate success to the frontend
+        return { warning: warningMsg }; // Indicate success and optional warning to the frontend
       } catch (error) {
         this.error('Repair failed:', error);
         if (error.level === 'client-authentication' || error.message.includes('All configured authentication methods failed')) {
