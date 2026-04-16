@@ -192,9 +192,7 @@ class RPiDevice extends Device {
       }
       // check if any poll needs to be done this second
       const now = Date.now();
-      // Default to true if the setting is not present (for backward compatibility with existing devices)
-      const monitorGpioEnabled = this.settings.monitorGpio !== false;
-      const doFastPoll = monitorGpioEnabled && this.settings.pollingInterval > 0 && ((now - this.lastPollFastTm) >= (this.settings.pollingInterval * 1000));
+      const doFastPoll = this.settings.pollingInterval > 0 && ((now - this.lastPollFastTm) >= (this.settings.pollingInterval * 1000));
       const doSlowPoll = (now - this.lastPollSlowTm) >= (this.settings.pollingIntervalSlow * 1000);
       const doHourlyPoll = (now - this.lastHourlyPollTm) > 1000 * 60 * 60;
       if (!doFastPoll && !doSlowPoll) return;
