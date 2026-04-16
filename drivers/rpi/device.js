@@ -208,9 +208,10 @@ class RPiDevice extends Device {
         // get new status and update the devicestate
         const stats = await this.rpi.getStats();
         await this.updateDeviceState(stats);
-        // get user log and trigger flow
-        const newLogs = await this.rpi.getLastLogin().catch(() => null);
-        if (newLogs) await this.updateLogTrigger(newLogs);
+        // Get user log from stats (already fetched) and trigger flow
+        if (stats && stats.lastLogins) {
+          await this.updateLogTrigger(stats.lastLogins);
+        }
         this.lastPollSlowTm = now;
       }
       if (doFastPoll) {
