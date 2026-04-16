@@ -108,8 +108,29 @@ class RPiDevice extends Device {
   }
 
   async onDeleted() {
+    this.log(`Device deleted: ${this.getName()}. Attempting to clean up SSH key on the remote host.`);
+    await this.stopPolling(); // Stop any ongoing operations
+
+    try {
+      // Create a temporary RPI instance with the device's settings to connect one last time.
+      const rpi = new RPI(this.getSettings());
+      await rpi.connect();
+
+      // The command to remove the specific key associated with this app.
+      const cleanupCommand = "sed -i '/com.gruijter.rpi/d' ~/.ssh/authorized_keys";
+      this.log(`Executing cleanup command on ${this.getSetting('host')}: ${cleanupCommand}`);
+      await rpi.execute(cleanupCommand);
+
+      await rpi.disconnect();
+      this.log('Successfully removed public key from the remote host.');
+    } catch (error) {
+      // It's common for this to fail if the RPi is offline.
+      // We log it but don't throw, as we don't want to prevent the device from being deleted in Homey.
+      this.error(`Could not clean up public key on ${this.getSetting('host')}. This is not critical and may happen if the device was offline. Error: ${error.message}`);
+    }
+
     await this.destroyListeners();
-    this.log('Device deleted', this.getName());
+    this.log('Device cleanup complete.', this.getName());
   }
 
   async startPolling(interval) {
