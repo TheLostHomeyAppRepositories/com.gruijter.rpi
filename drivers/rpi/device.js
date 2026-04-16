@@ -106,7 +106,18 @@ class RPiDevice extends Device {
   }
 
   async onSettings({ oldSettings, newSettings, changedKeys }) {
-    this.log(`${this.getName()} settings where changed`, newSettings);
+    // Create a copy to avoid modifying the actual settings object before logging.
+    const settingsToLog = { ...newSettings };
+
+    // Obfuscate sensitive data for logging.
+    if (settingsToLog.privateKey && typeof settingsToLog.privateKey === 'string') {
+      // Only show the header of the private key.
+      settingsToLog.privateKey = `${settingsToLog.privateKey.substring(0, 29)}...`;
+    }
+    if (settingsToLog.password) {
+      settingsToLog.password = '********';
+    }
+    this.log(`${this.getName()} settings where changed`, settingsToLog);
     this.restartDevice(3 * 1000).catch(this.error);
   }
 
