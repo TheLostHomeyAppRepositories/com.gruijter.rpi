@@ -1,6 +1,24 @@
 
 <script>
 	// Homey.showLoadingOverlay();
+	let isRepair = false;
+
+	Homey.on('show', () => {
+		// Try to get device data. This only works in repair mode.
+		Homey.emit('get_device_data')
+			.then(deviceData => {
+				if (deviceData) {
+					isRepair = true;
+					document.getElementById('host').value = deviceData.host || '';
+					document.getElementById('port').value = deviceData.port || 22;
+					document.getElementById('username').value = deviceData.username || 'pi';
+				}
+			})
+			.catch(() => {
+				// This is expected to fail during initial pairing.
+				isRepair = false;
+			});
+	});
 
 	async function manual() {
 		try {
@@ -12,8 +30,12 @@
 				password: document.getElementById('password').value,
 			};
 			if (settings.host === '' || settings.username === '') throw Error(Homey.__('pair.incomplete'));
-			const device = await Homey.emit('manual_login', settings);
-			Homey.showView('list_devices');
+			await Homey.emit('manual_login', settings);
+			if (isRepair) {
+				Homey.done();
+			} else {
+				Homey.showView('list_devices');
+			}
 		} catch (error) { 
 			Homey.hideLoadingOverlay();
 			Homey.alert(error, 'error');
@@ -42,7 +64,3 @@
 </form>
 <br>
 <button class="homey-button-primary-full" id="manual" onclick="manual()" data-i18n="pair.continue" ></button>
-
-
-
-
