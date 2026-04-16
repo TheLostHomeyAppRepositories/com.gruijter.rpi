@@ -154,10 +154,10 @@ class RPiDriver extends Driver {
       `echo "${publicKey}" >> ~/.ssh/authorized_keys`,
       'chmod 600 ~/.ssh/authorized_keys',
       // Dropbear fallback (for OpenWRT and other minimal Linux distributions)
-      'if [ -d /etc/dropbear ]; then touch /etc/dropbear/authorized_keys; ' +
-      "sed -i '/com.gruijter.rpi/d' /etc/dropbear/authorized_keys; " +
-      `echo "${publicKey}" >> /etc/dropbear/authorized_keys; ` +
-      'chmod 600 /etc/dropbear/authorized_keys; fi',
+      'if [ -d /etc/dropbear ]; then touch /etc/dropbear/authorized_keys; '
+      + "sed -i '/com.gruijter.rpi/d' /etc/dropbear/authorized_keys; "
+      + `echo "${publicKey}" >> /etc/dropbear/authorized_keys; `
+      + 'chmod 600 /etc/dropbear/authorized_keys; fi',
     ];
     return commands.join(' ; ');
   }

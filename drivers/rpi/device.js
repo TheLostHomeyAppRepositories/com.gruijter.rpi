@@ -215,8 +215,24 @@ class RPiDevice extends Device {
         this.lastPollSlowTm = now;
       }
       if (doFastPoll) { // This block is now skipped if monitorGpio is false or interval is 0
-        const gpio = await this.rpi.getGPIOStates();
-        await this.updateGpioState(gpio);
+        // Try the fast, lightweight poll first for levels only.
+        const gpioLevels = await this.rpi.getGPIOLevels();
+
+        // If fast poll worked AND we have a cached full state from a previous poll...
+        if (gpioLevels && this.lastGpio) {
+          // Merge the new levels into our cached full state, preserving func/pull settings.
+          Object.keys(this.lastGpio).forEach((key) => {
+            if (gpioLevels[key]) {
+              this.lastGpio[key].level = gpioLevels[key].level;
+            }
+          });
+          await this.updateGpioState(this.lastGpio);
+        } else {
+          // Fallback to the heavy poll if fast poll is unavailable or we have no cache.
+          const gpio = await this.rpi.getGPIOStates();
+          // This call will populate this.lastGpio for the next fast poll attempt.
+          await this.updateGpioState(gpio);
+        }
         this.lastPollFastTm = now;
       }
       if (doHourlyPoll) {
