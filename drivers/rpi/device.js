@@ -400,7 +400,7 @@ class RPiDevice extends Device {
     try {
       if (!this.rpi) throw Error('Rpi not ready');
       if (!this.lastGpio) {
-        const gpio = await this.rpi.getGPIOStates();
+        const { states: gpio } = await this.rpi.getGPIOStates();
         await this.updateGpioState(gpio);
       }
       if (this?.lastGpio[args.io]?.func !== 'OUTPUT') throw Error(`GPIO${args.io} is not set as OUTPUT`);
@@ -477,8 +477,9 @@ class RPiDevice extends Device {
   async stopContainer(args, source) {
     try {
       if (!this.rpi) throw Error('Rpi not ready');
-      this.log(`${this.getName()} stop Docker container ${args.id.name} from ${source}`);
-      await this.rpi.stopContainer(args.id.name);
+      const targetId = typeof args.id === 'object' ? (args.id.name || args.id.description) : args.id;
+      this.log(`${this.getName()} stop Docker container ${targetId} from ${source}`);
+      await this.rpi.stopContainer(targetId);
       return Promise.resolve(true);
     } catch (error) {
       this.error(`${this.getName()}`, error && error.message);
@@ -489,8 +490,9 @@ class RPiDevice extends Device {
   async startContainer(args, source) {
     try {
       if (!this.rpi) throw Error('Rpi not ready');
-      this.log(`${this.getName()} start Docker container ${args.id.name} from ${source}`);
-      await this.rpi.startContainer(args.id.name);
+      const targetId = typeof args.id === 'object' ? (args.id.name || args.id.description) : args.id;
+      this.log(`${this.getName()} start Docker container ${targetId} from ${source}`);
+      await this.rpi.startContainer(targetId);
       return Promise.resolve(true);
     } catch (error) {
       this.error(`${this.getName()}`, error && error.message);
@@ -501,8 +503,9 @@ class RPiDevice extends Device {
   async restartContainer(args, source) {
     try {
       if (!this.rpi) throw Error('Rpi not ready');
-      this.log(`${this.getName()} restart Docker container ${args.id.name} from ${source}`);
-      await this.rpi.restartContainer(args.id.name);
+      const targetId = typeof args.id === 'object' ? (args.id.name || args.id.description) : args.id;
+      this.log(`${this.getName()} restart Docker container ${targetId} from ${source}`);
+      await this.rpi.restartContainer(targetId);
       return Promise.resolve(true);
     } catch (error) {
       this.error(`${this.getName()}`, error && error.message);
