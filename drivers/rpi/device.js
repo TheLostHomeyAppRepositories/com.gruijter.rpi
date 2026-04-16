@@ -337,7 +337,7 @@ class RPiDevice extends Device {
         meter_cpu_scaling: stats.cpuScaling,
         meter_mem_utilization: stats.memUsage,
         meter_storage_utilization: stats.storageUsage,
-        'meter_processes.active': stats.activeProcesses,
+        'meter_processes.active': stats.totalProcesses,
         'meter_processes.running': stats.runningProcesses,
         uptime: stats.uptime,
         meter_users: stats.users,
