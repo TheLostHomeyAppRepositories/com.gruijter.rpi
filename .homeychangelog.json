@@ -1,6 +1,6 @@
 {
   "2.1.0": {
-    "en": ""
+    "en": "SSH Key usage implemented. Reparing added. Improved support for non-rpi's. Reduced CPU load. SSH fixes. Memory leak fixes. Coder refactoring."
   }, 
   "2.0.0": {
     "en": "Fixed GPIO Trixie support. GPIO usability improvements. Translations to all languages. node-ssh@13.2.1"
