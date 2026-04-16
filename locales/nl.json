@@ -11,7 +11,8 @@
   },
   "repair": {
     "title": "Repareer Raspberry Pi",
-    "text": "Werk de verbindingsgegevens voor je Raspberry Pi bij. Je moet het wachtwoord opnieuw invoeren."
+    "text": "Werk de verbindingsgegevens voor je Raspberry Pi bij. Je moet het wachtwoord opnieuw invoeren.",
+    "data_error": "Kon bestaande apparaatgegevens niet laden. Probeer het opnieuw."
   },
   "device": {
     "connectionError": "Verbindingsfout, opnieuw opstarten"

@@ -11,7 +11,8 @@
   },
   "repair": {
     "title": "Reparer Raspberry Pi",
-    "text": "Oppdater tilkoblingsdetaljene for din Raspberry Pi. Du må skrive inn passordet på nytt."
+    "text": "Oppdater tilkoblingsdetaljene for din Raspberry Pi. Du må skrive inn passordet på nytt.",
+    "data_error": "Kunne ikke laste eksisterende enhetsdata. Vennligst prøv igjen."
   },
   "device": {
     "connectionError": "Tilkoblingsfeil, starter på nytt nå"

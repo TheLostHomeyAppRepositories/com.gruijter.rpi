@@ -11,7 +11,8 @@
   },
   "repair": {
     "title": "Reparar Raspberry Pi",
-    "text": "Actualice los detalles de conexión de su Raspberry Pi. Debe volver a introducir la contraseña."
+    "text": "Actualice los detalles de conexión de su Raspberry Pi. Debe volver a introducir la contraseña.",
+    "data_error": "No se pudieron cargar los datos del dispositivo existente. Por favor, inténtelo de nuevo."
   },
   "device": {
     "connectionError": "Error de conexión, reiniciando ahora"

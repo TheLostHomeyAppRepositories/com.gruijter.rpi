@@ -11,7 +11,8 @@
   },
   "repair": {
     "title": "Raspberry Pi reparieren",
-    "text": "Aktualisieren Sie die Verbindungsdetails für Ihren Raspberry Pi. Sie müssen das Passwort erneut eingeben."
+    "text": "Aktualisieren Sie die Verbindungsdetails für Ihren Raspberry Pi. Sie müssen das Passwort erneut eingeben.",
+    "data_error": "Vorhandene Gerätedaten konnten nicht geladen werden. Bitte versuchen Sie es erneut."
   },
   "device": {
     "connectionError": "Verbindungsfehler, wird jetzt neu gestartet"

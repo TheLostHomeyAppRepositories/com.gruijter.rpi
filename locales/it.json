@@ -11,7 +11,8 @@
   },
   "repair": {
     "title": "Ripara Raspberry Pi",
-    "text": "Aggiorna i dettagli di connessione per il tuo Raspberry Pi. È necessario inserire nuovamente la password."
+    "text": "Aggiorna i dettagli di connessione per il tuo Raspberry Pi. È necessario inserire nuovamente la password.",
+    "data_error": "Impossibile caricare i dati del dispositivo esistente. Riprova."
   },
   "device": {
     "connectionError": "Errore di connessione, riavviando ora"

@@ -6,12 +6,13 @@
 		"port": "Port SSH",
 		"username": "Nazwa użytkownika",
 		"password": "Hasło",
-		"incomplete": "IP lub URL, nazwa użytkownika and hasło musi zostać wprowadzone!",
+		"incomplete": "IP lub adres URL, nazwa użytkownika i hasło muszą zostać wprowadzone!",
 		"continue": "KONTYNUUJ"
 	},
 	"repair": {
 		"title": "Napraw Raspberry Pi",
-		"text": "Zaktualizuj szczegóły połączenia dla swojego Raspberry Pi. Konieczne jest ponowne wprowadzenie hasła."
+		"text": "Zaktualizuj szczegóły połączenia dla swojego Raspberry Pi. Konieczne jest ponowne wprowadzenie hasła.",
+		"data_error": "Nie można załadować istniejących danych urządzenia. Spróbuj ponownie."
 	},
 	"device": {
 		"connectionError": "Błąd połączenia, ponowne uruchomienie"

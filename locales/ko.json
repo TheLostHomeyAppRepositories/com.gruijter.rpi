@@ -11,7 +11,8 @@
   },
   "repair": {
     "title": "Raspberry Pi 복구",
-    "text": "Raspberry Pi의 연결 세부 정보를 업데이트하십시오. 비밀번호를 다시 입력해야 합니다."
+    "text": "Raspberry Pi의 연결 세부 정보를 업데이트하십시오. 비밀번호를 다시 입력해야 합니다.",
+    "data_error": "기존 장치 데이터를 로드할 수 없습니다. 다시 시도해 주세요."
   },
   "device": {
     "connectionError": "연결 오류, 이제 재시작합니다"

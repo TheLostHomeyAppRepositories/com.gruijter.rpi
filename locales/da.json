@@ -11,7 +11,8 @@
   },
   "repair": {
     "title": "Reparer Raspberry Pi",
-    "text": "Opdater forbindelsesoplysningerne for din Raspberry Pi. Du skal indtaste adgangskoden igen."
+    "text": "Opdater forbindelsesoplysningerne for din Raspberry Pi. Du skal indtaste adgangskoden igen.",
+    "data_error": "Kunne ikke indlæse eksisterende enhedsdata. Prøv venligst igen."
   },
   "device": {
     "connectionError": "Forbindelsesfejl, genstarter nu"

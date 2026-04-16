@@ -11,7 +11,8 @@
   },
   "repair": {
     "title": "Reparera Raspberry Pi",
-    "text": "Uppdatera anslutningsinformationen för din Raspberry Pi. Du måste ange lösenordet igen."
+    "text": "Uppdatera anslutningsinformationen för din Raspberry Pi. Du måste ange lösenordet igen.",
+    "data_error": "Kunde inte ladda befintlig enhetsdata. Vänligen försök igen."
   },
   "device": {
     "connectionError": "Anslutningsfel, startar om nu"
