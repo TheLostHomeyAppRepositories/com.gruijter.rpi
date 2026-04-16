@@ -32,6 +32,7 @@ class RPiDevice extends Device {
     try {
       // this.setUnavailable('Waiting for connection').catch(() => null);
       await this.destroyListeners();
+      this.unloaded = false;
       this.busy = false;
       this.skipCounter = 0;
       this.watchDogCounter = 15;
@@ -94,6 +95,8 @@ class RPiDevice extends Device {
 
   async onUninit() {
     this.log('Device unInit', this.getName());
+    this.unloaded = true;
+    await this.stopPolling();
     await this.destroyListeners();
     // await setTimeoutPromise(5000); // wait 5 secs
   }
@@ -157,6 +160,10 @@ class RPiDevice extends Device {
       this.log(`Device will restart in ${dly / 1000} seconds`);
       // await this.setUnavailable('Device is restarting. Wait a few minutes!');
       await setTimeoutPromise(dly);
+      if (this.unloaded) {
+        this.log('Device was uninitialized during restart delay. Aborting restart.');
+        return;
+      }
       this.restarting = false;
       this.onInit().catch(this.error);
     } catch (error) {
