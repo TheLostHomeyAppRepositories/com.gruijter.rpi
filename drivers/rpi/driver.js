@@ -20,6 +20,8 @@ along with com.gruijter.rpi. If not, see <http://www.gnu.org/licenses/>.
 'use strict';
 
 const { Driver } = require('homey');
+const crypto = require('crypto');
+const { utils } = require('ssh2'); // For parsing keys to OpenSSH format
 const RPI = require('../../lib/rpi_ssh');
 
 const capabilities = [
@@ -85,6 +87,32 @@ class RPiDriver extends Driver {
   //   console.dir(discoveryResults, { depth: null });
   // }
 
+  /**
+   * Generates an RSA SSH key pair (private and public).
+   * The public key is returned in OpenSSH format suitable for authorized_keys.
+   * @returns {Promise<{privateKey: string, publicKey: string}>}
+   */
+  async generateSshKeyPair() {
+    return new Promise((resolve, reject) => {
+      crypto.generateKeyPair('rsa', {
+        modulusLength: 4096,
+        publicKeyEncoding: {
+          type: 'spki',
+          format: 'pem',
+        },
+        privateKeyEncoding: {
+          type: 'pkcs8',
+          format: 'pem',
+        },
+      }, (err, privateKey, publicKey) => {
+        if (err) return reject(err);
+        const parsedPrivateKey = utils.parseKey(privateKey);
+        const openSshPublicKey = parsedPrivateKey.public.toString('ssh'); // This gives the 'ssh-rsa AAAA...' format
+        resolve({ privateKey, publicKey: openSshPublicKey });
+      });
+    });
+  }
+
   async onPair(session) {
     let discovered = [];
 
@@ -92,9 +120,34 @@ class RPiDriver extends Driver {
       try {
         this.log(conSett);
         const settings = { ...conSett };
-        const rpi = new RPI(settings);
-        // check credentials and get status info
-        await rpi.connect();
+
+        // 1. Generate SSH key pair
+        this.log('Generating SSH key pair...');
+        const { privateKey, publicKey } = await this.generateSshKeyPair();
+
+        // 2. Attempt initial connection using password to deploy public key
+        const tempRpi = new RPI({
+          host: settings.host,
+          port: settings.port,
+          username: settings.username,
+          password: settings.password, // Use password for initial connection
+        });
+        await tempRpi.connect();
+
+        // 3. Deploy public key to RPi's authorized_keys
+        this.log('Deploying public key to Raspberry Pi...');
+        // Ensure .ssh directory exists and has correct permissions, then append key
+        const deployCommand = `mkdir -p ~/.ssh && chmod 700 ~/.ssh && echo "${publicKey}" >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys`;
+        await tempRpi.execute(deployCommand);
+        await tempRpi.disconnect(); // Disconnect the temporary password-based connection
+
+        // 4. Store private key in settings and remove password for future connections
+        settings.privateKey = privateKey;
+        delete settings.password; // Remove password from stored settings
+
+        // 5. Connect using the new private key and get system info
+        const rpi = new RPI(settings); // Re-initialize RPI with key-based settings
+        await rpi.connect(); // Connect using the private key
         const sysInfo = await rpi.getSysInfo();
         Object.entries(sysInfo).forEach((entry) => {
           if (entry[1]) settings[entry[0]] = entry[1].toString();
@@ -105,36 +158,29 @@ class RPiDriver extends Driver {
             id: sysInfo.serial,
           },
           capabilities,
-          settings,
-          // piName: sysInfo.hostName,
-          // username: settings.username,
-          // password: settings.password,
-          // host: settings.host,
-          // port: settings.port,
-          // model: sysInfo.model,
-          // revision: sysInfo.revision,
-          // sn: sysInfo.serial,
-          // processors: sysInfo.processors,
-          // osArch: sysInfo.osArch,
-          // osName: sysInfo.osName,
-          // osVersion: sysInfo.osVersion,
+          settings, // These settings now contain the privateKey and no password
         };
         discovered = [device];
-        return Promise.resolve(discovered);
       } catch (error) {
         this.error(error);
-        return Promise.reject(error);
+        // Provide more user-friendly feedback during pairing
+        if (error.level === 'client-authentication' || error.message.includes('All configured authentication methods failed')) {
+          throw new Error('Authentication failed. Please check the username and password.');
+        }
+        if (error.level === 'client-socket') {
+          throw new Error(`Could not connect to the host. Please check the IP address and network connection. (${error.message})`);
+        }
+        if (error.message.includes('permission denied')) {
+          throw new Error('Failed to deploy SSH key. The user may not have permission to write to their home directory on the RPi.');
+        }
+        // Generic fallback for other errors
+        throw new Error(`An unexpected error occurred: ${error.message}`);
       }
+      return discovered;
     });
 
     session.setHandler('list_devices', async () => {
-      try {
-        const devices = discovered;
-        return Promise.resolve(devices);
-      } catch (error) {
-        this.error(error);
-        return Promise.reject(error);
-      }
+      return discovered;
     });
   }
 
