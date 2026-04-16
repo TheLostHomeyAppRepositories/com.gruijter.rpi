@@ -16,11 +16,7 @@
 			if (result && result.warning) {
 				await Homey.alert(result.warning, 'info');
 			}
-			if (isRepair) {
-				Homey.done();
-			} else {
-				Homey.showView('list_devices');
-			}
+			Homey.showView('list_devices');
 		} catch (error) { 
 			Homey.hideLoadingOverlay();
 			Homey.alert(error, 'error');

@@ -33,7 +33,6 @@
 			if (result && result.warning) {
 				await Homey.alert(result.warning, 'info');
 			}
-			// In repair, we just close the view on success.
 			Homey.done();
 		} catch (error) { 
 			Homey.hideLoadingOverlay();

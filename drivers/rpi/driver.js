@@ -146,14 +146,20 @@ class RPiDriver extends Driver {
    */
   getDeployCommand(publicKey) {
     const commands = [
+      // Standard OpenSSH
       'mkdir -p ~/.ssh',
       'chmod 700 ~/.ssh',
       'touch ~/.ssh/authorized_keys',
       "sed -i '/com.gruijter.rpi/d' ~/.ssh/authorized_keys",
       `echo "${publicKey}" >> ~/.ssh/authorized_keys`,
       'chmod 600 ~/.ssh/authorized_keys',
+      // Dropbear fallback (for OpenWRT and other minimal Linux distributions)
+      'if [ -d /etc/dropbear ]; then touch /etc/dropbear/authorized_keys; ' +
+      "sed -i '/com.gruijter.rpi/d' /etc/dropbear/authorized_keys; " +
+      `echo "${publicKey}" >> /etc/dropbear/authorized_keys; ` +
+      'chmod 600 /etc/dropbear/authorized_keys; fi',
     ];
-    return commands.join(' && ');
+    return commands.join(' ; ');
   }
 
   async onPair(session) {

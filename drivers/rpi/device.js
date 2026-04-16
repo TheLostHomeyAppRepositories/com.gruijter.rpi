@@ -131,7 +131,7 @@ class RPiDevice extends Device {
       await rpi.connect();
 
       // The command to remove the specific key associated with this app.
-      const cleanupCommand = "sed -i '/com.gruijter.rpi/d' ~/.ssh/authorized_keys";
+      const cleanupCommand = "sed -i '/com.gruijter.rpi/d' ~/.ssh/authorized_keys ; if [ -d /etc/dropbear ]; then sed -i '/com.gruijter.rpi/d' /etc/dropbear/authorized_keys; fi";
       this.log(`Executing cleanup command on ${this.getSetting('host')}: ${cleanupCommand}`);
       await rpi.execute(cleanupCommand);
 
