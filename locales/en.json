@@ -9,6 +9,11 @@
 		"incomplete": "IP or URL, username and password must be entered!",
 		"continue": "CONTINUE"
 	},
+	"repair": {
+		"title": "Repair Raspberry Pi",
+		"text": "Update the connection details for your Raspberry Pi. You need to enter the password again.",
+		"data_error": "Could not load existing device data. Please try again."
+	},
 	"device": {
 		"connectionError": "Connection error, restarting now"
 	}

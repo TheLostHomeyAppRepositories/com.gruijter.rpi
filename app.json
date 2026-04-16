@@ -2441,6 +2441,11 @@
           "template": "done"
         }
       ],
+      "repair": [
+        {
+          "id": "repair_local_login"
+        }
+      ],
       "id": "rpi",
       "settings": [
         {

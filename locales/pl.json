@@ -9,6 +9,10 @@
 		"incomplete": "IP lub URL, nazwa użytkownika and hasło musi zostać wprowadzone!",
 		"continue": "KONTYNUUJ"
 	},
+	"repair": {
+		"title": "Napraw Raspberry Pi",
+		"text": "Zaktualizuj szczegóły połączenia dla swojego Raspberry Pi. Konieczne jest ponowne wprowadzenie hasła."
+	},
 	"device": {
 		"connectionError": "Błąd połączenia, ponowne uruchomienie"
 	}

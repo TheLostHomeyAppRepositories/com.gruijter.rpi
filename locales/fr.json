@@ -9,6 +9,10 @@
     "incomplete": "L'adresse IP ou l'URL, le nom d'utilisateur et le mot de passe doivent être renseignés !",
     "continue": "CONTINUER"
   },
+  "repair": {
+    "title": "Réparer Raspberry Pi",
+    "text": "Mettez à jour les détails de connexion de votre Raspberry Pi. Vous devez saisir à nouveau le mot de passe."
+  },
   "device": {
     "connectionError": "Erreur de connexion, redémarrage maintenant"
   }

@@ -9,6 +9,10 @@
     "incomplete": "IP eller URL, användarnamn och lösenord måste anges!",
     "continue": "Fortsätt"
   },
+  "repair": {
+    "title": "Reparera Raspberry Pi",
+    "text": "Uppdatera anslutningsinformationen för din Raspberry Pi. Du måste ange lösenordet igen."
+  },
   "device": {
     "connectionError": "Anslutningsfel, startar om nu"
   }

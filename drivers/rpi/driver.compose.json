@@ -786,5 +786,10 @@
       "id": "done",
       "template": "done"
     }
+  ],
+  "repair": [
+    {
+      "id": "repair_local_login"
+    }
   ]
 }

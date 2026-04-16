@@ -9,6 +9,10 @@
     "incomplete": "IP eller URL, brugernavn og adgangskode skal indtastes!",
     "continue": "Fortsæt"
   },
+  "repair": {
+    "title": "Reparer Raspberry Pi",
+    "text": "Opdater forbindelsesoplysningerne for din Raspberry Pi. Du skal indtaste adgangskoden igen."
+  },
   "device": {
     "connectionError": "Forbindelsesfejl, genstarter nu"
   }

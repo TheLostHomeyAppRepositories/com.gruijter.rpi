@@ -9,6 +9,10 @@
     "incomplete": "IP of URL, gebruikersnaam en wachtwoord moeten ingevuld worden!",
     "continue": "DOORGAAN"
   },
+  "repair": {
+    "title": "Repareer Raspberry Pi",
+    "text": "Werk de verbindingsgegevens voor je Raspberry Pi bij. Je moet het wachtwoord opnieuw invoeren."
+  },
   "device": {
     "connectionError": "Verbindingsfout, opnieuw opstarten"
   }

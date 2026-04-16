@@ -9,6 +9,10 @@
     "incomplete": "IP 또는 URL, 사용자 이름 및 비밀번호를 입력해야 합니다!",
     "continue": "계속하기"
   },
+  "repair": {
+    "title": "Raspberry Pi 복구",
+    "text": "Raspberry Pi의 연결 세부 정보를 업데이트하십시오. 비밀번호를 다시 입력해야 합니다."
+  },
   "device": {
     "connectionError": "연결 오류, 이제 재시작합니다"
   }

@@ -1,37 +1,51 @@
 
 <script>
-	// Homey.showLoadingOverlay();
+	Homey.showLoadingOverlay();
+	// This view is the initial repair view, so it runs immediately.
+	Homey.emit('get_device_data')
+		.then(deviceData => {
+			if (deviceData) {
+				document.getElementById('host').value = deviceData.host || '';
+				document.getElementById('port').value = deviceData.port || 22;
+				document.getElementById('username').value = deviceData.username || 'pi';
+			}
+			Homey.hideLoadingOverlay();
+		})
+		.catch(error => {
+			Homey.hideLoadingOverlay();
+			Homey.alert(error.message || Homey.__('repair.data_error'), 'error');
+		});
+
 	async function manual() {
 		try {
 			Homey.showLoadingOverlay();
-			const settings = {
+			const connectionSettings = {
 				host: document.getElementById('host').value,
 				port: Number(document.getElementById('port').value) || 22,
 				username: document.getElementById('username').value,
 				password: document.getElementById('password').value,
 			};
-			if (settings.host === '' || settings.username === '') throw Error(Homey.__('pair.incomplete'));
-			const result = await Homey.emit('manual_login', settings);
+			if (!connectionSettings.host || !connectionSettings.username) {
+				throw new Error(Homey.__('pair.incomplete'));
+			}
+			const result = await Homey.emit('manual_login', connectionSettings);
 			Homey.hideLoadingOverlay();
 			if (result && result.warning) {
 				await Homey.alert(result.warning, 'info');
 			}
-			if (isRepair) {
-				Homey.done();
-			} else {
-				Homey.showView('list_devices');
-			}
+			// In repair, we just close the view on success.
+			Homey.done();
 		} catch (error) { 
 			Homey.hideLoadingOverlay();
-			Homey.alert(error, 'error');
+			Homey.alert(error.message || error.toString(), 'error');
 		}
 	}
 </script>
 
 <form class="homey-form">
 	<div class="homey-form-group">
-		<h1 class="homey-title" data-i18n="pair.title"></h1>
-		<p class="homey-subtitle" data-i18n="pair.text"></p>
+		<h1 class="homey-title" data-i18n="repair.title"></h1>
+		<p class="homey-subtitle" data-i18n="repair.text"></p>
 
 		<label class="homey-form-label" for="host" data-i18n="pair.host"></label>
 		<input class="homey-form-input" id="host" type="text" placeholder="e.g. 10.0.0.100" value="" />

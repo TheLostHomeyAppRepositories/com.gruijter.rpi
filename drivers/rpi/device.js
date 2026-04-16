@@ -41,8 +41,8 @@ class RPiDevice extends Device {
       this.lastHourlyPollTm = 0;
       this.settings = { ...this.getSettings() };
       await this.migrate().catch(this.error);
-      if (this.rpi) await this.rpi.connect(this.settings);
-      if (!this.rpi) this.rpi = new RPI(this.settings);
+      if (this.rpi) await this.rpi.connect();
+      if (!this.rpi) this.rpi = new RPI(this.settings, this.log.bind(this));
       // start polling device for info
       const pollingInterval = this.settings.pollingInterval ? this.settings.pollingInterval : this.settings.pollingIntervalSlow; // minimum 1 second, maximum 5 seconds
       this.startPolling(pollingInterval).catch(this.error);
@@ -116,7 +116,7 @@ class RPiDevice extends Device {
 
     try {
       // Create a temporary RPI instance with the device's settings to connect one last time.
-      const rpi = new RPI(this.getSettings());
+      const rpi = new RPI(this.getSettings(), this.log.bind(this));
       await rpi.connect();
 
       // The command to remove the specific key associated with this app.

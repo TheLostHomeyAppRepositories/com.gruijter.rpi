@@ -9,6 +9,10 @@
     "incomplete": "IP oder URL, Benutzername und Passwort müssen eingegeben werden!",
     "continue": "WEITER"
   },
+  "repair": {
+    "title": "Raspberry Pi reparieren",
+    "text": "Aktualisieren Sie die Verbindungsdetails für Ihren Raspberry Pi. Sie müssen das Passwort erneut eingeben."
+  },
   "device": {
     "connectionError": "Verbindungsfehler, wird jetzt neu gestartet"
   }
