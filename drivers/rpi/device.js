@@ -67,6 +67,12 @@ class RPiDevice extends Device {
       if (this.getStoreValue('has_fan') === false) {
         correctCaps = correctCaps.filter((cap) => cap !== 'meter_fan_speed' && cap !== 'meter_fan_speed_pct');
       }
+      if (this.getStoreValue('has_gpio') === false) {
+        correctCaps = correctCaps.filter((cap) => !cap.startsWith('onoff.gpio') && !cap.startsWith('button.gpio'));
+      }
+      if (this.getStoreValue('has_gpu_temp') === false) {
+        correctCaps = correctCaps.filter((cap) => cap !== 'measure_temperature.gpu');
+      }
       for (let index = 0; index < correctCaps.length; index += 1) {
         const caps = this.getCapabilities();
         const newCap = correctCaps[index];
@@ -333,8 +339,27 @@ class RPiDevice extends Device {
       // calculate network speeds
       const speeds = this.calculateSpeed(stats, this.lastStats);
 
-      // handle dynamic fan capabilities
       let added = false;
+
+      // handle dynamic GPIO capabilities (runs once on first poll)
+      if (this.getStoreValue('has_gpio') === undefined) {
+        const { method } = await this.rpi.getGPIOStates().catch(() => ({ method: null }));
+        const hasGpio = method !== null;
+        await this.setStoreValue('has_gpio', hasGpio).catch((err) => this.error(err));
+        if (!hasGpio) {
+          this.log(`Device ${this.getName()} has no GPIO support. Removing all GPIO capabilities dynamically...`);
+          for (let idx = 0; idx < 16; idx++) {
+            if (this.hasCapability(`onoff.gpio${idx}`)) {
+              await this.removeCapability(`onoff.gpio${idx}`).catch((err) => this.error(err));
+            }
+            if (this.hasCapability(`button.gpio${idx}`)) {
+              await this.removeCapability(`button.gpio${idx}`).catch((err) => this.error(err));
+            }
+          }
+        }
+      }
+
+      // handle dynamic fan capabilities
       if (stats.cpuFanSpeed !== null && stats.cpuFanSpeed !== undefined) {
         if (this.getStoreValue('has_fan') !== true) {
           await this.setStoreValue('has_fan', true).catch((err) => this.error(err));
@@ -365,13 +390,32 @@ class RPiDevice extends Device {
         await this.removeCapability('meter_fan_speed_pct').catch((err) => this.error(err));
       }
 
+      // handle dynamic GPU temp capability
+      if (stats.gpuTemp !== null && stats.gpuTemp !== undefined) {
+        if (this.getStoreValue('has_gpu_temp') !== true) {
+          await this.setStoreValue('has_gpu_temp', true).catch((err) => this.error(err));
+        }
+        if (!this.hasCapability('measure_temperature.gpu')) {
+          this.log(`Adding measure_temperature.gpu capability dynamically for ${this.getName()}`);
+          await this.addCapability('measure_temperature.gpu').catch((err) => this.error(err));
+          added = true;
+        }
+      } else {
+        if (this.getStoreValue('has_gpu_temp') !== false) {
+          await this.setStoreValue('has_gpu_temp', false).catch((err) => this.error(err));
+        }
+        if (this.hasCapability('measure_temperature.gpu')) {
+          this.log(`Removing measure_temperature.gpu capability dynamically for ${this.getName()}`);
+          await this.removeCapability('measure_temperature.gpu').catch((err) => this.error(err));
+        }
+      }
+
       if (added) {
-        this.log('Re-ordering capabilities to put fan capabilities in the correct position...');
+        this.log('Re-ordering capabilities to put fan and GPU capabilities in the correct position...');
         await this.migrate().catch((err) => this.error(err));
       }
 
       const capabilityStates = {
-        'measure_temperature.gpu': stats.gpuTemp,
         'measure_temperature.cpu': stats.cpuTemp,
         meter_cpu_utilization: stats.cpuUsage,
         meter_cpu_scaling: stats.cpuScaling,
@@ -386,6 +430,10 @@ class RPiDevice extends Device {
         'meter_download_speed.wlan0': speeds.dswlan,
         'meter_upload_speed.wlan0': speeds.uswlan,
       };
+
+      if (stats.gpuTemp !== null && stats.gpuTemp !== undefined) {
+        capabilityStates['measure_temperature.gpu'] = stats.gpuTemp;
+      }
 
       if (stats.cpuFanSpeed !== null && stats.cpuFanSpeed !== undefined) {
         capabilityStates.meter_fan_speed = stats.cpuFanSpeed;
