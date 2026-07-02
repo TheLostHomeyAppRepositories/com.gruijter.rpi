@@ -70,7 +70,10 @@ class RPiDevice extends Device {
       if (this.getStoreValue('has_fan') === false) {
         correctCaps = correctCaps.filter((cap) => cap !== 'meter_fan_speed' && cap !== 'meter_fan_speed_pct');
       }
-      if (this.getStoreValue('has_gpio') === false) {
+      const isRaspberryPi = this.settings.model && this.settings.model.toLowerCase().includes('raspberry pi');
+      if (!isRaspberryPi) {
+        correctCaps = correctCaps.filter((cap) => !cap.startsWith('onoff.gpio') && !cap.startsWith('button.gpio'));
+      } else if (this.getStoreValue('has_gpio') === false) {
         correctCaps = correctCaps.filter((cap) => !cap.startsWith('onoff.gpio') && !cap.startsWith('button.gpio'));
       }
       if (this.getStoreValue('has_gpu_temp') === false) {
@@ -349,7 +352,8 @@ class RPiDevice extends Device {
       let added = false;
 
       // handle dynamic GPIO capabilities (runs once on first poll)
-      if (this.getStoreValue('has_gpio') === null || this.getStoreValue('has_gpio') === undefined) {
+      const isRaspberryPi = this.settings.model && this.settings.model.toLowerCase().includes('raspberry pi');
+      if (isRaspberryPi && (this.getStoreValue('has_gpio') === null || this.getStoreValue('has_gpio') === undefined)) {
         const { method } = await this.rpi.getGPIOStates().catch(() => ({ method: null }));
         const hasGpio = method !== null;
         this.log(`Dynamic GPIO check result for ${this.getName()}: hasGpio = ${hasGpio} (method: ${method})`);
