@@ -1,0 +1,36 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Fan speed",
+    "nl": "Ventilatorsnelheid",
+    "pl": "Prędkość wentylatora",
+    "da": "Blæserhastighed",
+    "de": "Lüftergeschwindigkeit",
+    "es": "Velocidad del ventilador",
+    "fr": "Vitesse du ventilateur",
+    "it": "Velocità della ventola",
+    "no": "Viftehastighet",
+    "sv": "Fläkthastighet",
+    "ru": "Скорость ventilatora",
+    "ko": "팬 속도"
+  },
+  "getable": true,
+  "setable": false,
+  "units": {
+    "en": "RPM",
+    "nl": "RPM",
+    "pl": "RPM",
+    "da": "RPM",
+    "de": "U/min",
+    "es": "RPM",
+    "fr": "tr/min",
+    "it": "RPM",
+    "no": "RPM",
+    "sv": "RPM",
+    "ru": "об/мин",
+    "ko": "RPM"
+  },
+  "decimals": 0,
+  "insights": true,
+  "icon": "./assets/meter_fan_speed.svg"
+}

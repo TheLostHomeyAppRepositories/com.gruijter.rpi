@@ -61,10 +61,12 @@ class RPiDevice extends Device {
       this.log(`checking device migration for ${this.getName()}`);
       // store the capability states before migration
       const sym = Object.getOwnPropertySymbols(this).find((s) => String(s) === 'Symbol(state)');
-      const state = this[sym];
-      // check and repair incorrect capability(order)
+      const state = (sym && this[sym]) || {};
       let capsChanged = false;
-      const correctCaps = this.driver.ds.capabilities;
+      let correctCaps = [...this.driver.ds.capabilities];
+      if (this.getStoreValue('has_fan') === false) {
+        correctCaps = correctCaps.filter((cap) => cap !== 'meter_fan_speed' && cap !== 'meter_fan_speed_pct');
+      }
       for (let index = 0; index < correctCaps.length; index += 1) {
         const caps = this.getCapabilities();
         const newCap = correctCaps[index];
@@ -330,6 +332,44 @@ class RPiDevice extends Device {
     try {
       // calculate network speeds
       const speeds = this.calculateSpeed(stats, this.lastStats);
+
+      // handle dynamic fan capabilities
+      let added = false;
+      if (stats.cpuFanSpeed !== null && stats.cpuFanSpeed !== undefined) {
+        if (this.getStoreValue('has_fan') !== true) {
+          await this.setStoreValue('has_fan', true).catch((err) => this.error(err));
+        }
+        if (!this.hasCapability('meter_fan_speed')) {
+          this.log(`Adding meter_fan_speed capability dynamically for ${this.getName()}`);
+          await this.addCapability('meter_fan_speed').catch((err) => this.error(err));
+          added = true;
+        }
+      } else {
+        if (this.getStoreValue('has_fan') !== false) {
+          await this.setStoreValue('has_fan', false).catch((err) => this.error(err));
+        }
+        if (this.hasCapability('meter_fan_speed')) {
+          this.log(`Removing meter_fan_speed capability dynamically for ${this.getName()}`);
+          await this.removeCapability('meter_fan_speed').catch((err) => this.error(err));
+        }
+      }
+
+      if (stats.cpuFanPwm !== null && stats.cpuFanPwm !== undefined) {
+        if (!this.hasCapability('meter_fan_speed_pct')) {
+          this.log(`Adding meter_fan_speed_pct capability dynamically for ${this.getName()}`);
+          await this.addCapability('meter_fan_speed_pct').catch((err) => this.error(err));
+          added = true;
+        }
+      } else if (this.hasCapability('meter_fan_speed_pct')) {
+        this.log(`Removing meter_fan_speed_pct capability dynamically for ${this.getName()}`);
+        await this.removeCapability('meter_fan_speed_pct').catch((err) => this.error(err));
+      }
+
+      if (added) {
+        this.log('Re-ordering capabilities to put fan capabilities in the correct position...');
+        await this.migrate().catch((err) => this.error(err));
+      }
+
       const capabilityStates = {
         'measure_temperature.gpu': stats.gpuTemp,
         'measure_temperature.cpu': stats.cpuTemp,
@@ -346,6 +386,14 @@ class RPiDevice extends Device {
         'meter_download_speed.wlan0': speeds.dswlan,
         'meter_upload_speed.wlan0': speeds.uswlan,
       };
+
+      if (stats.cpuFanSpeed !== null && stats.cpuFanSpeed !== undefined) {
+        capabilityStates.meter_fan_speed = stats.cpuFanSpeed;
+      }
+      if (stats.cpuFanPwm !== null && stats.cpuFanPwm !== undefined) {
+        capabilityStates.meter_fan_speed_pct = Math.round((stats.cpuFanPwm / 255) * 100);
+      }
+
       // set the capabilities
       Object.entries(capabilityStates).forEach((entry) => {
         this.setCapability(entry[0], entry[1]).catch((err) => this.error(err));

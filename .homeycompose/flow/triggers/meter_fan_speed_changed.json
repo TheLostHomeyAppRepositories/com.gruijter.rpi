@@ -1,0 +1,45 @@
+{
+  "title": {
+    "en": "The fan speed (RPM) changed",
+    "nl": "De ventilatorsnelheid (RPM) is veranderd",
+    "pl": "Prędkość wentylatora (RPM) uległa zmianie",
+    "da": "Blæserhastigheden (RPM) er ændret",
+    "de": "Die Lüftergeschwindigkeit (U/min) hat sich geändert",
+    "es": "La velocidad del ventilador (RPM) ha cambiado",
+    "fr": "La vitesse du ventilateur (tr/min) a changé",
+    "it": "La velocità della ventola (RPM) è cambiata",
+    "no": "Viftehastigheten (RPM) har endret seg",
+    "sv": "Fläkthastigheten (RPM) har ändrats",
+    "ru": "Скорость вентилятора (об/мин) изменилась",
+    "ko": "팬 속도 (RPM)가 변경되었습니다"
+  },
+  "highlight": true,
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=rpi"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "meter_fan_speed",
+      "type": "number",
+      "title": {
+        "en": "Fan speed (RPM)",
+        "nl": "Ventilatorsnelheid (RPM)",
+        "pl": "Prędkość wentylatora (RPM)",
+        "da": "Blæserhastighed (RPM)",
+        "de": "Lüftergeschwindigkeit (U/min)",
+        "es": "Velocidad del ventilador (RPM)",
+        "fr": "Vitesse du ventilateur (tr/min)",
+        "it": "Velocità della ventola (RPM)",
+        "no": "Viftehastighet (RPM)",
+        "sv": "Fläkthastighet (RPM)",
+        "ru": "Скорость вентилятора (об/мин)",
+        "ko": "팬 속도 (RPM)"
+      },
+      "example": 3500
+    }
+  ]
+}

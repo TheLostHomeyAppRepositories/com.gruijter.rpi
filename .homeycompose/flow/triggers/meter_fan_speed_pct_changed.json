@@ -1,0 +1,45 @@
+{
+  "title": {
+    "en": "The fan speed (%) changed",
+    "nl": "De ventilatorsnelheid (%) is veranderd",
+    "pl": "Prędkość wentylatora (%) uległa zmianie",
+    "da": "Blæserhastigheden (%) er ændret",
+    "de": "Die Lüftergeschwindigkeit (%) hat sich geändert",
+    "es": "La velocidad del ventilador (%) ha cambiado",
+    "fr": "La vitesse du ventilateur (%) a changé",
+    "it": "La velocità della ventola (%) è cambiata",
+    "no": "Viftehastigheten (%) har endret seg",
+    "sv": "Fläkthastigheten (%) har ändrats",
+    "ru": "Скорость вентилятора (%) изменилась",
+    "ko": "팬 속도 (%)가 변경되었습니다"
+  },
+  "highlight": true,
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=rpi"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "meter_fan_speed_pct",
+      "type": "number",
+      "title": {
+        "en": "Fan speed (%)",
+        "nl": "Ventilatorsnelheid (%)",
+        "pl": "Prędkość wentylatora (%)",
+        "da": "Blæserhastighed (%)",
+        "de": "Lüftergeschwindigkeit (%)",
+        "es": "Velocidad del ventilador (%)",
+        "fr": "Vitesse du ventilateur (%)",
+        "it": "Velocità della ventola (%)",
+        "no": "Viftehastighet (%)",
+        "sv": "Fläkthastighet (%)",
+        "ru": "Скорость вентилятора (%)",
+        "ko": "팬 속도 (%)"
+      },
+      "example": 50
+    }
+  ]
+}

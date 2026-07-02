@@ -29,6 +29,8 @@ const capabilities = [
   'measure_temperature.cpu',
   'meter_cpu_utilization',
   'meter_cpu_scaling',
+  'meter_fan_speed',
+  'meter_fan_speed_pct',
   'meter_mem_utilization',
   'meter_storage_utilization',
   'meter_processes.active',

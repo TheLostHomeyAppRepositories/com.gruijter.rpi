@@ -1,0 +1,36 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Fan speed (%)",
+    "nl": "Ventilatorsnelheid (%)",
+    "pl": "Prędkość wentylatora (%)",
+    "da": "Blæserhastighed (%)",
+    "de": "Lüftergeschwindigkeit (%)",
+    "es": "Velocidad del ventilador (%)",
+    "fr": "Vitesse du ventilateur (%)",
+    "it": "Velocità della ventola (%)",
+    "no": "Viftehastighet (%)",
+    "sv": "Fläkthastighet (%)",
+    "ru": "Скорость вентилятора (%)",
+    "ko": "팬 속도 (%)"
+  },
+  "getable": true,
+  "setable": false,
+  "units": {
+    "en": "%",
+    "nl": "%",
+    "pl": "%",
+    "da": "%",
+    "de": "%",
+    "es": "%",
+    "fr": "%",
+    "it": "%",
+    "no": "%",
+    "sv": "%",
+    "ru": "%",
+    "ko": "%"
+  },
+  "decimals": 0,
+  "insights": true,
+  "icon": "./assets/meter_fan_speed.svg"
+}
