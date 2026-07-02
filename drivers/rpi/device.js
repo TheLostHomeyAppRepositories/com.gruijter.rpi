@@ -58,7 +58,10 @@ class RPiDevice extends Device {
 
   async migrate() {
     try {
-      this.log(`checking device migration for ${this.getName()}`);
+      this.log(`checking device migration for ${this.getName()}. Store `
+        + `has_fan: ${this.getStoreValue('has_fan')}, `
+        + `has_gpio: ${this.getStoreValue('has_gpio')}, `
+        + `has_gpu_temp: ${this.getStoreValue('has_gpu_temp')}`);
       // store the capability states before migration
       const sym = Object.getOwnPropertySymbols(this).find((s) => String(s) === 'Symbol(state)');
       const state = (sym && this[sym]) || {};
@@ -73,27 +76,31 @@ class RPiDevice extends Device {
       if (this.getStoreValue('has_gpu_temp') === false) {
         correctCaps = correctCaps.filter((cap) => cap !== 'measure_temperature.gpu');
       }
-      for (let index = 0; index < correctCaps.length; index += 1) {
-        const caps = this.getCapabilities();
+      const caps = this.getCapabilities();
+      const maxIndex = Math.max(correctCaps.length, caps.length);
+      for (let index = 0; index < maxIndex; index += 1) {
+        const currentCaps = this.getCapabilities();
         const newCap = correctCaps[index];
-        if (caps[index] !== newCap) {
+        if (currentCaps[index] !== newCap) {
           this.setUnavailable('Device is migrating. Please wait!').catch((err) => this.error(err));
           capsChanged = true;
           // remove all caps from here
-          for (let i = index; i < caps.length; i += 1) {
-            this.log(`removing capability ${caps[i]} for ${this.getName()}`);
-            await this.removeCapability(caps[i])
+          for (let i = index; i < currentCaps.length; i += 1) {
+            this.log(`removing capability ${currentCaps[i]} for ${this.getName()}`);
+            await this.removeCapability(currentCaps[i])
               .catch((error) => this.log(error));
             await setTimeoutPromise(2 * 1000); // wait a bit for Homey to settle
           }
           // add the new cap
-          this.log(`adding capability ${newCap} for ${this.getName()}`);
-          await this.addCapability(newCap);
-          // restore capability state
-          if (state[newCap]) this.log(`${this.getName()} restoring value ${newCap} to ${state[newCap]}`);
-          // else this.log(`${this.getName()} has gotten a new capability ${newCap}!`);
-          if (state[newCap] !== undefined) this.setCapability(newCap, state[newCap]).catch((err) => this.error(err));
-          await setTimeoutPromise(2 * 1000); // wait a bit for Homey to settle
+          if (newCap) {
+            this.log(`adding capability ${newCap} for ${this.getName()}`);
+            await this.addCapability(newCap);
+            // restore capability state
+            if (state[newCap]) this.log(`${this.getName()} restoring value ${newCap} to ${state[newCap]}`);
+            // else this.log(`${this.getName()} has gotten a new capability ${newCap}!`);
+            if (state[newCap] !== undefined) this.setCapability(newCap, state[newCap]).catch((err) => this.error(err));
+            await setTimeoutPromise(2 * 1000); // wait a bit for Homey to settle
+          }
         }
       }
       if (capsChanged) this.restartDevice(1 * 1000).catch((err) => this.error(err));
@@ -342,20 +349,13 @@ class RPiDevice extends Device {
       let added = false;
 
       // handle dynamic GPIO capabilities (runs once on first poll)
-      if (this.getStoreValue('has_gpio') === undefined) {
+      if (this.getStoreValue('has_gpio') === null || this.getStoreValue('has_gpio') === undefined) {
         const { method } = await this.rpi.getGPIOStates().catch(() => ({ method: null }));
         const hasGpio = method !== null;
+        this.log(`Dynamic GPIO check result for ${this.getName()}: hasGpio = ${hasGpio} (method: ${method})`);
         await this.setStoreValue('has_gpio', hasGpio).catch((err) => this.error(err));
         if (!hasGpio) {
-          this.log(`Device ${this.getName()} has no GPIO support. Removing all GPIO capabilities dynamically...`);
-          for (let idx = 0; idx < 16; idx++) {
-            if (this.hasCapability(`onoff.gpio${idx}`)) {
-              await this.removeCapability(`onoff.gpio${idx}`).catch((err) => this.error(err));
-            }
-            if (this.hasCapability(`button.gpio${idx}`)) {
-              await this.removeCapability(`button.gpio${idx}`).catch((err) => this.error(err));
-            }
-          }
+          added = true;
         }
       }
 
