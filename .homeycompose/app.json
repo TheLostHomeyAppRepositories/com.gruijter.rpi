@@ -1,6 +1,6 @@
 {
   "id": "com.gruijter.rpi",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "compatibility": ">=12.9.0",
   "sdk": 3,
   "brandColor": "#c7053d",
@@ -30,7 +30,8 @@
       "raspberry",
       "linux",
       "debian",
-      "ssh"
+      "ssh",
+      "sbc"
     ]
   },
   "category": [

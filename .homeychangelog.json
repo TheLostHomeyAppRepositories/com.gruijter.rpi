@@ -1,10 +1,13 @@
 {
+  "2.2.0": {
+    "en": "Added fan speed monitoring. Added more non-rpi monitoring support. Reduced RPi load. Fixed flow cards. Improved edge case stability."
+  },
   "2.1.0": {
     "en": "SSH Key usage implemented. Reparing added. Improved support for non-rpi's. Reduced CPU load. SSH fixes. Memory leak fixes. Coder refactoring."
-  }, 
+  },
   "2.0.0": {
     "en": "Fixed GPIO Trixie support. GPIO usability improvements. Translations to all languages. node-ssh@13.2.1"
-  },    
+  },
   "1.0.3": {
     "en": "Updated Polish language support."
   },
